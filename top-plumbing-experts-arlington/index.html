@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Top Plumbing Experts Arlington - Arlington, TX | (682) 297-6526</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #0a1628;
+      --primary-mid: #122040;
+      --accent: #e8671a;
+      --accent-dark: #c8550e;
+      --gold: #f5c842;
+      --white: #ffffff;
+      --light-bg: #f8f9fa;
+      --text-muted: #8a9ab5;
+      --border: #1e3050;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--primary);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Oswald', sans-serif;
+      letter-spacing: 0.02em;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ─── YELLOW BANNER ─────────────────────────────────────── */
+    .top-banner {
+      background: var(--gold);
+      color: var(--primary);
+      text-align: center;
+      padding: 9px 20px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      position: relative;
+      z-index: 200;
+    }
+
+    .top-banner .stars {
+      color: #e8671a;
+      margin-right: 6px;
+      font-size: 16px;
+    }
+
+    /* ─── STICKY NAV ────────────────────────────────────────── */
+    nav {
+      background: var(--primary);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-logo .logo-icon {
+      width: 38px;
+      height: 38px;
+      background: var(--accent);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    .nav-logo .logo-text {
+      font-family: 'Oswald', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+    }
+
+    .nav-logo .logo-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #a8bbd4;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--white); }
+
+    .nav-phone {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: var(--white);
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      transition: background 0.2s;
+    }
+
+    .nav-phone:hover { background: var(--accent-dark); }
+
+    /* ─── SPLIT HERO ────────────────────────────────────────── */
+    .hero {
+      display: grid;
+      grid-template-columns: 60% 40%;
+      min-height: 560px;
+    }
+
+    .hero-left {
+      background: var(--primary);
+      padding: 64px 56px 64px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-left::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 340px;
+      height: 340px;
+      background: radial-gradient(circle, rgba(232,103,26,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(232,103,26,0.15);
+      border: 1px solid rgba(232,103,26,0.4);
+      color: var(--accent);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      width: fit-content;
+    }
+
+    .hero-badge .dot {
+      width: 7px;
+      height: 7px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.85); }
+    }
+
+    .hero-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 52px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+
+    .hero-title .accent { color: var(--accent); }
+    .hero-title .gold { color: var(--gold); }
+
+    .hero-sub {
+      font-size: 17px;
+      color: #a8bbd4;
+      line-height: 1.65;
+      margin-bottom: 36px;
+      max-width: 440px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 44px;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--white);
+      padding: 15px 30px;
+      border-radius: 7px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      transition: background 0.2s, transform 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary:hover { background: var(--accent-dark); transform: translateY(-1px); }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      padding: 15px 28px;
+      border-radius: 7px;
+      border: 2px solid rgba(255,255,255,0.25);
+      font-family: 'Oswald', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .btn-outline:hover { border-color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.05); }
+
+    .hero-stats {
+      display: flex;
+      gap: 36px;
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-num {
+      font-family: 'Oswald', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: #6a80a0;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    .stat-divider {
+      width: 1px;
+      background: var(--border);
+      align-self: stretch;
+    }
+
+    .hero-right {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-right-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(10,22,40,0.5) 0%, transparent 40%);
+    }
+
+    /* ─── TRUST RIBBON ─────────────────────────────────────── */
+    .trust-ribbon {
+      background: var(--accent);
+      padding: 18px 40px;
+      display: flex;
+      justify-content: center;
+      gap: 0;
+    }
+
+    .trust-ribbon .badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--white);
+      font-family: 'Oswald', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      padding: 0 28px;
+      border-right: 1px solid rgba(255,255,255,0.25);
+    }
+
+    .trust-ribbon .badge:last-child { border-right: none; }
+
+    .trust-ribbon .badge svg {
+      flex-shrink: 0;
+    }
+
+    /* ─── PROBLEM / SOLUTION ───────────────────────────────── */
+    .problem-solution {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .problem-col {
+      background: var(--primary);
+      padding: 64px 56px;
+    }
+
+    .solution-col {
+      background: var(--light-bg);
+      padding: 64px 56px;
+    }
+
+    .col-eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .problem-col .col-eyebrow { color: #e04e3a; }
+    .solution-col .col-eyebrow { color: var(--accent); }
+
+    .col-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      line-height: 1.2;
+    }
+
+    .problem-col .col-title { color: var(--white); }
+    .solution-col .col-title { color: var(--primary); }
+
+    .problem-list, .promise-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .problem-list li, .promise-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    .problem-list li { color: #8a9ab5; }
+    .promise-list li { color: #3a4a60; }
+
+    .problem-list .icon {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: rgba(224,78,58,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+      font-size: 11px;
+      color: #e04e3a;
+      font-weight: 700;
+    }
+
+    .promise-list .icon {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: rgba(232,103,26,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+      font-size: 11px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* ─── SERVICES ──────────────────────────────────────────── */
+    .services {
+      background: var(--white);
+      padding: 80px 60px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .section-eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 38px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .section-sub {
+      font-size: 16px;
+      color: #6a7a90;
+      margin-top: 10px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      background: var(--light-bg);
+      border: 1px solid #e4eaf2;
+      border-radius: 10px;
+      padding: 22px 24px;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+    }
+
+    .service-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 4px 20px rgba(232,103,26,0.12);
+      transform: translateY(-2px);
+    }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+      background: var(--primary);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+
+    .service-info {}
+
+    .service-name {
+      font-family: 'Oswald', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 5px;
+    }
+
+    .service-outcome {
+      font-size: 13px;
+      color: #6a7a90;
+      line-height: 1.55;
+    }
+
+    /* ─── REVIEWS ────────────────────────────────────────────── */
+    .reviews {
+      background: var(--primary);
+      padding: 80px 60px;
+    }
+
+    .reviews .section-title { color: var(--white); }
+    .reviews .section-eyebrow { color: var(--gold); }
+    .reviews .section-sub { color: var(--text-muted); }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .review-card {
+      background: var(--primary-mid);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 26px;
+      position: relative;
+      transition: border-color 0.2s, transform 0.15s;
+    }
+
+    .review-card:hover {
+      border-color: rgba(245,200,66,0.4);
+      transform: translateY(-3px);
+    }
+
+    .review-card .quote-mark {
+      font-family: 'Oswald', sans-serif;
+      font-size: 64px;
+      line-height: 0.6;
+      color: var(--accent);
+      opacity: 0.4;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .review-stars {
+      color: var(--gold);
+      font-size: 16px;
+      margin-bottom: 14px;
+      letter-spacing: 2px;
+    }
+
+    .review-text {
+      font-size: 14px;
+      color: #a8bbd4;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .review-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Oswald', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .review-name {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--white);
+    }
+
+    .review-source {
+      font-size: 11px;
+      color: #5a7090;
+    }
+
+    /* ─── BRAND STORY / CTA ──────────────────────────────────── */
+    .cta-section {
+      background: var(--accent);
+      padding: 72px 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -120px;
+      left: -120px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-section::after {
+      content: '';
+      position: absolute;
+      bottom: -100px;
+      right: -100px;
+      width: 350px;
+      height: 350px;
+      background: radial-gradient(circle, rgba(0,0,0,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 14px;
+    }
+
+    .cta-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 44px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 16px;
+      line-height: 1.1;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-story {
+      font-size: 17px;
+      color: rgba(255,255,255,0.85);
+      max-width: 600px;
+      line-height: 1.7;
+      margin-bottom: 36px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn-white {
+      background: var(--white);
+      color: var(--accent);
+      padding: 16px 34px;
+      border-radius: 7px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      transition: transform 0.15s, box-shadow 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+
+    .btn-dark {
+      background: var(--primary);
+      color: var(--white);
+      padding: 16px 32px;
+      border-radius: 7px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 19px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      transition: background 0.2s;
+    }
+
+    .btn-dark:hover { background: #0d1e38; }
+
+    /* ─── CONTACT ────────────────────────────────────────────── */
+    .contact {
+      background: var(--light-bg);
+      padding: 72px 60px;
+    }
+
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .contact-info {}
+
+    .contact-info .section-title {
+      text-align: left;
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
+
+    .contact-items {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .contact-item .icon {
+      width: 40px;
+      height: 40px;
+      background: var(--primary);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 18px;
+    }
+
+    .contact-item .label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8a9ab5;
+      margin-bottom: 3px;
+    }
+
+    .contact-item .value {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .contact-item .value a { color: var(--accent); }
+    .contact-item .value a:hover { text-decoration: underline; }
+
+    .contact-form {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 32px 28px;
+      box-shadow: 0 4px 24px rgba(10,22,40,0.08);
+    }
+
+    .form-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #6a7a90;
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1px solid #d4dde8;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: var(--primary);
+      background: var(--white);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--accent);
+    }
+
+    .form-group textarea { resize: vertical; min-height: 80px; }
+
+    .form-submit {
+      width: 100%;
+      background: var(--accent);
+      color: var(--white);
+      border: none;
+      padding: 14px;
+      border-radius: 7px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 4px;
+    }
+
+    .form-submit:hover { background: var(--accent-dark); }
+
+    /* ─── FOOTER ─────────────────────────────────────────────── */
+    footer {
+      background: var(--primary);
+      padding: 32px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--border);
+    }
+
+    footer .footer-left {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    footer .footer-brand {
+      font-family: 'Oswald', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    footer .footer-sub {
+      font-size: 12px;
+      color: #4a6080;
+    }
+
+    footer .footer-right {
+      font-size: 13px;
+      color: #4a6080;
+      text-align: right;
+    }
+
+    footer .footer-right a {
+      color: #5a7590;
+      transition: color 0.2s;
+    }
+
+    footer .footer-right a:hover { color: var(--white); }
+
+    /* ─── FLOAT BUTTON ───────────────────────────────────────── */
+    .float-btn {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      background: var(--accent);
+      color: var(--white);
+      padding: 14px 24px;
+      border-radius: 50px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      z-index: 999;
+      box-shadow: 0 6px 28px rgba(232,103,26,0.45);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .float-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 36px rgba(232,103,26,0.55);
+    }
+
+    .float-btn .float-pulse {
+      width: 10px;
+      height: 10px;
+      background: var(--gold);
+      border-radius: 50%;
+      animation: pulse 1.6s infinite;
+    }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      nav { padding: 0 20px; }
+      .nav-links { display: none; }
+
+      .hero { grid-template-columns: 1fr; }
+      .hero-right { height: 280px; }
+      .hero-left { padding: 48px 28px; }
+      .hero-title { font-size: 38px; }
+
+      .trust-ribbon { flex-wrap: wrap; gap: 0; padding: 14px 20px; }
+      .trust-ribbon .badge { padding: 8px 16px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.2); width: 50%; justify-content: center; }
+      .trust-ribbon .badge:nth-child(3), .trust-ribbon .badge:nth-child(4) { border-bottom: none; }
+
+      .problem-solution { grid-template-columns: 1fr; }
+      .problem-col, .solution-col { padding: 48px 28px; }
+
+      .services { padding: 60px 24px; }
+      .services-grid { grid-template-columns: 1fr; }
+
+      .reviews { padding: 60px 24px; }
+      .reviews-grid { grid-template-columns: 1fr; }
+
+      .cta-section { padding: 56px 28px; }
+      .cta-title { font-size: 34px; }
+
+      .contact { padding: 56px 24px; }
+      .contact-inner { grid-template-columns: 1fr; gap: 36px; }
+
+      footer { flex-direction: column; gap: 14px; text-align: center; padding: 28px 24px; }
+      footer .footer-right { text-align: center; }
+
+      .float-btn { bottom: 18px; right: 18px; padding: 12px 20px; font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── YELLOW BANNER ─── -->
+  <div class="top-banner">
+    <span class="stars">⭐⭐⭐⭐⭐</span>
+    <strong>23 Google Reviews</strong> - Arlington's Trusted Plumber
+  </div>
+
+  <!-- ─── STICKY NAV ─── -->
+  <nav>
+    <div class="nav-logo">
+      <div class="logo-icon">🔧</div>
+      <div>
+        <div class="logo-text">Top Plumbing Experts Arlington</div>
+        <div class="logo-sub">Arlington, TX</div>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="tel:6822976526" class="nav-phone">
+      📞 (682) 297-6526
+    </a>
+  </nav>
+
+  <!-- ─── SPLIT HERO ─── -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Available 24/7 · Arlington, TX
+      </div>
+      <h1 class="hero-title">
+        Plumbing Done<br>
+        <span class="accent">Right</span> the<br>
+        <span class="gold">First Time.</span>
+      </h1>
+      <p class="hero-sub">
+        Burst pipe, slow drain, or no hot water - Steve picks up the phone and shows up ready to fix it. Licensed, insured, and trusted by Arlington homeowners.
+      </p>
+      <div class="hero-ctas">
+        <a href="tel:6822976526" class="btn-primary">
+          📞 Call Now - (682) 297-6526
+        </a>
+        <a href="#contact" class="btn-outline">Get Free Estimate</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">5★</span>
+          <span class="stat-label">Google Rating</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">23+</span>
+          <span class="stat-label">Reviews</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">Same</span>
+          <span class="stat-label">Day Service</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?w=1600&q=80" alt="Professional plumber at work" loading="eager" />
+      <div class="hero-right-overlay"></div>
+    </div>
+  </section>
+
+  <!-- ─── TRUST RIBBON ─── -->
+  <div class="trust-ribbon">
+    <div class="badge">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Licensed &amp; Insured
+    </div>
+    <div class="badge">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Same Day Service
+    </div>
+    <div class="badge">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      Upfront Pricing
+    </div>
+    <div class="badge">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f5c842" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      5★ Rated
+    </div>
+  </div>
+
+  <!-- ─── PROBLEM / SOLUTION ─── -->
+  <section class="problem-solution">
+    <div class="problem-col">
+      <div class="col-eyebrow">⚠ The Problem</div>
+      <h2 class="col-title">Most Plumbers Leave You Waiting - or Guessing</h2>
+      <ul class="problem-list">
+        <li>
+          <span class="icon">✕</span>
+          <span>You call, they say "tomorrow" - meanwhile your ceiling is dripping</span>
+        </li>
+        <li>
+          <span class="icon">✕</span>
+          <span>No price upfront, then a surprise bill at the end of the job</span>
+        </li>
+        <li>
+          <span class="icon">✕</span>
+          <span>A different tech every time - nobody knows your home's plumbing</span>
+        </li>
+        <li>
+          <span class="icon">✕</span>
+          <span>"Fixed" drains that clog again in 2 weeks - the quick patch, not the real fix</span>
+        </li>
+        <li>
+          <span class="icon">✕</span>
+          <span>Companies that upsell you on work you don't actually need</span>
+        </li>
+      </ul>
+    </div>
+    <div class="solution-col">
+      <div class="col-eyebrow">✓ Our Promise</div>
+      <h2 class="col-title">Steve Shows Up, Fixes It Right, Charges Fair.</h2>
+      <ul class="promise-list">
+        <li>
+          <span class="icon">✓</span>
+          <span>Same-day response - often within hours of your call</span>
+        </li>
+        <li>
+          <span class="icon">✓</span>
+          <span>Upfront pricing before any work begins - no surprises</span>
+        </li>
+        <li>
+          <span class="icon">✓</span>
+          <span>Steve himself handles your job - consistent, accountable service</span>
+        </li>
+        <li>
+          <span class="icon">✓</span>
+          <span>Real fixes that last - we find the root cause, not just the symptom</span>
+        </li>
+        <li>
+          <span class="icon">✓</span>
+          <span>No upselling, no pressure - honest recommendations only</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ─── SERVICES ─── -->
+  <section class="services" id="services">
+    <div class="section-header">
+      <div class="section-eyebrow">What We Fix</div>
+      <h2 class="section-title">Plumbing Services in Arlington</h2>
+      <p class="section-sub">From emergency repairs to complete replacements - handled fast and done right.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🚿</div>
+        <div class="service-info">
+          <div class="service-name">Drain Cleaning</div>
+          <div class="service-outcome">Slow drain? We clear it completely - not just temporarily.</div>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💧</div>
+        <div class="service-info">
+          <div class="service-name">Leak Repair</div>
+          <div class="service-outcome">Find it, fix it, guarantee it. No more water damage.</div>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔥</div>
+        <div class="service-info">
+          <div class="service-name">Water Heater</div>
+          <div class="service-outcome">Cold showers? New unit installed same day.</div>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🚽</div>
+        <div class="service-info">
+          <div class="service-name">Toilet &amp; Fixture</div>
+          <div class="service-outcome">Running toilet wasting money? Fixed in under an hour.</div>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🚨</div>
+        <div class="service-info">
+          <div class="service-name">Emergency Plumbing</div>
+          <div class="service-outcome">Burst pipe at midnight? Steve picks up the phone.</div>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔩</div>
+        <div class="service-info">
+          <div class="service-name">Pipe Replacement</div>
+          <div class="service-outcome">Old pipes causing problems? We replace them right the first time.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── REVIEWS ─── -->
+  <section class="reviews" id="reviews">
+    <div class="section-header">
+      <div class="section-eyebrow">⭐ Google Reviews</div>
+      <h2 class="section-title">What Garland Homeowners Say</h2>
+      <p class="section-sub">23 five-star reviews - and counting.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <span class="quote-mark">"</span>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Steve was very professional and did an awesome job. Would definitely call him again for any future plumbing needs.</p>
+        <div class="review-author">
+          <div class="review-avatar">JR</div>
+          <div>
+            <div class="review-name">James R.</div>
+            <div class="review-source">Google Review · Arlington, TX</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <span class="quote-mark">"</span>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">I called Steve King regarding a leaky exterior faucet - fixed it same day. Quick, clean, and the price was exactly what he quoted.</p>
+        <div class="review-author">
+          <div class="review-avatar">LM</div>
+          <div>
+            <div class="review-name">Linda M.</div>
+            <div class="review-source">Google Review · Arlington, TX</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <span class="quote-mark">"</span>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Fast, clean, and fair pricing. Will call again. Highly recommend him for any plumbing related issues - he knows his stuff.</p>
+        <div class="review-author">
+          <div class="review-avatar">MS</div>
+          <div>
+            <div class="review-name">Maria S.</div>
+            <div class="review-source">Google Review · Arlington, TX</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CTA ─── -->
+  <section class="cta-section">
+    <div class="cta-eyebrow">About Top Plumbing Experts Arlington</div>
+    <h2 class="cta-title">Steve Himself Answers the Phone</h2>
+    <p class="cta-story">
+      Top Plumbing Experts Arlington has been Arlington's go-to plumber for years. We built this business on one principle: show up when we say we will, fix it right the first time, and charge a fair price. No surprises, no upselling - just honest plumbing work.
+    </p>
+    <div class="cta-actions">
+      <a href="tel:6822976526" class="btn-white">
+        📞 Call (682) 297-6526
+      </a>
+      <a href="#contact" class="btn-dark">Request Estimate</a>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ─── -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="contact-info">
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="icon">📞</div>
+            <div>
+              <div class="label">Phone</div>
+              <div class="value"><a href="tel:6822976526">(682) 297-6526</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="icon">📍</div>
+            <div>
+              <div class="label">Service Area</div>
+              <div class="value">Arlington, TX &amp; surrounding areas</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="icon">⏰</div>
+            <div>
+              <div class="label">Hours</div>
+              <div class="value">24/7 Emergency Service Available</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="icon">⚡</div>
+            <div>
+              <div class="label">Response Time</div>
+              <div class="value">Same day - often within hours</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <div class="form-title">Request a Free Estimate</div>
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" placeholder="John Smith" />
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" placeholder="(469) 000-0000" />
+        </div>
+        <div class="form-group">
+          <label>Service Needed</label>
+          <select>
+            <option>Select a service…</option>
+            <option>Drain Cleaning</option>
+            <option>Leak Repair</option>
+            <option>Water Heater</option>
+            <option>Toilet &amp; Fixture</option>
+            <option>Emergency Plumbing</option>
+            <option>Pipe Replacement</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Describe the Issue</label>
+          <textarea placeholder="Tell us what's going on…"></textarea>
+        </div>
+        <button class="form-submit">Send Request →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer>
+    <div class="footer-left">
+      <div class="footer-brand">Top Plumbing Experts Arlington</div>
+      <div class="footer-sub">Licensed &amp; Insured · Arlington, TX</div>
+    </div>
+    <div class="footer-right">
+      <div style="margin-bottom:4px;">⭐⭐⭐⭐⭐ 5★ on Google · 23 Reviews</div>
+      <div>© 2025 Top Plumbing Experts Arlington. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- ─── FLOATING CTA ─── -->
+  <a href="tel:6822976526" class="float-btn">
+    <span class="float-pulse"></span>
+    Call Now - (682) 297-6526
+  </a>
+
+</body>
+</html>
