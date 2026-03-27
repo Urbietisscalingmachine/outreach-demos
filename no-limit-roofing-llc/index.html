@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>No Limit Roofing LLC | Roofing in Mesquite TX</title>
+  <meta name="description" content="No Limit Roofing LLC – Trusted roofing in Mesquite TX. 18 reviews. Call (972) 357-7539"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#2c1810;--accent:#e74c3c;--white:#fff;--light:#f4f7fb;--muted:#5a6472;--radius:12px}
+    body{font-family:'Inter',sans-serif;color:#1a1a2e;background:var(--white);line-height:1.6}
+    nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(44,24,16,0.97);backdrop-filter:blur(8px);padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{color:var(--white);font-size:1.15rem;font-weight:800}.nav-logo span{color:var(--accent)}
+    .nav-cta a{background:var(--accent);color:var(--primary);font-weight:700;padding:10px 20px;border-radius:8px;text-decoration:none;font-size:0.95rem}
+    .hero{min-height:100vh;background:url('https://lh3.googleusercontent.com/place-photos/AL8-SNErQN7R4a1tZnr1jCi3eP5oQEjGtKOHJ0N7mG2V46zxoeVShKDSfHETM9NTuRSJetneXmCGW7-rf3gqsQi_WXDPMzkqECFHlj8_ndMr2dy9fA_a5PmjlUtSzNVl0VZBb6dPP659KnxgfDIq=s1600-w800') center/cover no-repeat;display:flex;align-items:center;padding:120px 24px 80px;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(44,24,16,0.93) 0%,rgba(44,24,16,0.75) 100%)}
+    .hero-inner{max-width:860px;margin:0 auto;position:relative;z-index:1}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);color:var(--white);padding:6px 16px;border-radius:100px;font-size:0.85rem;font-weight:600;margin-bottom:24px}
+    h1{font-size:clamp(2rem,5vw,3.6rem);font-weight:900;color:var(--white);line-height:1.15;margin-bottom:20px;letter-spacing:-1px}
+    h1 span{color:var(--accent)}
+    .hero p{font-size:1.1rem;color:rgba(255,255,255,0.75);max-width:520px;margin-bottom:36px}
+    .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+    .btn-p{background:var(--accent);color:var(--primary);font-weight:800;font-size:1rem;padding:15px 28px;border-radius:10px;text-decoration:none;box-shadow:0 4px 20px rgba(0,0,0,0.25);transition:all .2s}
+    .btn-p:hover{opacity:.9;transform:translateY(-2px)}
+    .btn-s{background:rgba(255,255,255,0.1);color:var(--white);font-weight:700;padding:15px 28px;border-radius:10px;text-decoration:none;border:1px solid rgba(255,255,255,0.2);transition:all .2s}
+    .stats{margin-top:52px;display:flex;gap:36px;flex-wrap:wrap}
+    .stat-num{font-size:1.9rem;font-weight:900;color:var(--accent)}.stat-label{font-size:0.82rem;color:rgba(255,255,255,0.55)}
+    .trust{background:var(--accent);padding:14px 24px;display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap}
+    .trust-item{display:flex;align-items:center;gap:8px;font-weight:700;font-size:0.88rem;color:var(--primary)}
+    section{padding:76px 24px}.inner{max-width:1080px;margin:0 auto}
+    .sl{text-transform:uppercase;letter-spacing:2px;font-size:.78rem;font-weight:700;color:var(--accent);margin-bottom:10px}
+    .st{font-size:clamp(1.7rem,3vw,2.5rem);font-weight:900;color:var(--primary);margin-bottom:14px;letter-spacing:-.5px}
+    .ss{font-size:1rem;color:var(--muted);max-width:520px}
+    .bg-light{background:var(--light)}
+    .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:44px}
+    .service-card{background:var(--white);border-radius:var(--radius);padding:28px 24px;border:1px solid rgba(0,0,0,0.07);transition:all .2s}
+    .service-card:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(0,0,0,0.09)}
+    .service-icon{font-size:1.5rem;margin-bottom:14px}.service-card h3{font-size:1rem;font-weight:700;color:var(--primary)}
+    .rev-bg{background:var(--primary)}
+    .rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:44px}
+    .review-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:26px}
+    .stars{color:var(--accent);font-size:.95rem;margin-bottom:12px}
+    .review-card p{color:rgba(255,255,255,.8);font-size:.9rem;margin-bottom:14px;line-height:1.6}
+    .reviewer{font-weight:700;color:var(--white);font-size:.86rem}.reviewer span{color:rgba(255,255,255,.4);font-weight:400}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:44px;align-items:start}
+    @media(max-width:768px){.contact-grid{grid-template-columns:1fr;gap:32px}}
+    .ci{display:flex;gap:14px;margin-bottom:24px}
+    .cicon{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--primary));display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;border:1px solid rgba(0,0,0,.08)}
+    .ci h4{font-weight:700;color:var(--primary);margin-bottom:3px;font-size:.95rem}
+    .ci p,.ci a{color:var(--muted);text-decoration:none;font-size:.9rem}
+    .form{display:flex;flex-direction:column;gap:14px}
+    .frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    @media(max-width:500px){.frow{grid-template-columns:1fr}}
+    input,select,textarea{width:100%;padding:13px 15px;border:1.5px solid #e0e6ef;border-radius:10px;font-family:inherit;font-size:.93rem;outline:none;transition:border-color .2s}
+    input:focus,select:focus,textarea:focus{border-color:var(--primary)}
+    textarea{resize:vertical;min-height:110px}
+    .btn-submit{background:var(--primary);color:var(--white);font-weight:700;font-size:.98rem;padding:15px;border:none;border-radius:10px;cursor:pointer;transition:all .2s}
+    .btn-submit:hover{opacity:.9}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:40px}
+    footer{background:#0a1020;color:rgba(255,255,255,.45);text-align:center;padding:28px 24px;font-size:.86rem}
+    footer strong{color:rgba(255,255,255,.75)}
+    .float{position:fixed;bottom:26px;right:26px;z-index:200;background:var(--accent);color:var(--primary);font-weight:800;font-size:.97rem;padding:15px 22px;border-radius:100px;text-decoration:none;box-shadow:0 6px 28px rgba(0,0,0,.3);display:flex;align-items:center;gap:8px;transition:all .2s}
+    .float:hover{transform:scale(1.05)}
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo">No <span>LimitRoofingLLC</span></div>
+  <div class="nav-cta"><a href="tel:9723577539">📞 (972) 357-7539</a></div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="badge">⭐ 5 Rating · 18 Google Reviews</div>
+    <h1>Trusted <span>Roofing</span><br/>in Mesquite TX</h1>
+    <p>Local, licensed, and ready to help. Fast response times, fair pricing, and work done right the first time.</p>
+    <div class="cta-row">
+      <a href="tel:(972) 357-7539" class="btn-p">📞 Call (972) 357-7539</a>
+      <a href="#contact" class="btn-s">Free Estimate →</a>
+    </div>
+    <div class="stats">
+      <div><div class="stat-num">5★</div><div class="stat-label">Google Rating</div></div>
+      <div><div class="stat-num">18</div><div class="stat-label">Reviews</div></div>
+      <div><div class="stat-num">24/7</div><div class="stat-label">Emergency Service</div></div>
+      <div><div class="stat-num">100%</div><div class="stat-label">Licensed & Insured</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="trust-item">✅ Licensed & Insured</div>
+  <div class="trust-item">🚨 Emergency Service</div>
+  <div class="trust-item">📍 Mesquite TX</div>
+  <div class="trust-item">🏆 Local & Trusted</div>
+</div>
+
+<section class="bg-light">
+  <div class="inner">
+    <div class="sl">Services</div>
+    <h2 class="st">What We Do</h2>
+    <p class="ss">Professional roofing services for homeowners and businesses in Mesquite TX.</p>
+    <div class="svc-grid"><div class="service-card"><div class="service-icon">✅</div><h3>Roof Replacement</h3></div>
+<div class="service-card"><div class="service-icon">✅</div><h3>Leak Repair</h3></div>
+<div class="service-card"><div class="service-icon">✅</div><h3>Storm Damage Repair</h3></div>
+<div class="service-card"><div class="service-icon">✅</div><h3>Gutters & Fascia</h3></div>
+<div class="service-card"><div class="service-icon">✅</div><h3>Roof Inspection</h3></div>
+<div class="service-card"><div class="service-icon">✅</div><h3>Emergency Tarping</h3></div>
+</div>
+  </div>
+</section>
+
+<section><div class="inner"><div class="sl">Our Work</div><h2 class="st">Real Jobs, Real Results</h2><div class="gallery"><img src="https://lh3.googleusercontent.com/place-photos/AL8-SNErQN7R4a1tZnr1jCi3eP5oQEjGtKOHJ0N7mG2V46zxoeVShKDSfHETM9NTuRSJetneXmCGW7-rf3gqsQi_WXDPMzkqECFHlj8_ndMr2dy9fA_a5PmjlUtSzNVl0VZBb6dPP659KnxgfDIq=s1600-w800" alt="No Limit Roofing LLC" style="width:100%;height:220px;object-fit:cover;border-radius:12px;" />
+<img src="https://lh3.googleusercontent.com/places/ANXAkqERc1uXA3RwMP1Q0VMoWaw_BHrpbKQXPt4xjg1L0nfKMDOpnbnVKpzcf5UAGcFAUkGHqfv7z62QQJHrSouNU6KRhvXU5fO25yY=s1600-w800" alt="No Limit Roofing LLC" style="width:100%;height:220px;object-fit:cover;border-radius:12px;" />
+<img src="https://lh3.googleusercontent.com/places/ANXAkqGYZA4bjCJdatTgHBA_b9h6Wf8G_lDb2tb9oGrSrd-1GHuwyvCTF2zsHsLMxzABl_DJTndLCWjQkrFP7yNyRtYo7Z0ggVbIbQw=s1600-w800" alt="No Limit Roofing LLC" style="width:100%;height:220px;object-fit:cover;border-radius:12px;" />
+<img src="https://lh3.googleusercontent.com/place-photos/AL8-SNHzbnbC9xqS0e4faaBFhe7z-7QzhTV6uD2YjGzxcJLZushqcKaBdfY63k3r-MWSj57XZZZAgof1xAC8BFoFf73pDa4_FGHMKqUJO7zrhW-6rDIppCL0Fp6QD5FQFkXxKdAGCtDY6u5daCTYYQ=s1600-w800" alt="No Limit Roofing LLC" style="width:100%;height:220px;object-fit:cover;border-radius:12px;" />
+</div></div></section>
+
+<section class="rev-bg">
+  <div class="inner">
+    <div class="sl">Reviews</div>
+    <h2 class="st" style="color:white">What Customers Say</h2>
+    <div class="rev-grid">
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>"I cant say enough good about this company. Ernesto came out quick and taroed the roof to prevent anymore damage from storms we were about to have. He came back when our insurance a"</p>
+          <div class="reviewer">jason bolton <span>· 12 months ago</span></div>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>"If you are looking for someone to install your Gutters, pls reach out to them. They are very efficient and prpfessional. They do a very good job at reasonable price. The owner Erne"</p>
+          <div class="reviewer">Christine Newman <span>· 7 months ago</span></div>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>"No Limit Roofing did my roof, gutters and fence adding a lot of value to my house with their professionally job well done. Also they took and give me pictures of all process! Highl"</p>
+          <div class="reviewer">George Calvo <span>· a year ago</span></div>
+        </div></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="inner">
+    <div class="sl">Contact</div>
+    <h2 class="st">Get a Free Estimate</h2>
+    <p class="ss">Call us or fill out the form — we'll get back to you fast.</p>
+    <div class="contact-grid">
+      <div>
+        <div class="ci"><div class="cicon">📞</div><div><h4>Phone</h4><a href="tel:(972) 357-7539">(972) 357-7539</a></div></div>
+        <div class="ci"><div class="cicon">📍</div><div><h4>Address</h4><p>3939 US-80 Suite 390-D5, Mesquite, TX 75150, USA</p></div></div>
+        <div class="ci"><div class="cicon">🕐</div><div><h4>Hours</h4><p>Monday: 9:00 AM – 5:00 PM<br>Tuesday: 9:00 AM – 5:00 PM<br>Wednesday: 9:00 AM – 5:00 PM<br>Thursday: 9:00 AM – 5:00 PM<br>Friday: 9:00 AM – 5:00 PM<br>Saturday: 9:00 AM – 1:00 PM<br>Sunday: Closed</p></div></div>
+      </div>
+      <form class="form" onsubmit="return false">
+        <div class="frow"><input type="text" placeholder="Your Name"/><input type="tel" placeholder="Phone Number"/></div>
+        <input type="email" placeholder="Email Address"/>
+        <select><option value="">Service Needed</option><option>Roof Replacement</option><option>Leak Repair</option><option>Storm Damage Repair</option><option>Gutters & Fascia</option><option>Roof Inspection</option><option>Emergency Tarping</option></select>
+        <textarea placeholder="Describe your issue..."></textarea>
+        <button class="btn-submit" type="submit">Send Message →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><strong>No Limit Roofing LLC</strong> · 3939 US-80 Suite 390-D5, Mesquite, TX 75150, USA · <a href="tel:(972) 357-7539" style="color:rgba(255,255,255,.5)">(972) 357-7539</a></p>
+  <p style="margin-top:6px">© 2024 No Limit Roofing LLC. Licensed Roofing · Mesquite TX</p>
+</footer>
+
+<a href="tel:(972) 357-7539" class="float">📞 Call Now</a>
+</body>
+</html>
