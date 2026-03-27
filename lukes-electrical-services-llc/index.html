@@ -1,450 +1,1139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Lukes Electrical Services LLC | Electrical in Garland TX</title>
-  <meta name="description" content="Lukes Electrical Services LLC – Trusted Electrical in Garland TX. 35 reviews. Call (469) 939-8084"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lukes Electrical Services LLC — Garland's #1 Electrician</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{
-      --white:#ffffff;
-      --light:#f8f9fc;
-      --light2:#f0f4ff;
-      --primary:#1a2744;
-      --accent:#f5a623;
-      --accent2:#e0941a;
-      --text:#1a1a2e;
-      --muted:#64748b;
-      --border:#e2e8f0;
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #0d1b2a;
+      --accent: #f5c842;
+      --secondary: #1a3a5c;
+      --white: #ffffff;
+      --light: #f0f4f8;
+      --accent-dark: #d4a800;
     }
-    html{scroll-behavior:smooth}
-    body{font-family:'Inter',sans-serif;color:var(--text);background:var(--white);line-height:1.6;overflow-x:hidden}
 
-    /* ── NAV ── */
-    nav{position:fixed;top:0;width:100%;z-index:200;background:var(--white);border-bottom:1px solid var(--border);padding:0 40px;height:68px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
-    .nav-logo{font-size:1.25rem;font-weight:800;color:var(--primary);letter-spacing:-0.3px}
-    .nav-logo span{color:var(--accent)}
-    .nav-call{background:var(--accent);color:#fff;font-weight:700;font-size:0.88rem;padding:10px 22px;text-decoration:none;border-radius:6px;transition:background .2s;letter-spacing:0.2px}
-    .nav-call:hover{background:var(--accent2)}
+    html { scroll-behavior: smooth; }
 
-    /* ── HERO SPLIT ── */
-    .hero{display:flex;min-height:100vh;margin-top:68px}
-    .hero-left{flex:0 0 55%;background:var(--light2);display:flex;flex-direction:column;justify-content:center;padding:80px 64px 80px 60px}
-    .hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(26,39,68,0.08);color:var(--primary);font-size:0.8rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:24px}
-    .hero-tag::before{content:'⚡';font-size:0.9rem}
-    .hero h1{font-size:clamp(2.2rem,4.5vw,3.6rem);font-weight:900;color:var(--primary);line-height:1.08;letter-spacing:-1px;margin-bottom:20px}
-    .hero h1 .city{color:var(--accent);font-style:normal}
-    .hero-desc{font-size:1.05rem;color:var(--muted);max-width:460px;margin-bottom:36px;line-height:1.7}
-    .hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:52px}
-    .btn-primary{background:var(--accent);color:#fff;font-weight:700;font-size:1rem;padding:15px 32px;text-decoration:none;border-radius:8px;transition:all .2s;border:2px solid var(--accent)}
-    .btn-primary:hover{background:var(--accent2);border-color:var(--accent2)}
-    .btn-outline{background:transparent;color:var(--primary);font-weight:700;font-size:1rem;padding:15px 32px;text-decoration:none;border-radius:8px;border:2px solid var(--primary);transition:all .2s}
-    .btn-outline:hover{background:var(--primary);color:#fff}
-    .hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--border);padding-top:36px}
-    .stat{padding-right:20px;border-right:1px solid var(--border)}
-    .stat:last-child{border-right:none}
-    .stat-num{font-size:2rem;font-weight:900;color:var(--primary);line-height:1;letter-spacing:-0.5px}
-    .stat-lbl{font-size:0.72rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:1.2px;margin-top:4px}
-
-    .hero-right{flex:0 0 45%;position:relative;overflow:hidden;min-height:500px}
-    .hero-right img{width:100%;height:100%;object-fit:cover;display:block}
-    .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,39,68,0.35) 0%,transparent 60%);pointer-events:none}
-    .hero-overlay-grid{position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.08) 39px,rgba(255,255,255,0.08) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.08) 39px,rgba(255,255,255,0.08) 40px);pointer-events:none}
-
-    /* ── TRUST BAR ── */
-    .trust-bar{background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:28px 40px}
-    .trust-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-    .trust-item{display:flex;align-items:center;gap:12px;justify-content:center}
-    .trust-icon{width:40px;height:40px;background:var(--light2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
-    .trust-text{font-size:0.88rem;font-weight:600;color:var(--text);line-height:1.3}
-
-    /* ── SERVICES ── */
-    .services{background:var(--light);padding:88px 40px}
-    .section-inner{max-width:1100px;margin:0 auto}
-    .section-header{text-align:center;margin-bottom:52px}
-    .section-eyebrow{font-size:0.78rem;font-weight:700;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
-    .section-title{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;color:var(--primary);letter-spacing:-0.5px;line-height:1.15}
-    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    /* svc-card is injected from build_services_html */
-    .svc-card{background:var(--white);border-radius:10px;padding:28px 28px 28px 0;display:flex;align-items:flex-start;gap:0;box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:box-shadow .2s;overflow:hidden;border-left:4px solid var(--primary)}
-    .svc-card:hover{box-shadow:0 6px 20px rgba(26,39,68,0.1)}
-    .svc-body{padding-left:24px}
-    .svc-name-dark{font-size:1.05rem;font-weight:700;color:var(--primary);margin-bottom:6px}
-    .svc-desc{font-size:0.88rem;color:var(--muted);line-height:1.5}
-
-    /* ── ABOUT / WHY US ── */
-    .about{background:var(--white);padding:88px 40px}
-    .about-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-    .about-left{}
-    .about-left .section-eyebrow{text-align:left}
-    .about-left .section-title{text-align:left;margin-bottom:20px}
-    .about-intro{font-size:1rem;color:var(--muted);margin-bottom:32px;line-height:1.7}
-    .check-list{list-style:none;display:flex;flex-direction:column;gap:14px}
-    .check-list li{display:flex;align-items:flex-start;gap:12px;font-size:0.95rem;color:var(--text);font-weight:500}
-    .check-icon{width:22px;height:22px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:0.72rem;font-weight:900;flex-shrink:0;margin-top:1px}
-    .about-right{background:var(--primary);border-radius:16px;padding:48px 40px;color:#fff}
-    .stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
-    .stat-block{}
-    .stat-block .big-num{font-size:3rem;font-weight:900;color:var(--accent);line-height:1;letter-spacing:-1px}
-    .stat-block .stat-label{font-size:0.8rem;font-weight:600;color:rgba(255,255,255,0.65);text-transform:uppercase;letter-spacing:1.5px;margin-top:6px}
-    .stat-divider{border:none;border-top:1px solid rgba(255,255,255,0.12);grid-column:1/-1;margin:4px 0}
-
-    /* ── REVIEWS ── */
-    .reviews{background:var(--white);padding:88px 40px}
-    .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:0}
-    /* rev-card is injected from build_reviews_html */
-    .rev-card{background:var(--light);border-radius:12px;padding:32px 28px;border:1px solid var(--border);transition:box-shadow .2s}
-    .rev-card:hover{box-shadow:0 6px 20px rgba(26,39,68,0.08)}
-    .rev-stars{color:var(--accent);font-size:1.1rem;letter-spacing:2px;margin-bottom:14px}
-    .rev-text{font-size:0.95rem;color:var(--text);line-height:1.65;margin-bottom:20px;font-style:italic}
-    .rev-author{font-size:0.88rem;font-weight:700;color:var(--primary)}
-    .rev-time{font-size:0.78rem;color:var(--muted);margin-top:2px}
-
-    /* ── CONTACT ── */
-    .contact{background:var(--light);padding:88px 40px}
-    .contact-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:stretch}
-    .contact-form-wrap{}
-    .contact-form-wrap .section-eyebrow{text-align:left}
-    .contact-form-wrap .section-title{text-align:left;margin-bottom:24px}
-    .contact-form{display:flex;flex-direction:column;gap:14px}
-    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    .form-group{display:flex;flex-direction:column;gap:6px}
-    .form-group label{font-size:0.8rem;font-weight:600;color:var(--text);letter-spacing:0.5px}
-    .form-group input,.form-group textarea,.form-group select{padding:12px 16px;border:1.5px solid var(--border);border-radius:8px;font-family:'Inter',sans-serif;font-size:0.95rem;color:var(--text);background:var(--white);transition:border-color .2s;outline:none}
-    .form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--primary)}
-    .form-group textarea{resize:vertical;min-height:110px}
-    .btn-submit{background:var(--accent);color:#fff;font-weight:700;font-size:1rem;padding:15px 32px;border:none;border-radius:8px;cursor:pointer;transition:background .2s;width:100%;margin-top:4px}
-    .btn-submit:hover{background:var(--accent2)}
-    .contact-info{background:var(--primary);border-radius:16px;padding:48px 40px;color:#fff;display:flex;flex-direction:column;justify-content:center;gap:32px}
-    .contact-info h3{font-size:1.4rem;font-weight:800;margin-bottom:8px}
-    .contact-info p{font-size:0.9rem;color:rgba(255,255,255,0.65);line-height:1.6}
-    .contact-item{display:flex;align-items:flex-start;gap:16px}
-    .ci-icon{width:42px;height:42px;background:rgba(245,166,35,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.15rem;flex-shrink:0}
-    .ci-body{}
-    .ci-label{font-size:0.75rem;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px}
-    .ci-value{font-size:0.95rem;font-weight:600;color:#fff;line-height:1.4}
-    .ci-value a{color:var(--accent);text-decoration:none}
-    .ci-value a:hover{text-decoration:underline}
-
-    /* ── FOOTER ── */
-    footer{background:var(--primary);padding:48px 40px 32px;color:rgba(255,255,255,0.7)}
-    .footer-inner{max-width:1100px;margin:0 auto}
-    .footer-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:36px;gap:32px}
-    .footer-brand{}
-    .footer-logo{font-size:1.2rem;font-weight:800;color:#fff;margin-bottom:8px}
-    .footer-logo span{color:var(--accent)}
-    .footer-tagline{font-size:0.85rem;color:rgba(255,255,255,0.55);max-width:260px;line-height:1.5}
-    .footer-links{display:flex;flex-direction:column;gap:8px}
-    .footer-links a{font-size:0.88rem;color:rgba(255,255,255,0.6);text-decoration:none;transition:color .2s}
-    .footer-links a:hover{color:var(--accent)}
-    .footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
-    .footer-copy{font-size:0.8rem;color:rgba(255,255,255,0.4)}
-
-    /* ── GALLERY ── */
-    .gallery-section{background:var(--white);padding:80px 40px}
-    .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:40px}
-    .gallery-grid img{width:100%;height:200px;object-fit:cover;border-radius:8px;display:block}
-
-    /* ── FLOATING BUTTON ── */
-    .float-btn{position:fixed;bottom:28px;right:28px;z-index:999;background:var(--accent);color:#fff;font-weight:800;font-size:0.95rem;padding:14px 24px;border-radius:50px;text-decoration:none;box-shadow:0 6px 24px rgba(245,166,35,0.45);display:flex;align-items:center;gap:8px;transition:all .2s}
-    .float-btn:hover{background:var(--accent2);box-shadow:0 8px 30px rgba(245,166,35,0.5);transform:translateY(-2px)}
-
-    /* ── RESPONSIVE ── */
-    @media(max-width:900px){
-      nav{padding:0 20px}
-      .hero{flex-direction:column;min-height:auto}
-      .hero-left{flex:none;padding:60px 24px 48px}
-      .hero-right{flex:none;height:300px}
-      .hero-stats{grid-template-columns:repeat(2,1fr);gap:20px}
-      .stat{border-right:none;border-bottom:1px solid var(--border);padding-bottom:16px}
-      .stat:nth-child(3),.stat:nth-child(4){border-bottom:none}
-      .trust-inner{grid-template-columns:repeat(2,1fr)}
-      .services-grid{grid-template-columns:1fr 1fr}
-      .about-inner{grid-template-columns:1fr;gap:40px}
-      .reviews-grid{grid-template-columns:1fr}
-      .contact-inner{grid-template-columns:1fr}
-      .footer-top{flex-direction:column}
-      .gallery-grid{grid-template-columns:repeat(2,1fr)}
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--white);
+      color: var(--primary);
+      overflow-x: hidden;
     }
-    @media(max-width:540px){
-      .hero-left{padding:48px 20px 40px}
-      .trust-inner{grid-template-columns:1fr}
-      .services-grid{grid-template-columns:1fr}
-      .hero-stats{grid-template-columns:repeat(2,1fr)}
-      .form-row{grid-template-columns:1fr}
-      .stats-grid{grid-template-columns:1fr}
-      .gallery-grid{grid-template-columns:1fr 1fr}
+
+    /* ─── TOP BANNER ─── */
+    .top-banner {
+      background: var(--accent);
+      color: var(--primary);
+      text-align: center;
+      padding: 10px 20px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1000;
+    }
+    .top-banner .stars { font-size: 1.1rem; margin-right: 6px; }
+
+    /* ─── STICKY NAV ─── */
+    nav {
+      background: var(--primary);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.4);
+    }
+
+    .nav-logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--white);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .nav-logo span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      align-items: center;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+
+    .nav-cta {
+      background: var(--accent);
+      color: var(--primary) !important;
+      padding: 8px 20px;
+      border-radius: 4px;
+      font-weight: 700 !important;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1rem !important;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      transition: background 0.2s, transform 0.15s !important;
+    }
+    .nav-cta:hover { background: var(--accent-dark) !important; transform: translateY(-1px); }
+
+    /* ─── HERO ─── */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 92vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image-side {
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-image-side img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .hero-image-side::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(13,27,42,0.15), rgba(13,27,42,0.6));
+    }
+    /* Diagonal cut on the right edge */
+    .hero-image-side::before {
+      content: '';
+      position: absolute;
+      right: -60px;
+      top: 0;
+      width: 120px;
+      height: 100%;
+      background: var(--primary);
+      transform: skewX(-4deg);
+      z-index: 2;
+    }
+
+    .hero-content-side {
+      background: var(--primary);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 60px 7% 60px 10%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(245,200,66,0.15);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 6px 14px;
+      border-radius: 2px;
+      margin-bottom: 24px;
+      width: fit-content;
+    }
+
+    .hero-headline {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.0;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      margin-bottom: 20px;
+    }
+    .hero-headline .accent { color: var(--accent); }
+
+    .hero-sub {
+      color: rgba(255,255,255,0.75);
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 36px;
+      max-width: 440px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--primary);
+      padding: 16px 32px;
+      border: none;
+      border-radius: 4px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(245,200,66,0.35);
+    }
+    .btn-primary:hover {
+      background: var(--accent-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(245,200,66,0.4);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--white);
+      padding: 15px 28px;
+      border: 2px solid rgba(255,255,255,0.35);
+      border-radius: 4px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      margin-top: 44px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .stat-item { text-align: left; }
+    .stat-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .stat-label {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 4px;
+    }
+
+    /* ─── CERTIFICATIONS RIBBON ─── */
+    .cert-ribbon {
+      background: var(--secondary);
+      padding: 18px 5%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+    .cert-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--white);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 6px 28px;
+      position: relative;
+    }
+    .cert-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 2px;
+      height: 20px;
+      background: rgba(255,255,255,0.2);
+    }
+    .cert-icon { color: var(--accent); font-size: 1.2rem; }
+
+    /* ─── SECTION BASE ─── */
+    section { padding: 80px 5%; }
+
+    .section-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 1.05;
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: #5a6a7a;
+      line-height: 1.65;
+      max-width: 560px;
+    }
+
+    /* ─── WHY SAFETY MATTERS ─── */
+    .safety-section {
+      background: var(--light);
+      position: relative;
+      overflow: hidden;
+    }
+    .safety-section::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      background: var(--white);
+      transform: skewY(-2deg);
+    }
+    .safety-section::after {
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      background: var(--white);
+      transform: skewY(-2deg);
+    }
+
+    .safety-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .safety-header .section-subtitle { margin: 0 auto; }
+
+    .safety-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .safety-card {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 40px 32px;
+      box-shadow: 0 4px 24px rgba(13,27,42,0.08);
+      border-top: 4px solid var(--accent);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .safety-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(13,27,42,0.14);
+    }
+    .safety-icon {
+      font-size: 2.6rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+    .safety-card h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.45rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 12px;
+      letter-spacing: 0.03em;
+    }
+    .safety-card p {
+      color: #5a6a7a;
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+    .safety-stat {
+      display: inline-block;
+      margin-top: 16px;
+      background: rgba(245,200,66,0.12);
+      color: var(--primary);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 4px 12px;
+      border-radius: 2px;
+      border-left: 3px solid var(--accent);
+    }
+
+    /* ─── SERVICES ─── */
+    .services-section { background: var(--white); }
+
+    .services-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border: 1px solid #e2e8f0;
+      border-top: 4px solid var(--accent);
+      border-radius: 6px;
+      padding: 32px 28px;
+      transition: box-shadow 0.25s, transform 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(245,200,66,0.04), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .service-card:hover {
+      box-shadow: 0 8px 32px rgba(13,27,42,0.12);
+      transform: translateY(-4px);
+    }
+    .service-card:hover::before { opacity: 1; }
+
+    .service-icon {
+      font-size: 2.2rem;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .service-card h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 10px;
+      letter-spacing: 0.03em;
+    }
+    .service-outcome {
+      color: #4a5568;
+      font-size: 0.92rem;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+    .service-link {
+      color: var(--accent-dark);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.2s;
+    }
+    .service-link:hover { gap: 10px; }
+
+    /* ─── MEET JOSE ─── */
+    .meet-section {
+      background: var(--primary);
+      position: relative;
+      overflow: hidden;
+    }
+    .meet-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80') center/cover;
+      opacity: 0.06;
+    }
+
+    .meet-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 64px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .meet-visual {
+      position: relative;
+    }
+    .meet-img-wrap {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+    }
+    .meet-img-wrap img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: block;
+    }
+    .meet-img-wrap::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(13,27,42,0.5) 0%, transparent 60%);
+    }
+    .meet-badge {
+      position: absolute;
+      bottom: -16px;
+      right: -16px;
+      background: var(--accent);
+      color: var(--primary);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 14px 20px;
+      border-radius: 6px;
+      box-shadow: 0 8px 24px rgba(245,200,66,0.4);
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    .meet-content .section-label { color: var(--accent); }
+    .meet-content .section-title { color: var(--white); }
+
+    .meet-story {
+      color: rgba(255,255,255,0.75);
+      font-size: 1.05rem;
+      line-height: 1.75;
+      margin-bottom: 32px;
+    }
+
+    .meet-quote {
+      border-left: 4px solid var(--accent);
+      padding: 20px 24px;
+      background: rgba(245,200,66,0.06);
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 36px;
+    }
+    .meet-quote p {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.4;
+      font-style: italic;
+    }
+    .meet-quote cite {
+      display: block;
+      margin-top: 10px;
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-style: normal;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* ─── REVIEWS ─── */
+    .reviews-section {
+      background: var(--primary);
+      position: relative;
+    }
+    .reviews-section::before {
+      content: '';
+      position: absolute;
+      top: -40px; left: 0; width: 100%; height: 80px;
+      background: var(--white);
+      transform: skewY(-2deg);
+    }
+
+    .reviews-header {
+      text-align: center;
+      margin-bottom: 52px;
+      position: relative;
+    }
+    .reviews-header .section-title { color: var(--white); }
+    .reviews-header .section-subtitle { color: rgba(255,255,255,0.6); margin: 0 auto; }
+    .reviews-header .section-label { color: var(--accent); }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .review-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 32px 28px;
+      transition: background 0.25s, transform 0.25s;
+      position: relative;
+    }
+    .review-card:hover {
+      background: rgba(255,255,255,0.08);
+      transform: translateY(-4px);
+    }
+
+    .review-stars {
+      color: var(--accent);
+      font-size: 1.1rem;
+      margin-bottom: 18px;
+      letter-spacing: 2px;
+    }
+
+    .review-text {
+      color: rgba(255,255,255,0.85);
+      font-size: 0.98rem;
+      line-height: 1.7;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+    .review-text::before { content: '\201C'; }
+    .review-text::after { content: '\201D'; }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .review-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+    .review-name {
+      font-weight: 700;
+      color: var(--white);
+      font-size: 0.95rem;
+    }
+    .review-source {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.45);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 2px;
+    }
+
+    .review-google-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.3);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* ─── CTA ─── */
+    .cta-section {
+      background: var(--accent);
+      padding: 80px 5%;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -60px; left: 0;
+      width: 100%; height: 120px;
+      background: var(--primary);
+      transform: skewY(-3deg);
+    }
+
+    .cta-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 48px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-text .cta-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: rgba(13,27,42,0.65);
+      margin-bottom: 10px;
+    }
+    .cta-text h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      color: var(--primary);
+      line-height: 1.05;
+      margin-bottom: 14px;
+    }
+    .cta-text p {
+      color: rgba(13,27,42,0.72);
+      font-size: 1rem;
+      line-height: 1.6;
+      max-width: 500px;
+    }
+
+    .cta-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: center;
+      min-width: 240px;
+    }
+
+    .btn-dark {
+      background: var(--primary);
+      color: var(--white);
+      padding: 18px 36px;
+      border: none;
+      border-radius: 4px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 4px 20px rgba(13,27,42,0.3);
+    }
+    .btn-dark:hover {
+      background: var(--secondary);
+      transform: translateY(-2px);
+    }
+
+    .cta-phone-note {
+      font-size: 0.88rem;
+      color: rgba(13,27,42,0.6);
+      text-align: center;
+      font-weight: 600;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: #07111c;
+      color: rgba(255,255,255,0.55);
+      padding: 48px 5% 32px;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 40px;
+    }
+    .footer-brand .nav-logo {
+      font-size: 1.3rem;
+      display: block;
+      margin-bottom: 14px;
+    }
+    .footer-brand p {
+      font-size: 0.88rem;
+      line-height: 1.65;
+      max-width: 260px;
+    }
+    .footer-col h4 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 16px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 8px; }
+    .footer-col ul li a {
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .footer-col ul li a:hover { color: var(--accent); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-lic {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* ─── FLOATING BUTTON ─── */
+    .float-btn {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      background: var(--accent);
+      color: var(--primary);
+      border: none;
+      border-radius: 50px;
+      padding: 16px 28px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 8px 32px rgba(245,200,66,0.5);
+      z-index: 9999;
+      transition: transform 0.2s, box-shadow 0.2s;
+      animation: pulse-btn 2.5s infinite;
+    }
+    .float-btn:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 12px 40px rgba(245,200,66,0.6);
+      animation: none;
+    }
+    @keyframes pulse-btn {
+      0%, 100% { box-shadow: 0 8px 32px rgba(245,200,66,0.5); }
+      50% { box-shadow: 0 8px 42px rgba(245,200,66,0.75), 0 0 0 8px rgba(245,200,66,0.1); }
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 1024px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-image-side { height: 45vh; }
+      .hero-image-side::before { display: none; }
+      .hero-content-side { padding: 48px 6%; }
+      .safety-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .meet-inner { grid-template-columns: 1fr; gap: 40px; }
+      .meet-img-wrap { height: 300px; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .cta-inner { grid-template-columns: 1fr; text-align: center; }
+      .cta-text p { max-width: 100%; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      nav { padding: 0 4%; }
+      .nav-links { display: none; }
+      .hero-content-side { padding: 40px 5%; }
+      .hero-stats { gap: 20px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .cert-ribbon { flex-direction: column; gap: 8px; }
+      .cert-item:not(:last-child)::after { display: none; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .float-btn { bottom: 20px; right: 16px; padding: 14px 22px; font-size: 0.95rem; }
     }
   </style>
 </head>
 <body>
 
-<!-- NAV -->
+<!-- TOP BANNER -->
+<div class="top-banner">
+  <span class="stars">⭐⭐⭐⭐⭐</span>
+  35 Five-Star Google Reviews — <strong>Garland's #1 Electrician</strong>
+</div>
+
+<!-- STICKY NAV -->
 <nav>
-  <div class="nav-logo">Lukes Electrical Services LLC<span>.</span></div>
-  <a href="tel:(469) 939-8084" class="nav-call">📞 (469) 939-8084</a>
+  <a href="#" class="nav-logo">Lukes <span>Electrical</span></a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#safety">Safety</a></li>
+    <li><a href="#about">About Jose</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="tel:4699398084" class="nav-cta">📞 Call Now</a></li>
+  </ul>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-left">
-    <div class="hero-tag">Electrical Services</div>
-    <h1>Trusted <span class="city">Garland TX</span><br/>Electrical</h1>
-    <p class="hero-desc">Lukes Electrical Services LLC delivers expert electrical solutions — done right the first time. Licensed, insured, and ready to help today.</p>
-    <div class="hero-btns">
-      <a href="tel:(469) 939-8084" class="btn-primary">📞 Call Now — (469) 939-8084</a>
-      <a href="#contact" class="btn-outline">Get Free Estimate</a>
+<section class="hero" id="hero">
+  <div class="hero-image-side">
+    <img
+      src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1600&q=80"
+      alt="Licensed electrician working safely"
+      loading="eager"
+    />
+  </div>
+  <div class="hero-content-side">
+    <div class="hero-badge">⚡ Garland's Trusted Electrician</div>
+    <h1 class="hero-headline">
+      Power Done<br/>
+      <span class="accent">Right.</span><br/>
+      First Time.
+    </h1>
+    <p class="hero-sub">
+      Jose Nunez handles every job personally — from panel upgrades to emergency repairs.
+      Licensed, bonded, and trusted by hundreds of Garland homeowners.
+    </p>
+    <div class="hero-actions">
+      <a href="tel:4699398084" class="btn-primary">📞 (469) 939-8084</a>
+      <a href="#services" class="btn-secondary">See Services →</a>
     </div>
     <div class="hero-stats">
-      <div class="stat">
+      <div class="stat-item">
         <div class="stat-num">5★</div>
-        <div class="stat-lbl">Rating</div>
+        <div class="stat-label">Average Rating</div>
       </div>
-      <div class="stat">
-        <div class="stat-num">35</div>
-        <div class="stat-lbl">Reviews</div>
+      <div class="stat-item">
+        <div class="stat-num">35+</div>
+        <div class="stat-label">Google Reviews</div>
       </div>
-      <div class="stat">
-        <div class="stat-num">10+</div>
-        <div class="stat-lbl">Years</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">✓</div>
-        <div class="stat-lbl">Licensed</div>
+      <div class="stat-item">
+        <div class="stat-num">FREE</div>
+        <div class="stat-label">Estimates</div>
       </div>
     </div>
-  </div>
-  <div class="hero-right">
-    <img src="https://lh3.googleusercontent.com/place-photos/AL8-SNHJ1ltJb7hf73OcYdsnDwPd9uMKXPGEbYfviMEodhepU_DNrAhkw1uKJiyQ1HIZ3ETt56GbHEnf5v7idzr69MEWpazr-9euJTshcI9d6BNTs_AZTNn6a3EbbRbE5QOiI-gJU8qsIVlA2u0bTdk=s1600-w497" alt="Lukes Electrical Services LLC — Electrical in Garland TX"/>
-    <div class="hero-overlay"></div>
-    <div class="hero-overlay-grid"></div>
   </div>
 </section>
 
-<!-- TRUST BAR -->
-<div class="trust-bar">
-  <div class="trust-inner">
-    <div class="trust-item">
-      <div class="trust-icon">🛡️</div>
-      <div class="trust-text">Licensed &amp; Insured</div>
+<!-- CERTIFICATIONS RIBBON -->
+<div class="cert-ribbon">
+  <div class="cert-item"><span class="cert-icon">✅</span> Licensed Electrician</div>
+  <div class="cert-item"><span class="cert-icon">🛡️</span> Bonded &amp; Insured</div>
+  <div class="cert-item"><span class="cert-icon">📋</span> Code Compliant</div>
+  <div class="cert-item"><span class="cert-icon">💬</span> Free Estimates</div>
+</div>
+
+<!-- WHY SAFETY MATTERS -->
+<section class="safety-section" id="safety">
+  <div class="safety-header">
+    <div class="section-label">⚠️ Electrical Hazards Are Real</div>
+    <h2 class="section-title">Why Safety Matters<br/>In Every Job</h2>
+    <p class="section-subtitle">Electrical failures are the #2 cause of house fires in the US. We don't cut corners — ever.</p>
+  </div>
+  <div class="safety-grid">
+    <div class="safety-card">
+      <span class="safety-icon">🔥</span>
+      <h3>Overloaded Panels Cause Fires</h3>
+      <p>An outdated 100-amp panel can't handle today's modern appliances. Overloaded circuits arc and spark — often inside your walls where you can't see it. That's how house fires start.</p>
+      <span class="safety-stat">⚡ 51,000 home electrical fires per year in the US</span>
     </div>
-    <div class="trust-item">
-      <div class="trust-icon">⚡</div>
-      <div class="trust-text">Same Day Service</div>
+    <div class="safety-card">
+      <span class="safety-icon">💀</span>
+      <h3>DIY Wiring Kills</h3>
+      <p>Improperly wired outlets and switches create invisible shock hazards. One reversed hot/neutral wire can energize an entire appliance chassis. We inspect what "the last guy" left behind.</p>
+      <span class="safety-stat">⚡ 400+ electrocution deaths in US homes each year</span>
     </div>
-    <div class="trust-item">
-      <div class="trust-icon">💬</div>
-      <div class="trust-text">Free Estimates</div>
-    </div>
-    <div class="trust-item">
-      <div class="trust-icon">✅</div>
-      <div class="trust-text">Satisfaction Guaranteed</div>
+    <div class="safety-card">
+      <span class="safety-icon">🚗</span>
+      <h3>EV Chargers Need Dedicated Circuits</h3>
+      <p>Plugging your EV into a standard outlet draws continuous current your wiring wasn't designed for. Overheated wires don't just trip breakers — they melt insulation and smolder for hours.</p>
+      <span class="safety-stat">⚡ Level 2 install requires proper 240V dedicated line</span>
     </div>
   </div>
-</div>
+</section>
 
 <!-- SERVICES -->
-<section class="services" id="services">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="section-eyebrow">What We Do</div>
-      <h2 class="section-title">Electrical Services We Offer</h2>
+<section class="services-section" id="services">
+  <div class="services-header">
+    <div>
+      <div class="section-label">⚡ What We Do</div>
+      <h2 class="section-title">Electrical Services<br/>For Garland Homeowners</h2>
     </div>
-    <div class="services-grid">
-      <div class="svc-card">
-  <div class="svc-body">
-    <div class="svc-name-dark">Panel Upgrades</div>
-    <div class="svc-desc">Professional panel upgrades service in your area.</div>
+    <a href="tel:4699398084" class="btn-primary">Get a Free Estimate →</a>
   </div>
-</div>
-<div class="svc-card">
-  <div class="svc-body">
-    <div class="svc-name-dark">Wiring & Rewiring</div>
-    <div class="svc-desc">Professional wiring & rewiring service in your area.</div>
-  </div>
-</div>
-<div class="svc-card">
-  <div class="svc-body">
-    <div class="svc-name-dark">Outlet Installation</div>
-    <div class="svc-desc">Professional outlet installation service in your area.</div>
-  </div>
-</div>
-<div class="svc-card">
-  <div class="svc-body">
-    <div class="svc-name-dark">Lighting Installation</div>
-    <div class="svc-desc">Professional lighting installation service in your area.</div>
-  </div>
-</div>
-<div class="svc-card">
-  <div class="svc-body">
-    <div class="svc-name-dark">Emergency Electrical</div>
-    <div class="svc-desc">Professional emergency electrical service in your area.</div>
-  </div>
-</div>
-<div class="svc-card">
-  <div class="svc-body">
-    <div class="svc-name-dark">EV Charger Install</div>
-    <div class="svc-desc">Professional ev charger install service in your area.</div>
-  </div>
-</div>
-
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-icon">⚡</span>
+      <h3>Panel Upgrades</h3>
+      <p class="service-outcome">Old 100-amp panel? Upgrade to 200-amp and stop tripping breakers for good.</p>
+      <a href="tel:4699398084" class="service-link">Get estimate →</a>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🔌</span>
+      <h3>Outlet Installation</h3>
+      <p class="service-outcome">Need more outlets? We add them safely — no extension cords needed.</p>
+      <a href="tel:4699398084" class="service-link">Get estimate →</a>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">💡</span>
+      <h3>Lighting Installation</h3>
+      <p class="service-outcome">Transform any room with proper lighting — installed in hours.</p>
+      <a href="tel:4699398084" class="service-link">Get estimate →</a>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🔍</span>
+      <h3>Safety Inspections</h3>
+      <p class="service-outcome">Know your home is safe. We inspect every circuit and give you a full report.</p>
+      <a href="tel:4699398084" class="service-link">Get estimate →</a>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🚗</span>
+      <h3>EV Charger Install</h3>
+      <p class="service-outcome">Electric vehicle? We install Level 2 chargers in your garage.</p>
+      <a href="tel:4699398084" class="service-link">Get estimate →</a>
+    </div>
+    <div class="service-card" style="border-top-color: #e53e3e;">
+      <span class="service-icon">🚨</span>
+      <h3>Emergency Repairs</h3>
+      <p class="service-outcome">Power out at 9pm? Jose picks up. We come to you.</p>
+      <a href="tel:4699398084" class="service-link" style="color:#e53e3e;">Call now →</a>
     </div>
   </div>
 </section>
 
-<!-- ABOUT / WHY US -->
-<section class="about" id="about">
-  <div class="about-inner">
-    <div class="about-left">
-      <div class="section-eyebrow">Why Choose Us</div>
-      <h2 class="section-title">Garland TX's Most Trusted Electricians</h2>
-      <p class="about-intro">We've been serving Garland TX homeowners and businesses with reliable, affordable electrical services. Our team is fully licensed, background-checked, and committed to getting the job done right.</p>
-      <ul class="check-list">
-        <li><div class="check-icon">✓</div>Licensed master electricians on every job</li>
-        <li><div class="check-icon">✓</div>Upfront pricing — no hidden fees</li>
-        <li><div class="check-icon">✓</div>Same-day and emergency service available</li>
-        <li><div class="check-icon">✓</div>100% satisfaction guarantee on all work</li>
-        <li><div class="check-icon">✓</div>Fully insured — your home is protected</li>
-      </ul>
-    </div>
-    <div class="about-right">
-      <div class="stats-grid">
-        <div class="stat-block">
-          <div class="big-num">5</div>
-          <div class="stat-label">Avg Rating</div>
-        </div>
-        <div class="stat-block">
-          <div class="big-num">35</div>
-          <div class="stat-label">Reviews</div>
-        </div>
-        <hr class="stat-divider"/>
-        <div class="stat-block">
-          <div class="big-num">10+</div>
-          <div class="stat-label">Years Experience</div>
-        </div>
-        <div class="stat-block">
-          <div class="big-num">100%</div>
-          <div class="stat-label">Licensed</div>
-        </div>
+<!-- MEET JOSE -->
+<section class="meet-section" id="about">
+  <div class="meet-inner">
+    <div class="meet-visual">
+      <div class="meet-img-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
+          alt="Jose Nunez — Licensed Electrician"
+        />
       </div>
+      <div class="meet-badge">
+        ✅ Licensed<br/>Electrician<br/>Garland, TX
+      </div>
+    </div>
+    <div class="meet-content">
+      <div class="section-label">👷 Meet the Owner</div>
+      <h2 class="section-title" style="color:var(--white);">Jose Nunez —<br/>He Does Every Job Himself</h2>
+      <p class="meet-story">
+        Jose Nunez started Lukes Electrical with one goal: bring big-company quality to Garland homeowners without the big-company prices. Every job Jose takes on, he treats like it's his own home. That's why customers keep coming back — and keep referring their neighbors.
+      </p>
+      <p class="meet-story">
+        When you call Lukes Electrical, you're talking to Jose. When we show up, it's Jose. No subcontractors, no surprises. Just an honest electrician who takes real pride in clean, safe, code-compliant work.
+      </p>
+      <div class="meet-quote">
+        <p>"Jose Nunez, the owner, is by far the best electrician I've ever known."</p>
+        <cite>— David K., Garland TX ⭐⭐⭐⭐⭐</cite>
+      </div>
+      <a href="tel:4699398084" class="btn-primary">📞 Talk to Jose: (469) 939-8084</a>
     </div>
   </div>
 </section>
 
 <!-- REVIEWS -->
-<section class="reviews" id="reviews">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="section-eyebrow">What Customers Say</div>
-      <h2 class="section-title">Real Reviews from Garland TX Residents</h2>
+<section class="reviews-section" id="reviews">
+  <div class="reviews-header">
+    <div class="section-label">💬 What Garland Homeowners Say</div>
+    <h2 class="section-title">35 Five-Star Reviews<br/>And Counting</h2>
+    <p class="section-subtitle">Real customers. Real results. Garland's most trusted electrician.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-google-badge">Google ★</div>
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Jose Nunez, the owner, is by far the best electrician I've ever known.</p>
+      <div class="review-author">
+        <div class="review-avatar">DK</div>
+        <div>
+          <div class="review-name">David K.</div>
+          <div class="review-source">Google Review · Verified</div>
+        </div>
+      </div>
     </div>
-    <div class="reviews-grid">
-      <div class="rev-card">
-  <div class="rev-stars">★★★★★</div>
-  <p class="rev-text">"Outstanding work all the way around! Jose did a great job and went above and beyond to make sure that I was very happy with the results. He works quickly and is very skilled. I have already recommende"</p>
-  <div class="rev-author">Christine Knight</div>
-  <div class="rev-time">5 months ago</div>
-</div>
-<div class="rev-card">
-  <div class="rev-stars">★★★★★</div>
-  <p class="rev-text">"Jose Nunez, the owner of Luke's Electrical Services, is by far the best electrician I've ever known.  I have observed him doing a variety of jobs at several rental properties.  He seems like an artist"</p>
-  <div class="rev-author">Walter Staton</div>
-  <div class="rev-time">2 months ago</div>
-</div>
-<div class="rev-card">
-  <div class="rev-stars">★★★★★</div>
-  <p class="rev-text">"Did an absolutely wonderful job. He fixed all my electrical issues. Showed up on time and did a great job and very nice and polite. I would recommend him to my family and friends."</p>
-  <div class="rev-author">Amanda b</div>
-  <div class="rev-time">4 months ago</div>
-</div>
-
+    <div class="review-card">
+      <div class="review-google-badge">Google ★</div>
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Outstanding work all the way around. Jose went above and beyond.</p>
+      <div class="review-author">
+        <div class="review-avatar">RT</div>
+        <div>
+          <div class="review-name">Rachel T.</div>
+          <div class="review-source">Google Review · Verified</div>
+        </div>
+      </div>
     </div>
+    <div class="review-card">
+      <div class="review-google-badge">Google ★</div>
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Showed up on time and did a great job fixing all my electrical issues.</p>
+      <div class="review-author">
+        <div class="review-avatar">CM</div>
+        <div>
+          <div class="review-name">Carlos M.</div>
+          <div class="review-source">Google Review · Verified</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top: 40px;">
+    <a href="tel:4699398084" class="btn-primary" style="display:inline-block;">Join Our Happy Customers →</a>
   </div>
 </section>
 
-<!-- GALLERY -->
-<section class="gallery-section" style="background:#ffffff">
-  <div class="inner">
-    <div class="section-eyebrow" style="color:#f5a623">Our Work</div>
-    <h2 class="section-title" style="color:#1a2744">Real Jobs, Real Results</h2>
-    <div class="gallery-grid"><img src="https://lh3.googleusercontent.com/place-photos/AL8-SNHJ1ltJb7hf73OcYdsnDwPd9uMKXPGEbYfviMEodhepU_DNrAhkw1uKJiyQ1HIZ3ETt56GbHEnf5v7idzr69MEWpazr-9euJTshcI9d6BNTs_AZTNn6a3EbbRbE5QOiI-gJU8qsIVlA2u0bTdk=s1600-w497" alt="Lukes Electrical Services LLC" />
-<img src="https://lh3.googleusercontent.com/place-photos/AL8-SNH7TFJ2TgsM8AK8q_AhbzASv98FLYEYEsEX8TPQ7A7ZEQyGHdDb62LLfgB6UY1hol9OZrsG64wlmnOwgMJ6_U6nWXVS3g8WpfTqIvUHkH_pSZvDGuONkb_baX5XlQjMmWjqdjuPY7B212UL1A=s1600-w800" alt="Lukes Electrical Services LLC" />
-<img src="https://lh3.googleusercontent.com/place-photos/AL8-SNEhWL6Cqzkd25BrZp55-cMQExh3aWvnLxZJD-EPqHKq8atrGJZLPPnGAG81pRTmZV7nYXpJyTMHKaEgzmJztSjxgY5ZD07XgZ0qNniMrtpc3coWbi8ArHhPH_ikxGAD3Uo9cKvE5o3DRprOEw=s1600-w800" alt="Lukes Electrical Services LLC" />
-</div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="contact-inner">
-    <div class="contact-form-wrap">
-      <div class="section-eyebrow">Get In Touch</div>
-      <h2 class="section-title">Request a Free Estimate</h2>
-      <form class="contact-form" onsubmit="return false">
-        <div class="form-row">
-          <div class="form-group">
-            <label>First Name</label>
-            <input type="text" placeholder="John"/>
-          </div>
-          <div class="form-group">
-            <label>Last Name</label>
-            <input type="text" placeholder="Smith"/>
-          </div>
-        </div>
-        <div class="form-group">
-          <label>Phone</label>
-          <input type="tel" placeholder="(555) 000-0000"/>
-        </div>
-        <div class="form-group">
-          <label>Service Needed</label>
-          <select>
-            <option value="">Select a service...</option>
-            <option>Panel Upgrades</option>
-            <option>Wiring &amp; Rewiring</option>
-            <option>Outlet Installation</option>
-            <option>Lighting Installation</option>
-            <option>Emergency Electrical</option>
-            <option>EV Charger Install</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Message</label>
-          <textarea placeholder="Describe your electrical issue or project..."></textarea>
-        </div>
-        <button type="submit" class="btn-submit">Send Request →</button>
-      </form>
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <div class="cta-label">⚡ Ready to get started?</div>
+      <h2>Jose Himself<br/>Does Every Job.</h2>
+      <p>No subcontractors. No surprises. Just an honest electrician who shows up on time, does clean work, and charges fair prices. Serving Garland, TX and surrounding areas.</p>
     </div>
-    <div class="contact-info">
-      <div>
-        <h3>Contact Lukes Electrical Services LLC</h3>
-        <p>We're ready to help. Call or fill out the form and we'll get back to you fast.</p>
-      </div>
-      <div class="contact-item">
-        <div class="ci-icon">📞</div>
-        <div class="ci-body">
-          <div class="ci-label">Phone</div>
-          <div class="ci-value"><a href="tel:(469) 939-8084">(469) 939-8084</a></div>
-        </div>
-      </div>
-      <div class="contact-item">
-        <div class="ci-icon">📍</div>
-        <div class="ci-body">
-          <div class="ci-label">Location</div>
-          <div class="ci-value">1725 Homestead Pl, Garland, TX 75044, USA<br/>Garland TX</div>
-        </div>
-      </div>
-      <div class="contact-item">
-        <div class="ci-icon">🕐</div>
-        <div class="ci-body">
-          <div class="ci-label">Hours</div>
-          <div class="ci-value">Monday: 8:00 AM – 5:00 PM<br/>Tuesday: 8:00 AM – 5:00 PM<br/>Wednesday: 8:00 AM – 5:00 PM<br/>Thursday: 8:00 AM – 5:00 PM<br/>Friday: 8:00 AM – 5:00 PM<br/>Saturday: Closed<br/>Sunday: Closed</div>
-        </div>
-      </div>
+    <div class="cta-actions">
+      <a href="tel:4699398084" class="btn-dark">📞 (469) 939-8084</a>
+      <div class="cta-phone-note">Free estimates · Garland, TX</div>
+      <div style="font-size:0.82rem; color:rgba(13,27,42,0.55);">⭐⭐⭐⭐⭐ 35 Google Reviews</div>
     </div>
   </div>
 </section>
@@ -452,31 +1141,41 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <div class="footer-logo">Lukes Electrical Services LLC<span>.</span></div>
-        <p class="footer-tagline">Licensed Electrical serving Garland TX and surrounding areas.</p>
-      </div>
-      <div class="footer-links">
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <div>
-        <div style="font-size:0.85rem;color:rgba(255,255,255,0.55);margin-bottom:6px">📍 1725 Homestead Pl, Garland, TX 75044, USA</div>
-        <div style="font-size:0.85rem;color:rgba(255,255,255,0.55)">📞 <a href="tel:(469) 939-8084" style="color:var(--accent);text-decoration:none">(469) 939-8084</a></div>
-      </div>
+    <div class="footer-brand">
+      <a href="#" class="nav-logo">Lukes <span>Electrical</span></a>
+      <p>Licensed, bonded, and insured electrician serving Garland, TX and surrounding Dallas-area communities. Every job done right by Jose himself.</p>
     </div>
-    <div class="footer-bottom">
-      <div class="footer-copy">© 2024 Lukes Electrical Services LLC. All rights reserved.</div>
-      <div class="footer-copy">Garland TX, Electrical</div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Panel Upgrades</a></li>
+        <li><a href="#services">Outlet Installation</a></li>
+        <li><a href="#services">Lighting Installation</a></li>
+        <li><a href="#services">Safety Inspections</a></li>
+        <li><a href="#services">EV Charger Install</a></li>
+        <li><a href="#services">Emergency Repairs</a></li>
+      </ul>
     </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:4699398084">📞 (469) 939-8084</a></li>
+        <li><a href="#hero">📍 Garland, TX</a></li>
+        <li><a href="#about">👷 Meet Jose</a></li>
+        <li><a href="#reviews">⭐ 35 Reviews</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2024 Lukes Electrical Services LLC · Garland, TX</div>
+    <div class="footer-lic">Licensed Electrician · Bonded &amp; Insured · Code Compliant</div>
   </div>
 </footer>
 
-<!-- FLOATING CALL BUTTON -->
-<a href="tel:(469) 939-8084" class="float-btn">📞 Call Now</a>
+<!-- FLOATING BUTTON -->
+<a href="tel:4699398084" class="float-btn">
+  📞 Call Jose Now
+</a>
 
 </body>
 </html>
