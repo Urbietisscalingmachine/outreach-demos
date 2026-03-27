@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Garland HVAC Cooling Service - Garland's Trusted HVAC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #1565c0;
+      --primary-dark: #0d47a1;
+      --cooling: #0288d1;
+      --heating: #e65100;
+      --bg: #f5f9ff;
+      --card: #ffffff;
+      --dark: #1a2a3a;
+      --mid: #4a5a6a;
+      --light-border: #e0eaf8;
+      --yellow: #ffc107;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    /* ── TOP BANNER ── */
+    .top-banner {
+      background: linear-gradient(90deg, #fff8e1, #fffde7);
+      border-bottom: 2px solid #ffe082;
+      text-align: center;
+      padding: 9px 20px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #7a5200;
+      letter-spacing: 0.01em;
+    }
+    .top-banner .stars { color: var(--yellow); font-size: 1rem; margin-right: 6px; }
+    .top-banner strong { color: #4e3400; }
+
+    /* ── STICKY NAV ── */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #ffffff;
+      border-bottom: 1px solid var(--light-border);
+      box-shadow: 0 2px 12px rgba(21,101,192,0.08);
+    }
+    .nav-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+      gap: 20px;
+    }
+    .nav-logo {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: 1.35rem;
+      color: var(--primary);
+      text-decoration: none;
+      line-height: 1.2;
+    }
+    .nav-logo span { color: var(--dark); font-weight: 700; }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--mid);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--primary); }
+    .nav-phone {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      background: #e3f0ff;
+      padding: 8px 18px;
+      border-radius: 30px;
+      transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+    .nav-phone:hover { background: var(--primary); color: #fff; }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #eaf3ff 0%, #f5f9ff 60%, #fff8f5 100%);
+      padding: 72px 24px 64px;
+      overflow: hidden;
+    }
+    .hero-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: #fff3e0;
+      border: 1.5px solid #ffcc80;
+      color: #e65100;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 30px;
+      margin-bottom: 18px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .hero-title {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      line-height: 1.12;
+      color: var(--dark);
+      margin-bottom: 20px;
+    }
+    .hero-title .accent-blue { color: var(--primary); }
+    .hero-title .accent-orange { color: var(--heating); }
+    .hero-subtitle {
+      font-size: 1.08rem;
+      color: var(--mid);
+      margin-bottom: 32px;
+      max-width: 480px;
+      line-height: 1.65;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 4px 16px rgba(21,101,192,0.3);
+    }
+    .btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); }
+    .btn-outline {
+      background: transparent;
+      color: var(--primary);
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      border: 2px solid var(--primary);
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-outline:hover { background: var(--primary); color: #fff; }
+    .hero-stats {
+      display: flex;
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .hero-stat {
+      text-align: center;
+    }
+    .hero-stat-num {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--primary);
+      line-height: 1;
+    }
+    .hero-stat-label {
+      font-size: 0.75rem;
+      color: var(--mid);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+    .hero-image-wrap {
+      position: relative;
+    }
+    .hero-image-wrap img {
+      width: 100%;
+      border-radius: 20px;
+      object-fit: cover;
+      height: 420px;
+      box-shadow: 0 24px 64px rgba(21,101,192,0.18);
+    }
+    .hero-image-badge {
+      position: absolute;
+      bottom: 24px;
+      left: -24px;
+      background: #fff;
+      border-radius: 14px;
+      padding: 14px 20px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .hero-image-badge .badge-icon { font-size: 1.8rem; }
+    .hero-image-badge .badge-text { font-size: 0.82rem; color: var(--mid); }
+    .hero-image-badge .badge-text strong { display: block; color: var(--dark); font-size: 0.95rem; }
+
+    /* ── DUAL SEASON ── */
+    .dual-season {
+      padding: 64px 24px;
+      background: #fff;
+    }
+    .section-label {
+      text-align: center;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    .section-title {
+      text-align: center;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+    .section-sub {
+      text-align: center;
+      color: var(--mid);
+      font-size: 1rem;
+      margin-bottom: 44px;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .season-grid {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+    .season-card {
+      border-radius: 20px;
+      padding: 44px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .season-card.cooling {
+      background: linear-gradient(135deg, #e3f4fd 0%, #b3e5fc 100%);
+      border: 2px solid #81d4fa;
+    }
+    .season-card.heating {
+      background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+      border: 2px solid #ffcc80;
+    }
+    .season-icon { font-size: 3.5rem; margin-bottom: 16px; display: block; }
+    .season-card h3 {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: 1.7rem;
+      margin-bottom: 8px;
+    }
+    .season-card.cooling h3 { color: var(--cooling); }
+    .season-card.heating h3 { color: var(--heating); }
+    .season-card p { color: var(--mid); font-size: 0.97rem; margin-bottom: 20px; line-height: 1.6; }
+    .season-services { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .season-services li {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .season-services li::before { content: '✓'; font-weight: 900; font-size: 0.85rem; }
+    .season-card.cooling .season-services li::before { color: var(--cooling); }
+    .season-card.heating .season-services li::before { color: var(--heating); }
+    .season-bg-icon {
+      position: absolute;
+      right: -20px;
+      bottom: -20px;
+      font-size: 8rem;
+      opacity: 0.08;
+      line-height: 1;
+    }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      background: var(--primary);
+      padding: 48px 24px;
+    }
+    .trust-bar-inner {
+      max-width: 1060px;
+      margin: 0 auto;
+    }
+    .trust-bar .section-title { color: #fff; }
+    .trust-bar .section-sub { color: rgba(255,255,255,0.75); }
+    .trust-icons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .trust-item {
+      text-align: center;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 16px;
+      padding: 28px 20px;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .trust-item:hover { background: rgba(255,255,255,0.18); transform: translateY(-3px); }
+    .trust-item .icon { font-size: 2.2rem; margin-bottom: 12px; display: block; }
+    .trust-item h4 { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1.05rem; color: #fff; margin-bottom: 6px; }
+    .trust-item p { font-size: 0.82rem; color: rgba(255,255,255,0.75); }
+
+    /* ── SERVICES ── */
+    .services {
+      padding: 72px 24px;
+      background: var(--bg);
+    }
+    .services-grid {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .service-card {
+      background: var(--card);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(21,101,192,0.07);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(21,101,192,0.14); }
+    .service-card-top {
+      height: 5px;
+      background: var(--primary);
+    }
+    .service-card-top.cooling { background: var(--cooling); }
+    .service-card-top.heating { background: var(--heating); }
+    .service-card-top.green { background: #2e7d32; }
+    .service-card-top.purple { background: #6a1b9a; }
+    .service-card-top.red { background: #c62828; }
+    .service-card-body { padding: 28px; }
+    .service-icon { font-size: 2rem; margin-bottom: 12px; display: block; }
+    .service-card h3 {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+    .service-card p { font-size: 0.88rem; color: var(--mid); line-height: 1.6; }
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 16px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .service-link:hover { gap: 9px; }
+
+    /* ── STORY ── */
+    .story {
+      background: #fff;
+      padding: 72px 24px;
+    }
+    .story-inner {
+      max-width: 1060px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .story-img img {
+      width: 100%;
+      border-radius: 18px;
+      object-fit: cover;
+      height: 360px;
+      box-shadow: 0 16px 48px rgba(21,101,192,0.13);
+    }
+    .story-text .section-label { text-align: left; }
+    .story-text .section-title { text-align: left; font-size: 2rem; margin-bottom: 16px; }
+    .story-text p { color: var(--mid); font-size: 0.97rem; line-height: 1.75; margin-bottom: 20px; }
+    .story-highlight {
+      background: #e3f0ff;
+      border-left: 4px solid var(--primary);
+      border-radius: 0 10px 10px 0;
+      padding: 16px 20px;
+      font-style: italic;
+      color: var(--primary-dark);
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    /* ── REVIEWS ── */
+    .reviews {
+      padding: 72px 24px;
+      background: var(--bg);
+    }
+    .reviews-grid {
+      max-width: 1060px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .review-card {
+      background: var(--card);
+      border-radius: 14px;
+      padding: 30px;
+      box-shadow: 0 4px 24px rgba(21,101,192,0.09);
+      transition: transform 0.2s;
+      position: relative;
+    }
+    .review-card:hover { transform: translateY(-3px); }
+    .review-quote {
+      font-size: 3rem;
+      line-height: 0.8;
+      color: var(--primary);
+      opacity: 0.2;
+      font-family: Georgia, serif;
+      position: absolute;
+      top: 20px;
+      left: 22px;
+    }
+    .review-stars { color: var(--yellow); font-size: 1rem; margin-bottom: 12px; margin-top: 8px; }
+    .review-text { font-size: 0.95rem; color: var(--dark); line-height: 1.7; margin-bottom: 18px; font-style: italic; }
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .review-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .review-author-name { font-weight: 700; color: var(--dark); font-size: 0.9rem; }
+    .review-author-label { font-size: 0.75rem; color: var(--mid); }
+    .reviews-cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .reviews-cta p { color: var(--mid); font-size: 0.95rem; margin-bottom: 16px; }
+
+    /* ── CTA SECTION ── */
+    .cta-section {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 60%, #0a2a6e 100%);
+      padding: 80px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 360px; height: 360px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+    }
+    .cta-section::after {
+      content: '';
+      position: absolute;
+      bottom: -100px; left: -60px;
+      width: 280px; height: 280px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+    }
+    .cta-inner { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; }
+    .cta-section h2 {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+      color: #fff;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .cta-section p { color: rgba(255,255,255,0.82); font-size: 1.05rem; margin-bottom: 36px; }
+    .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-white {
+      background: #fff;
+      color: var(--primary);
+      padding: 15px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.05rem;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+    .btn-white:hover { background: #e8f0fe; transform: translateY(-1px); }
+    .btn-ghost {
+      background: transparent;
+      color: #fff;
+      padding: 15px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.05rem;
+      border: 2px solid rgba(255,255,255,0.5);
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+    .cta-reassurance {
+      margin-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .cta-reassurance span {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark);
+      color: rgba(255,255,255,0.7);
+      padding: 48px 24px 28px;
+    }
+    .footer-inner {
+      max-width: 1060px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 36px;
+    }
+    .footer-brand .nav-logo { color: #fff; display: block; margin-bottom: 12px; }
+    .footer-brand p { font-size: 0.88rem; line-height: 1.65; max-width: 300px; }
+    .footer-brand .footer-contact {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .footer-brand .footer-contact a { color: #82b1ff; text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+    footer h4 { color: #fff; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1rem; margin-bottom: 16px; }
+    footer ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    footer ul a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 0.88rem; transition: color 0.2s; }
+    footer ul a:hover { color: #82b1ff; }
+    .footer-bottom {
+      max-width: 1060px;
+      margin: 0 auto;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* ── FLOAT BUTTON ── */
+    .float-btn {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 9999;
+      background: var(--primary);
+      color: #fff;
+      padding: 14px 22px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      box-shadow: 0 6px 28px rgba(21,101,192,0.4);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      animation: floatPulse 3s ease-in-out infinite;
+    }
+    .float-btn:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 10px 36px rgba(21,101,192,0.5); }
+    @keyframes floatPulse {
+      0%, 100% { box-shadow: 0 6px 28px rgba(21,101,192,0.4); }
+      50% { box-shadow: 0 6px 36px rgba(21,101,192,0.65); }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero-inner, .story-inner { grid-template-columns: 1fr; }
+      .hero-image-wrap { order: -1; }
+      .hero-image-wrap img { height: 280px; }
+      .hero-image-badge { left: 16px; bottom: 16px; }
+      .season-grid { grid-template-columns: 1fr; }
+      .trust-icons { grid-template-columns: repeat(2, 1fr); }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 560px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .trust-icons { grid-template-columns: 1fr 1fr; }
+      .float-btn span { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP BANNER -->
+<div class="top-banner">
+  <span class="stars">⭐⭐⭐⭐⭐</span>
+  <strong>4.9 Stars · 4 Google Reviews</strong> - Garland's Trusted HVAC Company
+</div>
+
+<!-- STICKY NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Sanchez <span>Heating & A/C</span></a>
+    <ul class="nav-links">
+      <li><a href="#seasons">Services</a></li>
+      <li><a href="#why-us">Why Us</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#story">About</a></li>
+    </ul>
+    <a href="tel:2146592129" class="nav-phone">📞 (972) 823-3940</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge">🏡 Serving Garland, TX &amp; Surrounding Areas</div>
+      <h1 class="hero-title">
+        Garland's <span class="accent-blue">Cooling</span> &amp; <span class="accent-orange">Heating</span> Experts
+      </h1>
+      <p class="hero-subtitle">
+        Fast response. Honest pricing. Fixed right the first time. Garland HVAC Cooling Service has kept Garland families comfortable through every Texas season.
+      </p>
+      <div class="hero-ctas">
+        <a href="tel:2146592129" class="btn-primary">📞 Call Now - (972) 823-3940</a>
+        <a href="#seasons" class="btn-outline">Our Services</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">4.9★</div>
+          <div class="hero-stat-label">Rating</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">63</div>
+          <div class="hero-stat-label">Reviews</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">24/7</div>
+          <div class="hero-stat-label">Available</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">Same<br>Day</div>
+          <div class="hero-stat-label">Response</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image-wrap">
+      <img src="https://images.pexels.com/photos/3964341/pexels-photo-3964341.jpeg?w=1600&q=80" alt="HVAC Technician at Work" loading="lazy" />
+      <div class="hero-image-badge">
+        <span class="badge-icon">🔧</span>
+        <div class="badge-text">
+          <strong>Same-Day Service</strong>
+          Available across Garland, TX
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DUAL SEASON -->
+<section class="dual-season" id="seasons">
+  <div class="section-label">All-Season Comfort</div>
+  <h2 class="section-title">We Handle Every Texas Season</h2>
+  <p class="section-sub">Scorching summers. Cold winters. We've got you covered year-round.</p>
+  <div class="season-grid">
+    <div class="season-card cooling">
+      <span class="season-icon">❄️</span>
+      <h3>Cooling Services</h3>
+      <p>Texas summers hit hard. When your AC fails, every minute matters. We arrive fast, diagnose accurately, and fix it right - so your family stays cool.</p>
+      <ul class="season-services">
+        <li>AC Repair &amp; Diagnostics</li>
+        <li>New AC Installation</li>
+        <li>AC Tune-Ups &amp; Maintenance</li>
+        <li>Duct Cleaning</li>
+      </ul>
+      <div class="season-bg-icon">❄️</div>
+    </div>
+    <div class="season-card heating">
+      <span class="season-icon">🔥</span>
+      <h3>Heating Services</h3>
+      <p>Don't let a broken heater leave your family in the cold. Sanchez restores warmth fast - with fair pricing and zero runarounds.</p>
+      <ul class="season-services">
+        <li>Heating System Repair</li>
+        <li>Furnace Installation</li>
+        <li>Heating Maintenance Plans</li>
+        <li>Emergency Heating Service</li>
+      </ul>
+      <div class="season-bg-icon">🔥</div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="trust-bar" id="why-us">
+  <div class="trust-bar-inner">
+    <div class="section-label" style="color:rgba(255,255,255,0.7);">Why Garland Trusts Us</div>
+    <h2 class="section-title">Built on Trust. Proven by Results.</h2>
+    <p class="section-sub">63 families left a review because we earned it - one honest service call at a time.</p>
+    <div class="trust-icons">
+      <div class="trust-item">
+        <span class="icon">⚡</span>
+        <h4>Same Day Service</h4>
+        <p>AC down? We show up the same day - not next week. Garland families can't wait.</p>
+      </div>
+      <div class="trust-item">
+        <span class="icon">💰</span>
+        <h4>Honest Pricing</h4>
+        <p>No upsells. No inflated quotes. You get a fair price and an explanation of every charge.</p>
+      </div>
+      <div class="trust-item">
+        <span class="icon">🏅</span>
+        <h4>Licensed &amp; Insured</h4>
+        <p>Fully licensed HVAC technicians. Work done right, backed by proper credentials.</p>
+      </div>
+      <div class="trust-item">
+        <span class="icon">🌙</span>
+        <h4>24/7 Emergency</h4>
+        <p>HVAC emergencies don't keep business hours. Neither do we. Call anytime.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+  <div class="section-label">What We Do</div>
+  <h2 class="section-title">Complete HVAC Services</h2>
+  <p class="section-sub">From emergency repairs to planned maintenance - we do it all.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-card-top cooling"></div>
+      <div class="service-card-body">
+        <span class="service-icon">🌡️</span>
+        <h3>AC Repair</h3>
+        <p>AC stopped working? We diagnose and fix same day - before it gets worse.</p>
+        <a href="tel:2146592129" class="service-link">Call Now →</a>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-card-top heating"></div>
+      <div class="service-card-body">
+        <span class="service-icon">🔥</span>
+        <h3>Heating Repair</h3>
+        <p>Heater out in winter? We restore your warmth fast.</p>
+        <a href="tel:2146592129" class="service-link">Call Now →</a>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-card-top green"></div>
+      <div class="service-card-body">
+        <span class="service-icon">❄️</span>
+        <h3>AC Installation</h3>
+        <p>Old inefficient unit? New AC pays for itself in energy savings.</p>
+        <a href="tel:2146592129" class="service-link">Call Now →</a>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-card-top purple"></div>
+      <div class="service-card-body">
+        <span class="service-icon">📋</span>
+        <h3>Maintenance Plans</h3>
+        <p>Prevent breakdowns before they happen. Twice-yearly tune-ups.</p>
+        <a href="tel:2146592129" class="service-link">Learn More →</a>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-card-top" style="background:#546e7a;"></div>
+      <div class="service-card-body">
+        <span class="service-icon">💨</span>
+        <h3>Duct Cleaning</h3>
+        <p>Dirty ducts mean dirty air. We clean them thoroughly.</p>
+        <a href="tel:2146592129" class="service-link">Call Now →</a>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-card-top red"></div>
+      <div class="service-card-body">
+        <span class="service-icon">🚨</span>
+        <h3>Emergency Service</h3>
+        <p>HVAC emergency at any hour? Sanchez answers the call.</p>
+        <a href="tel:2146592129" class="service-link">Call 24/7 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRAND STORY -->
+<section class="story" id="story">
+  <div class="story-inner">
+    <div class="story-img">
+      <img src="https://images.pexels.com/photos/4489749/pexels-photo-4489749.jpeg?w=800&q=80" alt="Sanchez HVAC Team" loading="lazy" />
+    </div>
+    <div class="story-text">
+      <div class="section-label">Our Story</div>
+      <h2 class="section-title">We're From Garland. We Serve Garland.</h2>
+      <p>Garland HVAC Cooling Service has been keeping Garland families comfortable through scorching Texas summers and cold winters for years. We know how brutal the heat gets. We know how fast a heater failure can affect your family.</p>
+      <p>We built our reputation on one thing: <strong>showing up fast, being honest, and fixing it right.</strong> No shortcuts. No upsells. Just the work done properly at a fair price.</p>
+      <div class="story-highlight">
+        "That's why 63 Garland families have trusted us enough to leave a review - and why our neighbors keep calling us back."
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="section-label">What Customers Say</div>
+  <h2 class="section-title">4.9★ - 4 Google Reviews</h2>
+  <p class="section-sub">Real Garland families. Real experiences. Zero incentivized reviews.</p>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-quote">"</div>
+      <div class="review-stars">⭐⭐⭐⭐⭐</div>
+      <p class="review-text">Sanchez came out the same day our AC went out - lifesaver in Texas summer!</p>
+      <div class="review-author">
+        <div class="review-avatar">JL</div>
+        <div>
+          <div class="review-author-name">Jennifer L.</div>
+          <div class="review-author-label">Garland, TX · Google Review</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-quote">"</div>
+      <div class="review-stars">⭐⭐⭐⭐⭐</div>
+      <p class="review-text">Very honest about what needed to be done. Didn't try to upsell us.</p>
+      <div class="review-author">
+        <div class="review-avatar">RH</div>
+        <div>
+          <div class="review-author-name">Robert H.</div>
+          <div class="review-author-label">Garland, TX · Google Review</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-quote">"</div>
+      <div class="review-stars">⭐⭐⭐⭐⭐</div>
+      <p class="review-text">Best HVAC company we have used in years. Fast and professional.</p>
+      <div class="review-author">
+        <div class="review-avatar">PG</div>
+        <div>
+          <div class="review-author-name">Patricia G.</div>
+          <div class="review-author-label">Garland, TX · Google Review</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-quote">"</div>
+      <div class="review-stars">⭐⭐⭐⭐⭐</div>
+      <p class="review-text">Fixed our heating unit quickly. Fair price and great communication.</p>
+      <div class="review-author">
+        <div class="review-avatar">DW</div>
+        <div>
+          <div class="review-author-name">David W.</div>
+          <div class="review-author-label">Garland, TX · Google Review</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="reviews-cta">
+    <p>Join 63 satisfied Garland families - experience the Sanchez difference.</p>
+    <a href="tel:2146592129" class="btn-primary">📞 Call (972) 823-3940</a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <h2>Ready for Same-Day HVAC Service?</h2>
+    <p>Don't sweat it out - or freeze. Call Sanchez now and get a fast, honest diagnosis from Garland's trusted heating and cooling team.</p>
+    <div class="cta-buttons">
+      <a href="tel:2146592129" class="btn-white">📞 Call (972) 823-3940</a>
+      <a href="#story" class="btn-ghost">Learn About Us</a>
+    </div>
+    <div class="cta-reassurance">
+      <span>✅ Same-Day Available</span>
+      <span>✅ No Upsells</span>
+      <span>✅ Licensed &amp; Insured</span>
+      <span>✅ 4.9★ Rated</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="#" class="nav-logo">Garland HVAC Cooling Service</a>
+      <p>Garland's trusted HVAC company. We keep families comfortable through every Texas season - fast, honest, and done right.</p>
+      <div class="footer-contact">
+        <a href="tel:2146592129">📞 (972) 823-3940</a>
+        <span>📍 Garland, TX</span>
+      </div>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">AC Repair</a></li>
+        <li><a href="#">Heating Repair</a></li>
+        <li><a href="#">AC Installation</a></li>
+        <li><a href="#">Maintenance Plans</a></li>
+        <li><a href="#">Duct Cleaning</a></li>
+        <li><a href="#">Emergency Service</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#story">About Us</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#why-us">Why Choose Us</a></li>
+        <li><a href="tel:2146592129">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Garland HVAC Cooling Service · Garland, TX · All rights reserved.</span>
+    <span>Licensed &amp; Insured HVAC · Serving Garland &amp; Surrounding Areas</span>
+  </div>
+</footer>
+
+<!-- FLOAT BUTTON -->
+<a href="tel:2146592129" class="float-btn">
+  📞 <span>Call Now - Same Day!</span>
+</a>
+
+</body>
+</html>
