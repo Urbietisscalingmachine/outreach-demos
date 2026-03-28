@@ -186,6 +186,61 @@
     .why-item h3 { font-size: 0.95rem; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
     .why-item p { font-size: 0.85rem; color: #666; line-height: 1.5; }
 
+    /* ABOUT */
+    .about-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      padding: 80px 6%;
+    }
+    @media (max-width: 768px) {
+      .about-section { grid-template-columns: 1fr; gap: 32px; }
+    }
+    .about-img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .about-content .brand-name {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+    .about-content .brand-location {
+      font-size: 0.9rem;
+      color: var(--accent);
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .about-content p {
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.75;
+      margin-bottom: 28px;
+    }
+    .about-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--light);
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      padding: 7px 14px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
     /* REVIEWS */
     .reviews-grid {
       display: grid;
@@ -323,6 +378,23 @@
     </div>
   </div>
 </section>
+
+<div class="about-section">
+  <img class="about-img" src="https://images.pexels.com/photos/8486944/pexels-photo-8486944.jpeg?w=900&q=80" alt="Steve King Plumbing team">
+  <div class="about-content">
+    <div class="section-label">About Us</div>
+    <div class="brand-name">Steve King Plumbing</div>
+    <div class="brand-location">Serving Mesquite TX &amp; Surrounding Areas</div>
+    <p>We started with a simple idea: show up on time, fix it right, and charge a fair price. No surprises, no upsells, no runaround. Just honest plumbing work for Mesquite TX homeowners who deserve better than the average call center service.</p>
+    <p>Every job gets our full attention. We treat your home like our own.</p>
+    <div class="about-pills">
+      <span class="pill">✅ Licensed &amp; Insured</span>
+      <span class="pill">📍 Local &amp; Family-Owned</span>
+      <span class="pill">⭐ 4.8 Stars on Google</span>
+      <span class="pill">🕐 Same-Day Available</span>
+    </div>
+  </div>
+</div>
 
 <section>
   <div class="section-label">What Customers Say</div>
