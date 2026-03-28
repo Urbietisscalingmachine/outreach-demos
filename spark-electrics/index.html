@@ -1,1178 +1,410 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spark Electrics - Coppell's #1 Electrician</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spark Electrics | Electrician in Coppell TX</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --primary: #2d4a1a;
-      --accent: #00e5ff;
-      --secondary: #1a3a5c;
+      --primary: #1a1a2e;
+      --accent: #f5c518;
+      --text: #1a1a1a;
+      --light: #f8f8f8;
       --white: #ffffff;
-      --light: #f0f4f8;
-      --accent-dark: #b8a000;
     }
+    body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--text); background: var(--white); }
 
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--white);
-      color: var(--primary);
-      overflow-x: hidden;
-    }
-
-    /* ─── TOP BANNER ─── */
-    .top-banner {
-      background: var(--accent);
-      color: var(--primary);
-      text-align: center;
-      padding: 10px 20px;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 1.05rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      position: relative;
-      z-index: 1000;
-    }
-    .top-banner .stars { font-size: 1.1rem; margin-right: 6px; }
-
-    /* ─── STICKY NAV ─── */
     nav {
       background: var(--primary);
-      position: sticky;
-      top: 0;
-      z-index: 999;
       padding: 0 5%;
       display: flex;
       align-items: center;
       justify-content: space-between;
       height: 64px;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.4);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-
-    .nav-logo {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 1.5rem;
-      font-weight: 900;
+    .nav-logo { color: var(--white); font-size: 1.2rem; font-weight: 700; letter-spacing: 0.5px; }
+    .nav-phone a {
       color: var(--white);
       text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-    .nav-logo span { color: var(--accent); }
-
-    .nav-links {
-      display: flex;
-      gap: 28px;
-      list-style: none;
-      align-items: center;
-    }
-    .nav-links a {
-      color: rgba(255,255,255,0.85);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      letter-spacing: 0.03em;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--accent); }
-
-    .nav-cta {
+      font-size: 1rem;
+      font-weight: 600;
       background: var(--accent);
-      color: var(--primary) !important;
-      padding: 8px 20px;
+      color: #111;
+      padding: 8px 18px;
       border-radius: 4px;
-      font-weight: 700 !important;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 1rem !important;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      transition: background 0.2s, transform 0.15s !important;
     }
-    .nav-cta:hover { background: var(--accent-dark) !important; transform: translateY(-1px); }
 
-    /* ─── HERO ─── */
     .hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      min-height: 92vh;
       position: relative;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
       overflow: hidden;
     }
-
-    .hero-image-side {
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-image-side img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .hero-image-side::after {
-      content: '';
+    .hero-bg {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to right, rgba(13,27,42,0.15), rgba(13,27,42,0.6));
+      background-image: url('https://images.pexels.com/photos/1109541/pexels-photo-1109541.jpeg?w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.35);
     }
-    /* Diagonal cut on the right edge */
-    .hero-image-side::before {
-      content: '';
-      position: absolute;
-      right: -60px;
-      top: 0;
-      width: 120px;
-      height: 100%;
-      background: var(--primary);
-      transform: skewX(-4deg);
-      z-index: 2;
-    }
-
-    .hero-content-side {
-      background: var(--primary);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 60px 7% 60px 10%;
+    .hero-content {
       position: relative;
-      z-index: 1;
+      z-index: 2;
+      padding: 60px 6%;
+      max-width: 680px;
     }
-
     .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(245,200,66,0.15);
-      border: 1px solid var(--accent);
-      color: var(--accent);
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 0.85rem;
+      display: inline-block;
+      background: var(--accent);
+      color: #111;
+      font-size: 0.78rem;
       font-weight: 700;
+      letter-spacing: 1px;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
-      padding: 6px 14px;
-      border-radius: 2px;
-      margin-bottom: 24px;
-      width: fit-content;
-    }
-
-    .hero-headline {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: clamp(2.8rem, 5vw, 4.5rem);
-      font-weight: 900;
-      color: var(--white);
-      line-height: 1.0;
-      text-transform: uppercase;
-      letter-spacing: 0.02em;
+      padding: 5px 14px;
+      border-radius: 3px;
       margin-bottom: 20px;
     }
-    .hero-headline .accent { color: var(--accent); }
-
-    .hero-sub {
-      color: rgba(255,255,255,0.75);
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin-bottom: 36px;
-      max-width: 440px;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: var(--primary);
-      padding: 16px 32px;
-      border: none;
-      border-radius: 4px;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 1.15rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-      box-shadow: 0 4px 20px rgba(245,200,66,0.35);
-    }
-    .btn-primary:hover {
-      background: var(--accent-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 28px rgba(245,200,66,0.4);
-    }
-
-    .btn-secondary {
-      background: transparent;
+    .hero h1 {
       color: var(--white);
-      padding: 15px 28px;
-      border: 2px solid rgba(255,255,255,0.35);
-      border-radius: 4px;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      transition: border-color 0.2s, color 0.2s;
-    }
-    .btn-secondary:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    .hero-stats {
-      display: flex;
-      gap: 32px;
-      margin-top: 44px;
-      padding-top: 32px;
-      border-top: 1px solid rgba(255,255,255,0.1);
-    }
-    .stat-item { text-align: left; }
-    .stat-num {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 2.2rem;
-      font-weight: 900;
-      color: var(--accent);
-      line-height: 1;
-    }
-    .stat-label {
-      color: rgba(255,255,255,0.6);
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-top: 4px;
-    }
-
-    /* ─── CERTIFICATIONS RIBBON ─── */
-    .cert-ribbon {
-      background: var(--secondary);
-      padding: 18px 5%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 0;
-      flex-wrap: wrap;
-      overflow: hidden;
-    }
-    .cert-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--white);
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 1rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      padding: 6px 28px;
-      position: relative;
-    }
-    .cert-item:not(:last-child)::after {
-      content: '';
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 2px;
-      height: 20px;
-      background: rgba(255,255,255,0.2);
-    }
-    .cert-icon { color: var(--accent); font-size: 1.2rem; }
-
-    /* ─── SECTION BASE ─── */
-    section { padding: 80px 5%; }
-
-    .section-label {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--accent);
-      margin-bottom: 12px;
-    }
-
-    .section-title {
-      font-family: 'Barlow Condensed', sans-serif;
       font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 900;
-      text-transform: uppercase;
-      line-height: 1.05;
+      font-weight: 800;
+      line-height: 1.15;
       margin-bottom: 16px;
     }
-
-    .section-subtitle {
-      font-size: 1.05rem;
-      color: #5a6a7a;
-      line-height: 1.65;
-      max-width: 560px;
+    .hero p {
+      color: rgba(255,255,255,0.88);
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 32px;
+      max-width: 520px;
     }
-
-    /* ─── WHY SAFETY MATTERS ─── */
-    .safety-section {
-      background: var(--light);
-      position: relative;
-      overflow: hidden;
-    }
-    .safety-section::before {
-      content: '';
-      position: absolute;
-      top: -40px;
-      left: 0;
-      width: 100%;
-      height: 80px;
-      background: var(--white);
-      transform: skewY(-2deg);
-    }
-    .safety-section::after {
-      content: '';
-      position: absolute;
-      bottom: -40px;
-      left: 0;
-      width: 100%;
-      height: 80px;
-      background: var(--white);
-      transform: skewY(-2deg);
-    }
-
-    .safety-header {
-      text-align: center;
-      margin-bottom: 56px;
-    }
-    .safety-header .section-subtitle { margin: 0 auto; }
-
-    .safety-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .safety-card {
-      background: var(--white);
-      border-radius: 8px;
-      padding: 40px 32px;
-      box-shadow: 0 4px 24px rgba(13,27,42,0.08);
-      border-top: 4px solid var(--accent);
-      transition: transform 0.25s, box-shadow 0.25s;
-    }
-    .safety-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 40px rgba(13,27,42,0.14);
-    }
-    .safety-icon {
-      font-size: 2.6rem;
-      margin-bottom: 20px;
-      display: block;
-    }
-    .safety-card h3 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 1.45rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      color: var(--primary);
-      margin-bottom: 12px;
-      letter-spacing: 0.03em;
-    }
-    .safety-card p {
-      color: #5a6a7a;
-      font-size: 0.95rem;
-      line-height: 1.65;
-    }
-    .safety-stat {
-      display: inline-block;
-      margin-top: 16px;
-      background: rgba(245,200,66,0.12);
-      color: var(--primary);
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 0.85rem;
+    .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--accent);
+      color: #111;
+      padding: 14px 28px;
+      border-radius: 4px;
+      text-decoration: none;
       font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      padding: 4px 12px;
-      border-radius: 2px;
-      border-left: 3px solid var(--accent);
+      font-size: 1rem;
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      padding: 14px 28px;
+      border-radius: 4px;
+      border: 2px solid rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
     }
 
-    /* ─── SERVICES ─── */
-    .services-section { background: var(--white); }
-
-    .services-header {
+    .trust-bar {
+      background: var(--primary);
       display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-bottom: 48px;
+      justify-content: center;
+      gap: 40px;
       flex-wrap: wrap;
-      gap: 20px;
+      padding: 18px 5%;
+    }
+    .trust-item {
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    section { padding: 70px 6%; }
+    .section-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    h2.section-title {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      color: var(--primary);
+      font-weight: 800;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .section-sub {
+      font-size: 1rem;
+      color: #555;
+      max-width: 580px;
+      line-height: 1.65;
+      margin-bottom: 40px;
     }
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 24px;
     }
-
     .service-card {
-      background: var(--white);
-      border: 1px solid #e2e8f0;
-      border-top: 4px solid var(--accent);
-      border-radius: 6px;
-      padding: 32px 28px;
-      transition: box-shadow 0.25s, transform 0.25s;
-      position: relative;
-      overflow: hidden;
+      background: var(--light);
+      border-radius: 8px;
+      padding: 28px 24px;
+      border-left: 4px solid var(--accent);
     }
-    .service-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(245,200,66,0.04), transparent);
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-    .service-card:hover {
-      box-shadow: 0 8px 32px rgba(13,27,42,0.12);
-      transform: translateY(-4px);
-    }
-    .service-card:hover::before { opacity: 1; }
+    .service-icon { font-size: 2rem; margin-bottom: 12px; }
+    .service-card h3 { font-size: 1rem; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
+    .service-card p { font-size: 0.88rem; color: #555; line-height: 1.5; }
 
-    .service-icon {
-      font-size: 2.2rem;
-      margin-bottom: 16px;
-      display: block;
+    .about-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      padding: 80px 6%;
+      background: var(--light);
     }
-    .service-card h3 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 1.4rem;
+    @media (max-width: 768px) { .about-section { grid-template-columns: 1fr; gap: 32px; } }
+    .about-img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .about-content .brand-name {
+      font-size: 1.8rem;
       font-weight: 800;
-      text-transform: uppercase;
       color: var(--primary);
-      margin-bottom: 10px;
-      letter-spacing: 0.03em;
+      margin-bottom: 6px;
     }
-    .service-outcome {
-      color: #4a5568;
-      font-size: 0.92rem;
-      line-height: 1.6;
-      margin-bottom: 18px;
-    }
-    .service-link {
-      color: var(--accent-dark);
-      font-family: 'Barlow Condensed', sans-serif;
+    .about-content .brand-location {
       font-size: 0.9rem;
-      font-weight: 700;
+      color: var(--accent);
+      font-weight: 600;
+      letter-spacing: 1px;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      text-decoration: none;
-      display: flex;
+      margin-bottom: 20px;
+    }
+    .about-content p {
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.75;
+      margin-bottom: 20px;
+    }
+    .about-pills { display: flex; flex-wrap: wrap; gap: 10px; }
+    .pill {
+      display: inline-flex;
       align-items: center;
       gap: 6px;
-      transition: gap 0.2s;
-    }
-    .service-link:hover { gap: 10px; }
-
-    /* ─── MEET JOSE ─── */
-    .meet-section {
-      background: var(--primary);
-      position: relative;
-      overflow: hidden;
-    }
-    .meet-section::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: url('https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?w=1600&q=80') center/cover;
-      opacity: 0.06;
-    }
-
-    .meet-inner {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 64px;
-      align-items: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .meet-visual {
-      position: relative;
-    }
-    .meet-img-wrap {
-      position: relative;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 24px 60px rgba(0,0,0,0.5);
-    }
-    .meet-img-wrap img {
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
-      display: block;
-    }
-    .meet-img-wrap::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(13,27,42,0.5) 0%, transparent 60%);
-    }
-    .meet-badge {
-      position: absolute;
-      bottom: -16px;
-      right: -16px;
-      background: var(--accent);
-      color: var(--primary);
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      padding: 14px 20px;
-      border-radius: 6px;
-      box-shadow: 0 8px 24px rgba(245,200,66,0.4);
-      text-align: center;
-      line-height: 1.3;
-    }
-
-    .meet-content .section-label { color: var(--accent); }
-    .meet-content .section-title { color: var(--white); }
-
-    .meet-story {
-      color: rgba(255,255,255,0.75);
-      font-size: 1.05rem;
-      line-height: 1.75;
-      margin-bottom: 32px;
-    }
-
-    .meet-quote {
-      border-left: 4px solid var(--accent);
-      padding: 20px 24px;
-      background: rgba(245,200,66,0.06);
-      border-radius: 0 6px 6px 0;
-      margin-bottom: 36px;
-    }
-    .meet-quote p {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 1.35rem;
-      font-weight: 600;
-      color: var(--white);
-      line-height: 1.4;
-      font-style: italic;
-    }
-    .meet-quote cite {
-      display: block;
-      margin-top: 10px;
-      color: var(--accent);
-      font-size: 0.85rem;
-      font-style: normal;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    /* ─── REVIEWS ─── */
-    .reviews-section {
-      background: var(--primary);
-      position: relative;
-    }
-    .reviews-section::before {
-      content: '';
-      position: absolute;
-      top: -40px; left: 0; width: 100%; height: 80px;
       background: var(--white);
-      transform: skewY(-2deg);
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      padding: 7px 14px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary);
     }
 
-    .reviews-header {
-      text-align: center;
-      margin-bottom: 52px;
-      position: relative;
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 28px;
     }
-    .reviews-header .section-title { color: var(--white); }
-    .reviews-header .section-subtitle { color: rgba(255,255,255,0.6); margin: 0 auto; }
-    .reviews-header .section-label { color: var(--accent); }
+    .why-item { text-align: center; padding: 24px 16px; }
+    .why-num { font-size: 2.4rem; font-weight: 800; color: var(--accent); margin-bottom: 6px; }
+    .why-item h3 { font-size: 0.95rem; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+    .why-item p { font-size: 0.85rem; color: #666; line-height: 1.5; }
 
     .reviews-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 24px;
     }
-
     .review-card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
+      background: var(--white);
+      border: 1px solid #e8e8e8;
       border-radius: 8px;
-      padding: 32px 28px;
-      transition: background 0.25s, transform 0.25s;
-      position: relative;
+      padding: 24px;
     }
-    .review-card:hover {
-      background: rgba(255,255,255,0.08);
-      transform: translateY(-4px);
-    }
+    .stars { color: #f5a623; font-size: 1rem; margin-bottom: 10px; }
+    .review-card p { font-size: 0.9rem; color: #444; line-height: 1.6; margin-bottom: 14px; font-style: italic; }
+    .reviewer { font-size: 0.82rem; font-weight: 700; color: var(--primary); }
 
-    .review-stars {
-      color: var(--accent);
-      font-size: 1.1rem;
-      margin-bottom: 18px;
-      letter-spacing: 2px;
-    }
-
-    .review-text {
-      color: rgba(255,255,255,0.85);
-      font-size: 0.98rem;
-      line-height: 1.7;
-      margin-bottom: 24px;
-      font-style: italic;
-    }
-    .review-text::before { content: '\201C'; }
-    .review-text::after { content: '\201D'; }
-
-    .review-author {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .review-avatar {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background: var(--secondary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 800;
-      font-size: 1.1rem;
-      color: var(--accent);
-      flex-shrink: 0;
-    }
-    .review-name {
-      font-weight: 700;
-      color: var(--white);
-      font-size: 0.95rem;
-    }
-    .review-source {
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.45);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-top: 2px;
-    }
-
-    .review-google-badge {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      font-size: 0.75rem;
-      color: rgba(255,255,255,0.3);
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
-
-    /* ─── CTA ─── */
     .cta-section {
+      background: var(--primary);
+      text-align: center;
+      padding: 70px 6%;
+    }
+    .cta-section h2 { color: var(--white); font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; margin-bottom: 14px; }
+    .cta-section p { color: rgba(255,255,255,0.82); font-size: 1rem; margin-bottom: 32px; }
+    .btn-cta {
       background: var(--accent);
-      padding: 80px 5%;
-      position: relative;
-      overflow: hidden;
-    }
-    .cta-section::before {
-      content: '';
-      position: absolute;
-      top: -60px; left: 0;
-      width: 100%; height: 120px;
-      background: var(--primary);
-      transform: skewY(-3deg);
-    }
-
-    .cta-inner {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 48px;
-      align-items: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .cta-text .cta-label {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: rgba(13,27,42,0.65);
-      margin-bottom: 10px;
-    }
-    .cta-text h2 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      font-weight: 900;
-      text-transform: uppercase;
-      color: var(--primary);
-      line-height: 1.05;
-      margin-bottom: 14px;
-    }
-    .cta-text p {
-      color: rgba(13,27,42,0.72);
-      font-size: 1rem;
-      line-height: 1.6;
-      max-width: 500px;
-    }
-
-    .cta-actions {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      align-items: center;
-      min-width: 240px;
-    }
-
-    .btn-dark {
-      background: var(--primary);
-      color: var(--white);
-      padding: 18px 36px;
-      border: none;
+      color: #111;
+      padding: 16px 36px;
       border-radius: 4px;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 1.2rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      cursor: pointer;
       text-decoration: none;
-      display: inline-block;
-      width: 100%;
-      text-align: center;
-      transition: background 0.2s, transform 0.15s;
-      box-shadow: 0 4px 20px rgba(13,27,42,0.3);
-    }
-    .btn-dark:hover {
-      background: var(--secondary);
-      transform: translateY(-2px);
-    }
-
-    .cta-phone-note {
-      font-size: 0.88rem;
-      color: rgba(13,27,42,0.6);
-      text-align: center;
-      font-weight: 600;
-    }
-
-    /* ─── FOOTER ─── */
-    footer {
-      background: #07111c;
-      color: rgba(255,255,255,0.55);
-      padding: 48px 5% 32px;
-    }
-    .footer-inner {
-      display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr;
-      gap: 48px;
-      margin-bottom: 40px;
-    }
-    .footer-brand .nav-logo {
-      font-size: 1.3rem;
-      display: block;
-      margin-bottom: 14px;
-    }
-    .footer-brand p {
-      font-size: 0.88rem;
-      line-height: 1.65;
-      max-width: 260px;
-    }
-    .footer-col h4 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 0.85rem;
       font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: rgba(255,255,255,0.4);
-      margin-bottom: 16px;
-    }
-    .footer-col ul { list-style: none; }
-    .footer-col ul li { margin-bottom: 8px; }
-    .footer-col ul li a {
-      color: rgba(255,255,255,0.55);
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: color 0.2s;
-    }
-    .footer-col ul li a:hover { color: var(--accent); }
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.07);
-      padding-top: 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.82rem;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .footer-lic {
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    /* ─── FLOATING BUTTON ─── */
-    .float-btn {
-      position: fixed;
-      bottom: 32px;
-      right: 32px;
-      background: var(--accent);
-      color: var(--primary);
-      border: none;
-      border-radius: 50px;
-      padding: 16px 28px;
-      font-family: 'Barlow Condensed', sans-serif;
       font-size: 1.05rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      cursor: pointer;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      box-shadow: 0 8px 32px rgba(245,200,66,0.5);
-      z-index: 9999;
-      transition: transform 0.2s, box-shadow 0.2s;
-      animation: pulse-btn 2.5s infinite;
-    }
-    .float-btn:hover {
-      transform: translateY(-3px) scale(1.03);
-      box-shadow: 0 12px 40px rgba(245,200,66,0.6);
-      animation: none;
-    }
-    @keyframes pulse-btn {
-      0%, 100% { box-shadow: 0 8px 32px rgba(245,200,66,0.5); }
-      50% { box-shadow: 0 8px 42px rgba(245,200,66,0.75), 0 0 0 8px rgba(245,200,66,0.1); }
     }
 
-    /* ─── RESPONSIVE ─── */
-    @media (max-width: 1024px) {
-      .hero { grid-template-columns: 1fr; min-height: auto; }
-      .hero-image-side { height: 45vh; }
-      .hero-image-side::before { display: none; }
-      .hero-content-side { padding: 48px 6%; }
-      .safety-grid { grid-template-columns: 1fr; }
-      .services-grid { grid-template-columns: repeat(2, 1fr); }
-      .meet-inner { grid-template-columns: 1fr; gap: 40px; }
-      .meet-img-wrap { height: 300px; }
-      .reviews-grid { grid-template-columns: 1fr; }
-      .cta-inner { grid-template-columns: 1fr; text-align: center; }
-      .cta-text p { max-width: 100%; }
-      .footer-inner { grid-template-columns: 1fr 1fr; }
+    footer {
+      background: #111;
+      color: rgba(255,255,255,0.65);
+      text-align: center;
+      padding: 28px 5%;
+      font-size: 0.82rem;
     }
-    @media (max-width: 640px) {
-      nav { padding: 0 4%; }
-      .nav-links { display: none; }
-      .hero-content-side { padding: 40px 5%; }
-      .hero-stats { gap: 20px; }
-      .services-grid { grid-template-columns: 1fr; }
-      .cert-ribbon { flex-direction: column; gap: 8px; }
-      .cert-item:not(:last-child)::after { display: none; }
-      .footer-inner { grid-template-columns: 1fr; }
-      .float-btn { bottom: 20px; right: 16px; padding: 14px 22px; font-size: 0.95rem; }
-    }
+    footer strong { color: var(--white); }
   </style>
 </head>
 <body>
 
-<!-- TOP BANNER -->
-<div class="top-banner">
-  <span class="stars">⭐⭐⭐⭐⭐</span>
-  35 Five-Star Google Reviews - <strong>Coppell's #1 Electrician</strong>
-</div>
-
-<!-- STICKY NAV -->
 <nav>
-  <a href="#" class="nav-logo">Lukes <span>Electrical</span></a>
-  <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#safety">Safety</a></li>
-    <li><a href="#about">About Us</a></li>
-    <li><a href="#reviews">Reviews</a></li>
-    <li><a href="tel:4697760454" class="nav-cta">📞 Call Now</a></li>
-  </ul>
+  <div class="nav-logo">Spark Electrics</div>
+  <div class="nav-phone"><a href="tel:+14697760454">(469) 776-0454</a></div>
 </nav>
 
-<!-- HERO -->
-<section class="hero" id="hero">
-  <div class="hero-image-side">
-    <img
-      src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?w=1600&q=80"
-      alt="Licensed electrician working safely"
-      loading="eager"
-    />
-  </div>
-  <div class="hero-content-side">
-    <div class="hero-badge">⚡ Coppell's Trusted Electrician</div>
-    <h1 class="hero-headline">
-      Power Done<br/>
-      <span class="accent">Right.</span><br/>
-      First Time.
-    </h1>
-    <p class="hero-sub">
-      Our Team handles every job personally - from panel upgrades to emergency repairs.
-      Licensed, bonded, and trusted by hundreds of Coppell homeowners.
-    </p>
-    <div class="hero-actions">
-      <a href="tel:4697760454" class="btn-primary">📞 (469) 776-0454</a>
-      <a href="#services" class="btn-secondary">See Services →</a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat-item">
-        <div class="stat-num">5★</div>
-        <div class="stat-label">Average Rating</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">35+</div>
-        <div class="stat-label">Google Reviews</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">FREE</div>
-        <div class="stat-label">Estimates</div>
-      </div>
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Licensed &amp; Insured - Coppell TX</div>
+    <h1>Your Local Electrician
+in Coppell TX</h1>
+    <p>Licensed, insured electricians for any job big or small. Serving Coppell TX homes and businesses safely.</p>
+    <div class="hero-buttons">
+      <a href="tel:+14697760454" class="btn-primary">Call (469) 776-0454</a>
+      <a href="#services" class="btn-outline">Our Services</a>
     </div>
   </div>
 </section>
 
-<!-- CERTIFICATIONS RIBBON -->
-<div class="cert-ribbon">
-  <div class="cert-item"><span class="cert-icon">✅</span> Licensed Electrician</div>
-  <div class="cert-item"><span class="cert-icon">🛡️</span> Bonded &amp; Insured</div>
-  <div class="cert-item"><span class="cert-icon">📋</span> Code Compliant</div>
-  <div class="cert-item"><span class="cert-icon">💬</span> Free Estimates</div>
+<div class="trust-bar">
+  <div class="trust-item"><span>&#11088;</span> 4.9 Stars (58 Reviews)</div>
+  <div class="trust-item"><span>&#128336;</span> Same-Day Service</div>
+  <div class="trust-item"><span>&#128737;</span> Licensed &amp; Insured</div>
+  <div class="trust-item"><span>&#128205;</span> Serving Coppell TX</div>
 </div>
 
-<!-- WHY SAFETY MATTERS -->
-<section class="safety-section" id="safety">
-  <div class="safety-header">
-    <div class="section-label">⚠️ Electrical Hazards Are Real</div>
-    <h2 class="section-title">Why Safety Matters<br/>In Every Job</h2>
-    <p class="section-subtitle">Electrical failures are the #2 cause of house fires in the US. We don't cut corners - ever.</p>
-  </div>
-  <div class="safety-grid">
-    <div class="safety-card">
-      <span class="safety-icon">🔥</span>
-      <h3>Overloaded Panels Cause Fires</h3>
-      <p>An outdated 100-amp panel can't handle today's modern appliances. Overloaded circuits arc and spark - often inside your walls where you can't see it. That's how house fires start.</p>
-      <span class="safety-stat">⚡ 51,000 home electrical fires per year in the US</span>
-    </div>
-    <div class="safety-card">
-      <span class="safety-icon">💀</span>
-      <h3>DIY Wiring Kills</h3>
-      <p>Improperly wired outlets and switches create invisible shock hazards. One reversed hot/neutral wire can energize an entire appliance chassis. We inspect what "the last guy" left behind.</p>
-      <span class="safety-stat">⚡ 400+ electrocution deaths in US homes each year</span>
-    </div>
-    <div class="safety-card">
-      <span class="safety-icon">🚗</span>
-      <h3>EV Chargers Need Dedicated Circuits</h3>
-      <p>Plugging your EV into a standard outlet draws continuous current your wiring wasn't designed for. Overheated wires don't just trip breakers - they melt insulation and smolder for hours.</p>
-      <span class="safety-stat">⚡ Level 2 install requires proper 240V dedicated line</span>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section class="services-section" id="services">
-  <div class="services-header">
-    <div>
-      <div class="section-label">⚡ What We Do</div>
-      <h2 class="section-title">Electrical Services<br/>For Garland Homeowners</h2>
-    </div>
-    <a href="tel:4697760454" class="btn-primary">Get a Free Estimate →</a>
-  </div>
+<section id="services">
+  <div class="section-label">What We Do</div>
+  <h2 class="section-title">Electrical Services
+in Coppell TX</h2>
+  <p class="section-sub">From simple repairs to full rewires, every job is done to code and backed by our guarantee.</p>
   <div class="services-grid">
     <div class="service-card">
-      <span class="service-icon">⚡</span>
+      <div class="service-icon">⚡</div>
       <h3>Panel Upgrades</h3>
-      <p class="service-outcome">Old 100-amp panel? Upgrade to 200-amp and stop tripping breakers for good.</p>
-      <a href="tel:4697760454" class="service-link">Get estimate →</a>
+      <p>Breaker box replacements and electrical panel upgrades done safely.</p>
     </div>
     <div class="service-card">
-      <span class="service-icon">🔌</span>
-      <h3>Outlet Installation</h3>
-      <p class="service-outcome">Need more outlets? We add them safely - no extension cords needed.</p>
-      <a href="tel:4697760454" class="service-link">Get estimate →</a>
+      <div class="service-icon">💡</div>
+      <h3>Wiring & Rewiring</h3>
+      <p>New wiring installs and rewiring for older homes.</p>
     </div>
     <div class="service-card">
-      <span class="service-icon">💡</span>
-      <h3>Lighting Installation</h3>
-      <p class="service-outcome">Transform any room with proper lighting - installed in hours.</p>
-      <a href="tel:4697760454" class="service-link">Get estimate →</a>
+      <div class="service-icon">🔌</div>
+      <h3>Outlet & Switch</h3>
+      <p>Outlets, switches, and fixtures installed or replaced.</p>
     </div>
     <div class="service-card">
-      <span class="service-icon">🔍</span>
-      <h3>Safety Inspections</h3>
-      <p class="service-outcome">Know your home is safe. We inspect every circuit and give you a full report.</p>
-      <a href="tel:4697760454" class="service-link">Get estimate →</a>
+      <div class="service-icon">🏠</div>
+      <h3>Home Inspections</h3>
+      <p>Full electrical safety inspection before buying or selling.</p>
     </div>
     <div class="service-card">
-      <span class="service-icon">🚗</span>
+      <div class="service-icon">🌞</div>
       <h3>EV Charger Install</h3>
-      <p class="service-outcome">Electric vehicle? We install Level 2 chargers in your garage.</p>
-      <a href="tel:4697760454" class="service-link">Get estimate →</a>
+      <p>Home EV charging station installation. Level 1 and Level 2.</p>
     </div>
-    <div class="service-card" style="border-top-color: #e53e3e;">
-      <span class="service-icon">🚨</span>
-      <h3>Emergency Repairs</h3>
-      <p class="service-outcome">Power out at 9pm? Our Team picks up. We come to you.</p>
-      <a href="tel:4697760454" class="service-link" style="color:#e53e3e;">Call now →</a>
+    <div class="service-card">
+      <div class="service-icon">🚨</div>
+      <h3>Emergency Electric</h3>
+      <p>Electrical emergency? We respond fast, any time of day.</p>
     </div>
   </div>
 </section>
 
-<!-- MEET JOSE -->
-<section class="meet-section" id="about">
-  <div class="meet-inner">
-    <div class="meet-visual">
-      <div class="meet-img-wrap">
-        <img
-          src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?w=1600&q=80"
-          alt="Our Team - Licensed Electrician"
-        />
-      </div>
-      <div class="meet-badge">
-        ✅ Licensed<br/>Electrician<br/>Coppell, TX
-      </div>
+<div class="about-section">
+  <img class="about-img" src="https://images.pexels.com/photos/1109541/pexels-photo-1109541.jpeg?w=1600&q=80" alt="Spark Electrics">
+  <div class="about-content">
+    <div class="section-label">About Us</div>
+    <div class="brand-name">Spark Electrics</div>
+    <div class="brand-location">Serving Coppell TX &amp; Surrounding Areas</div>
+    <p>Electrical work is not something to guess on. Spark Electrics brings licensed, insured professionals to every job in Coppell TX. We do it right, we document it, and we stand behind our work. Your family's safety is our first priority.</p>
+    <div class="about-pills">
+      <span class="pill">&#10003; Licensed &amp; Insured</span>
+      <span class="pill">&#128205; Local &amp; Family-Owned</span>
+      <span class="pill">&#11088; 4.9 Stars on Google</span>
+      <span class="pill">&#128336; Same-Day Available</span>
     </div>
-    <div class="meet-content">
-      <div class="section-label">👷 Meet the Owner</div>
-      <h2 class="section-title" style="color:var(--white);">Our Team -<br/>Professional Electricians</h2>
-      <p class="meet-story">
-        Spark Electrics has been serving Coppell TX with safe, professional electrical work. Licensed, insured, and ready to help.
-      </p>
-      <div class="meet-quote">
-        <p>"Our Team, the owner, is by far the best electrician I've ever known."</p>
-        <cite>- David K., Coppell TX ⭐⭐⭐⭐⭐</cite>
-      </div>
-      <a href="tel:4697760454" class="btn-primary">📞 Call Us: (469) 776-0454</a>
+  </div>
+</div>
+
+<section>
+  <div class="section-label">Why Choose Us</div>
+  <h2 class="section-title">Spark Electrics<br>Coppell TX Trusts</h2>
+  <div class="why-grid">
+    <div class="why-item">
+      <div class="why-num">60min</div>
+      <h3>Fast Response</h3>
+      <p>We aim to be at your door within 60 minutes for emergencies.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-num">100%</div>
+      <h3>Satisfaction Guarantee</h3>
+      <p>Not happy? We make it right. No questions asked.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-num">4.9&#11088;</div>
+      <h3>Top Rated</h3>
+      <p>Trusted by Coppell TX homeowners. 58 five-star reviews.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-num">$0</div>
+      <h3>Free Estimate</h3>
+      <p>No charge to come out and tell you what it will cost.</p>
     </div>
   </div>
 </section>
 
-<!-- REVIEWS -->
-<section class="reviews-section" id="reviews">
-  <div class="reviews-header">
-    <div class="section-label">💬 What Garland Homeowners Say</div>
-    <h2 class="section-title">35 Five-Star Reviews<br/>And Counting</h2>
-    <p class="section-subtitle">Real customers. Real results. Coppell's most trusted electrician.</p>
-  </div>
+<section style="background: var(--light);">
+  <div class="section-label">What Customers Say</div>
+  <h2 class="section-title">Real Reviews from<br>Coppell TX Homeowners</h2>
   <div class="reviews-grid">
     <div class="review-card">
-      <div class="review-google-badge">Google ★</div>
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">Our Team, the owner, is by far the best electrician I've ever known.</p>
-      <div class="review-author">
-        <div class="review-avatar">DK</div>
-        <div>
-          <div class="review-name">David K.</div>
-          <div class="review-source">Google Review · Verified</div>
-        </div>
-      </div>
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>"They installed my EV charger in one afternoon. Clean install, walked me through everything."</p>
+      <div class="reviewer">- Dan B., Coppell TX</div>
     </div>
     <div class="review-card">
-      <div class="review-google-badge">Google ★</div>
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">Outstanding work all the way around. Our Team went above and beyond.</p>
-      <div class="review-author">
-        <div class="review-avatar">RT</div>
-        <div>
-          <div class="review-name">Rachel T.</div>
-          <div class="review-source">Google Review · Verified</div>
-        </div>
-      </div>
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>"Responded to our electrical emergency same evening. Calm, professional, and solved the problem fast."</p>
+      <div class="reviewer">- Susan W., Coppell TX</div>
     </div>
     <div class="review-card">
-      <div class="review-google-badge">Google ★</div>
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">Showed up on time and did a great job fixing all my electrical issues.</p>
-      <div class="review-author">
-        <div class="review-avatar">CM</div>
-        <div>
-          <div class="review-name">Carlos M.</div>
-          <div class="review-source">Google Review · Verified</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div style="text-align:center; margin-top: 40px;">
-    <a href="tel:4697760454" class="btn-primary" style="display:inline-block;">Join Our Happy Customers →</a>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section" id="contact">
-  <div class="cta-inner">
-    <div class="cta-text">
-      <div class="cta-label">⚡ Ready to get started?</div>
-      <h2>Our Team<br/>Does Every Job.</h2>
-      <p>No subcontractors. No surprises. Just an honest electrician who shows up on time, does clean work, and charges fair prices. Serving Coppell, TX and surrounding areas.</p>
-    </div>
-    <div class="cta-actions">
-      <a href="tel:4697760454" class="btn-dark">📞 (469) 776-0454</a>
-      <div class="cta-phone-note">Free estimates · Coppell, TX</div>
-      <div style="font-size:0.82rem; color:rgba(13,27,42,0.55);">⭐⭐⭐⭐⭐ 35 Google Reviews</div>
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>"Honest pricing, great workmanship. Our go-to electrician for anything in the house now."</p>
+      <div class="reviewer">- Mark H., Coppell TX</div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<section class="cta-section">
+  <h2>Need an Electrician in Coppell TX?</h2>
+  <p>Call now for fast, reliable service. Free estimates. Same-day available.</p>
+  <a href="tel:+14697760454" class="btn-cta">Call (469) 776-0454 Now</a>
+</section>
+
 <footer>
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <a href="#" class="nav-logo">Lukes <span>Electrical</span></a>
-      <p>Licensed, bonded, and insured electrician serving Coppell, TX and surrounding Dallas-area communities. Every job done right by Our Team.</p>
-    </div>
-    <div class="footer-col">
-      <h4>Services</h4>
-      <ul>
-        <li><a href="#services">Panel Upgrades</a></li>
-        <li><a href="#services">Outlet Installation</a></li>
-        <li><a href="#services">Lighting Installation</a></li>
-        <li><a href="#services">Safety Inspections</a></li>
-        <li><a href="#services">EV Charger Install</a></li>
-        <li><a href="#services">Emergency Repairs</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <ul>
-        <li><a href="tel:4697760454">📞 (469) 776-0454</a></li>
-        <li><a href="#hero">📍 Coppell, TX</a></li>
-        <li><a href="#about">👷 Meet Our Team</a></li>
-        <li><a href="#reviews">⭐ 35 Reviews</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <div>© 2024 Spark Electrics · Coppell, TX</div>
-    <div class="footer-lic">Licensed Electrician · Bonded &amp; Insured · Code Compliant</div>
-  </div>
+  <strong>Spark Electrics</strong> | Coppell TX | (469) 776-0454 | Licensed &amp; Insured<br>
+  <span style="opacity:0.5;font-size:0.75rem;">Licensed electrical services in Coppell TX and surrounding areas.</span>
 </footer>
-
-<!-- FLOATING BUTTON -->
-<a href="tel:4697760454" class="float-btn">
-  📞 Call Us Now
-</a>
 
 </body>
 </html>

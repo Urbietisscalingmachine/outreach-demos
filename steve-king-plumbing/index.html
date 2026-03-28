@@ -15,7 +15,6 @@
     }
     body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--text); background: var(--white); }
 
-    /* NAV */
     nav {
       background: var(--primary);
       padding: 0 5%;
@@ -34,11 +33,11 @@
       font-size: 1rem;
       font-weight: 600;
       background: var(--accent);
+      color: #fff;
       padding: 8px 18px;
       border-radius: 4px;
     }
 
-    /* HERO */
     .hero {
       position: relative;
       min-height: 520px;
@@ -52,7 +51,7 @@
       background-image: url('https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?w=1600&q=80');
       background-size: cover;
       background-position: center;
-      filter: brightness(0.38);
+      filter: brightness(0.35);
     }
     .hero-content {
       position: relative;
@@ -63,7 +62,7 @@
     .hero-badge {
       display: inline-block;
       background: var(--accent);
-      color: var(--white);
+      color: #fff;
       font-size: 0.78rem;
       font-weight: 700;
       letter-spacing: 1px;
@@ -89,15 +88,13 @@
     .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
     .btn-primary {
       background: var(--accent);
-      color: var(--white);
+      color: #fff;
       padding: 14px 28px;
       border-radius: 4px;
       text-decoration: none;
       font-weight: 700;
       font-size: 1rem;
-      transition: opacity 0.2s;
     }
-    .btn-primary:hover { opacity: 0.88; }
     .btn-outline {
       background: transparent;
       color: var(--white);
@@ -109,7 +106,6 @@
       font-size: 1rem;
     }
 
-    /* TRUST BAR */
     .trust-bar {
       background: var(--primary);
       display: flex;
@@ -126,9 +122,7 @@
       font-size: 0.9rem;
       font-weight: 600;
     }
-    .trust-item span.icon { font-size: 1.1rem; }
 
-    /* SECTION */
     section { padding: 70px 6%; }
     .section-label {
       font-size: 0.78rem;
@@ -153,7 +147,6 @@
       margin-bottom: 40px;
     }
 
-    /* SERVICES GRID */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -169,34 +162,15 @@
     .service-card h3 { font-size: 1rem; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
     .service-card p { font-size: 0.88rem; color: #555; line-height: 1.5; }
 
-    /* WHY US */
-    .why-section { background: var(--light); }
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 28px;
-    }
-    .why-item { text-align: center; padding: 24px 16px; }
-    .why-num {
-      font-size: 2.4rem;
-      font-weight: 800;
-      color: var(--accent);
-      margin-bottom: 6px;
-    }
-    .why-item h3 { font-size: 0.95rem; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
-    .why-item p { font-size: 0.85rem; color: #666; line-height: 1.5; }
-
-    /* ABOUT */
     .about-section {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 60px;
       align-items: center;
       padding: 80px 6%;
+      background: var(--light);
     }
-    @media (max-width: 768px) {
-      .about-section { grid-template-columns: 1fr; gap: 32px; }
-    }
+    @media (max-width: 768px) { .about-section { grid-template-columns: 1fr; gap: 32px; } }
     .about-img {
       width: 100%;
       height: 380px;
@@ -221,18 +195,14 @@
       font-size: 1rem;
       color: #444;
       line-height: 1.75;
-      margin-bottom: 28px;
+      margin-bottom: 20px;
     }
-    .about-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
+    .about-pills { display: flex; flex-wrap: wrap; gap: 10px; }
     .pill {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: var(--light);
+      background: var(--white);
       border: 1px solid #ddd;
       border-radius: 20px;
       padding: 7px 14px;
@@ -241,7 +211,16 @@
       color: var(--primary);
     }
 
-    /* REVIEWS */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 28px;
+    }
+    .why-item { text-align: center; padding: 24px 16px; }
+    .why-num { font-size: 2.4rem; font-weight: 800; color: var(--accent); margin-bottom: 6px; }
+    .why-item h3 { font-size: 0.95rem; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+    .why-item p { font-size: 0.85rem; color: #666; line-height: 1.5; }
+
     .reviews-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -257,7 +236,6 @@
     .review-card p { font-size: 0.9rem; color: #444; line-height: 1.6; margin-bottom: 14px; font-style: italic; }
     .reviewer { font-size: 0.82rem; font-weight: 700; color: var(--primary); }
 
-    /* CTA */
     .cta-section {
       background: var(--primary);
       text-align: center;
@@ -267,7 +245,7 @@
     .cta-section p { color: rgba(255,255,255,0.82); font-size: 1rem; margin-bottom: 32px; }
     .btn-cta {
       background: var(--accent);
-      color: var(--white);
+      color: #fff;
       padding: 16px 36px;
       border-radius: 4px;
       text-decoration: none;
@@ -275,7 +253,6 @@
       font-size: 1.05rem;
     }
 
-    /* FOOTER */
     footer {
       background: #111;
       color: rgba(255,255,255,0.65);
@@ -297,7 +274,8 @@
   <div class="hero-bg"></div>
   <div class="hero-content">
     <div class="hero-badge">Licensed &amp; Insured - Mesquite TX</div>
-    <h1>Trusted Plumber<br>in Mesquite TX</h1>
+    <h1>Trusted Plumber
+in Mesquite TX</h1>
     <p>Fast response, honest pricing, and work done right the first time. Serving Mesquite TX homeowners and businesses.</p>
     <div class="hero-buttons">
       <a href="tel:+14696934316" class="btn-primary">Call (469) 693-4316</a>
@@ -307,21 +285,21 @@
 </section>
 
 <div class="trust-bar">
-  <div class="trust-item"><span class="icon">⭐</span> 4.8 Stars (47 Reviews)</div>
-  <div class="trust-item"><span class="icon">🕐</span> Same-Day Service</div>
-  <div class="trust-item"><span class="icon">🛡️</span> Licensed &amp; Insured</div>
-  <div class="trust-item"><span class="icon">📍</span> Serving Mesquite TX</div>
+  <div class="trust-item"><span>&#11088;</span> 4.8 Stars (47 Reviews)</div>
+  <div class="trust-item"><span>&#128336;</span> Same-Day Service</div>
+  <div class="trust-item"><span>&#128737;</span> Licensed &amp; Insured</div>
+  <div class="trust-item"><span>&#128205;</span> Serving Mesquite TX</div>
 </div>
 
 <section id="services">
-  <div class="section-label">What We Fix</div>
-  <h2 class="section-title">Plumbing Services<br>in Mesquite TX</h2>
+  <div class="section-label">What We Do</div>
+  <h2 class="section-title">Mesquite TX Plumbing Services</h2>
   <p class="section-sub">From emergency repairs to full installations, we handle it all with speed and quality.</p>
   <div class="services-grid">
     <div class="service-card">
       <div class="service-icon">🚿</div>
       <h3>Drain Cleaning</h3>
-      <p>Clogged drains cleared fast. Kitchen, bathroom, and main line blockages.</p>
+      <p>Clogged drains cleared fast. Kitchen, bathroom, and main line.</p>
     </div>
     <div class="service-card">
       <div class="service-icon">🔧</div>
@@ -331,7 +309,7 @@
     <div class="service-card">
       <div class="service-icon">🌡️</div>
       <h3>Water Heater</h3>
-      <p>Repair or replace your water heater. Same-day service available.</p>
+      <p>Repair or replace your water heater. Same-day available.</p>
     </div>
     <div class="service-card">
       <div class="service-icon">🚽</div>
@@ -345,16 +323,31 @@
     </div>
     <div class="service-card">
       <div class="service-icon">🚨</div>
-      <h3>Emergency Plumbing</h3>
+      <h3>Emergency</h3>
       <p>Plumbing emergency? We respond fast, day or night.</p>
     </div>
   </div>
 </section>
 
-<section class="why-section">
+<div class="about-section">
+  <img class="about-img" src="https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?w=1600&q=80" alt="Steve King Plumbing">
+  <div class="about-content">
+    <div class="section-label">About Us</div>
+    <div class="brand-name">Steve King Plumbing</div>
+    <div class="brand-location">Serving Mesquite TX &amp; Surrounding Areas</div>
+    <p>We started simple: show up on time, fix it right, charge a fair price. No surprises, no upsells. Just honest plumbing for Mesquite TX homeowners who deserve better than the average call center service. Every job gets our full attention.</p>
+    <div class="about-pills">
+      <span class="pill">&#10003; Licensed &amp; Insured</span>
+      <span class="pill">&#128205; Local &amp; Family-Owned</span>
+      <span class="pill">&#11088; 4.8 Stars on Google</span>
+      <span class="pill">&#128336; Same-Day Available</span>
+    </div>
+  </div>
+</div>
+
+<section>
   <div class="section-label">Why Choose Us</div>
-  <h2 class="section-title">The Mesquite TX Plumber<br>Neighbors Recommend</h2>
-  <p class="section-sub">Steve King Plumbing has been serving Mesquite TX with honest, reliable plumbing. We show up on time, fix it right, and charge a fair price.</p>
+  <h2 class="section-title">Steve King Plumbing<br>Mesquite TX Trusts</h2>
   <div class="why-grid">
     <div class="why-item">
       <div class="why-num">60min</div>
@@ -367,52 +360,35 @@
       <p>Not happy? We make it right. No questions asked.</p>
     </div>
     <div class="why-item">
-      <div class="why-num">4.8★</div>
+      <div class="why-num">4.8&#11088;</div>
       <h3>Top Rated</h3>
       <p>Trusted by Mesquite TX homeowners. 47 five-star reviews.</p>
     </div>
     <div class="why-item">
       <div class="why-num">$0</div>
       <h3>Free Estimate</h3>
-      <p>No charge to come out and tell you exactly what it will cost.</p>
+      <p>No charge to come out and tell you what it will cost.</p>
     </div>
   </div>
 </section>
 
-<div class="about-section">
-  <img class="about-img" src="https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?w=900&q=80" alt="Steve King Plumbing team">
-  <div class="about-content">
-    <div class="section-label">About Us</div>
-    <div class="brand-name">Steve King Plumbing</div>
-    <div class="brand-location">Serving Mesquite TX &amp; Surrounding Areas</div>
-    <p>We started with a simple idea: show up on time, fix it right, and charge a fair price. No surprises, no upsells, no runaround. Just honest plumbing work for Mesquite TX homeowners who deserve better than the average call center service.</p>
-    <p>Every job gets our full attention. We treat your home like our own.</p>
-    <div class="about-pills">
-      <span class="pill">✅ Licensed &amp; Insured</span>
-      <span class="pill">📍 Local &amp; Family-Owned</span>
-      <span class="pill">⭐ 4.8 Stars on Google</span>
-      <span class="pill">🕐 Same-Day Available</span>
-    </div>
-  </div>
-</div>
-
-<section>
+<section style="background: var(--light);">
   <div class="section-label">What Customers Say</div>
   <h2 class="section-title">Real Reviews from<br>Mesquite TX Homeowners</h2>
   <div class="reviews-grid">
     <div class="review-card">
       <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p>"Called in the morning with a burst pipe and they were at my door within the hour. Professional, clean, and fair price. Highly recommend."</p>
+      <p>"Called in the morning with a burst pipe and they were at my door within the hour. Professional, clean, and fair price."</p>
       <div class="reviewer">- Mike R., Mesquite TX</div>
     </div>
     <div class="review-card">
       <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p>"Fixed our water heater same day. They explained everything clearly and didn't try to upsell me on anything I didn't need."</p>
+      <p>"Fixed our water heater same day. Explained everything clearly, no upsells."</p>
       <div class="reviewer">- Sandra L., Mesquite TX</div>
     </div>
     <div class="review-card">
       <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p>"Best plumber in the area. Honest, on time, and quality work. Will use again and recommend to everyone in the neighborhood."</p>
+      <p>"Best plumber in the area. Honest, on time, quality work. Will recommend to everyone."</p>
       <div class="reviewer">- James T., Mesquite TX</div>
     </div>
   </div>

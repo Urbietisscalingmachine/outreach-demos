@@ -1,1386 +1,410 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Henry Family Roofing LLC | Expert Roofing - Mesquite, TX</title>
-  <meta name="description" content="Henry Family Roofing LLC - 5★ rated, 204 Google reviews. Our Team handles every job. Call (469) 960-3301 today." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Henry Family Roofing LLC | Roofing in Mesquite TX</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --red: #1a1a5c;
-      --red-deep: #1a1a5c;
-      --red-light: #1a1a5c;
-      --gold: #c9a227;
-      --gold-dark: #c9a227;
-      --dark: #0d0d1a;
-      --dark2: #1a1a2e;
-      --cream: #faf5eb;
-      --cream2: #f0e8d5;
+      --primary: #2c1810;
+      --accent: #c9a227;
+      --text: #1a1a1a;
+      --light: #f8f8f8;
       --white: #ffffff;
-      --gray: #666;
-      --light-gray: #f5f5f5;
     }
+    body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--text); background: var(--white); }
 
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--cream);
-      color: var(--dark);
-      overflow-x: hidden;
-    }
-
-    h1, h2, h3, h4 {
-      font-family: 'Playfair Display', serif;
-    }
-
-    /* ─── STICKY NAV ─────────────────────────────────────────── */
     nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 1000;
-      background: var(--dark);
-      border-bottom: 3px solid var(--red);
+      background: var(--primary);
+      padding: 0 5%;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 2rem;
-      height: 68px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+      height: 64px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-
-    .nav-brand {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .nav-star {
-      font-size: 1.6rem;
-      color: var(--gold);
-    }
-
-    .nav-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.15rem;
-      font-weight: 700;
+    .nav-logo { color: var(--white); font-size: 1.2rem; font-weight: 700; letter-spacing: 0.5px; }
+    .nav-phone a {
       color: var(--white);
-      line-height: 1.2;
-    }
-
-    .nav-title span {
-      display: block;
-      font-size: 0.72rem;
-      font-family: 'Inter', sans-serif;
-      font-weight: 400;
-      color: var(--gold);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: #ccc;
       text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 500;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      transition: color 0.2s;
+      font-size: 1rem;
+      font-weight: 600;
+      background: var(--accent);
+      color: #111;
+      padding: 8px 18px;
+      border-radius: 4px;
     }
 
-    .nav-links a:hover { color: var(--gold); }
-
-    .nav-cta {
-      background: var(--red);
-      color: var(--white) !important;
-      padding: 0.6rem 1.2rem !important;
-      font-weight: 700 !important;
-      letter-spacing: 0.02em !important;
-      text-transform: none !important;
-      border: 2px solid var(--red) !important;
-      transition: background 0.2s, border-color 0.2s !important;
-    }
-
-    .nav-cta:hover {
-      background: var(--gold) !important;
-      color: var(--dark) !important;
-      border-color: var(--gold) !important;
-    }
-
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      nav { padding: 0 1rem; }
-    }
-
-    /* ─── HERO ───────────────────────────────────────────────── */
-    #hero {
+    .hero {
       position: relative;
-      min-height: 100vh;
+      min-height: 520px;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
-      text-align: center;
-      padding: 68px 2rem 0;
       overflow: hidden;
     }
-
     .hero-bg {
       position: absolute;
       inset: 0;
-      background-image: url('https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?w=1600&q=80');
+      background-image: url('https://images.pexels.com/photos/7578882/pexels-photo-7578882.jpeg?w=1600&q=80');
       background-size: cover;
       background-position: center;
-      transform: scale(1.05);
-      animation: heroZoom 12s ease-in-out infinite alternate;
+      filter: brightness(0.35);
     }
-
-    @keyframes heroZoom {
-      from { transform: scale(1.05); }
-      to   { transform: scale(1.12); }
-    }
-
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(26,10,10,0.72) 0%,
-        rgba(139,26,26,0.45) 40%,
-        rgba(26,10,10,0.88) 100%
-      );
-    }
-
     .hero-content {
       position: relative;
       z-index: 2;
-      max-width: 880px;
-      padding-bottom: 4rem;
+      padding: 60px 6%;
+      max-width: 680px;
     }
-
     .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--gold);
-      color: var(--dark);
-      padding: 0.45rem 1.2rem;
-      font-size: 0.9rem;
+      display: inline-block;
+      background: var(--accent);
+      color: #111;
+      font-size: 0.78rem;
       font-weight: 700;
-      letter-spacing: 0.04em;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 4px 20px rgba(245,200,66,0.5);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 3px;
+      margin-bottom: 20px;
     }
-
-    .hero-badge .stars { font-size: 1rem; letter-spacing: 0.1em; }
-
-    #hero h1 {
-      font-size: clamp(2.4rem, 6vw, 4.5rem);
-      font-weight: 900;
+    .hero h1 {
       color: var(--white);
-      line-height: 1.1;
-      margin-bottom: 1.2rem;
-      text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 16px;
     }
-
-    #hero h1 em {
-      font-style: italic;
-      color: var(--gold);
-    }
-
-    .hero-sub {
-      font-size: 1.15rem;
+    .hero p {
       color: rgba(255,255,255,0.88);
-      max-width: 600px;
-      margin: 0 auto 2rem;
-      line-height: 1.7;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 32px;
+      max-width: 520px;
     }
-
-    .hero-btns {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
+    .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
     .btn-primary {
-      background: var(--red);
-      color: var(--white);
-      padding: 0.9rem 2.2rem;
-      font-size: 1rem;
-      font-weight: 700;
+      background: var(--accent);
+      color: #111;
+      padding: 14px 28px;
+      border-radius: 4px;
       text-decoration: none;
-      border: 2px solid var(--red);
-      transition: all 0.2s;
-      box-shadow: 0 4px 20px rgba(139,26,26,0.6);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
+      font-weight: 700;
+      font-size: 1rem;
     }
-
-    .btn-primary:hover {
-      background: var(--gold);
-      border-color: var(--gold);
-      color: var(--dark);
-      box-shadow: 0 6px 28px rgba(245,200,66,0.5);
-      transform: translateY(-2px);
-    }
-
-    .btn-secondary {
+    .btn-outline {
       background: transparent;
       color: var(--white);
-      padding: 0.9rem 2.2rem;
-      font-size: 1rem;
-      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 4px;
+      border: 2px solid rgba(255,255,255,0.7);
       text-decoration: none;
-      border: 2px solid rgba(255,255,255,0.6);
-      transition: all 0.2s;
-    }
-
-    .btn-secondary:hover {
-      border-color: var(--gold);
-      color: var(--gold);
-      transform: translateY(-2px);
-    }
-
-    .hero-stats {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      z-index: 2;
-      background: rgba(26,10,10,0.92);
-      border-top: 3px solid var(--red);
-      display: flex;
-      justify-content: center;
-    }
-
-    .hero-stats-inner {
-      display: flex;
-      divide: 1px solid rgba(255,255,255,0.1);
-      max-width: 900px;
-      width: 100%;
-    }
-
-    .stat {
-      flex: 1;
-      text-align: center;
-      padding: 1.4rem 1rem;
-      border-right: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .stat:last-child { border-right: none; }
-
-    .stat-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      font-weight: 900;
-      color: var(--gold);
-      display: block;
-    }
-
-    .stat-label {
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.65);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      display: block;
-      margin-top: 0.2rem;
-    }
-
-    @media (max-width: 600px) {
-      .stat-num { font-size: 1.5rem; }
-      .stat-label { font-size: 0.68rem; }
-    }
-
-    /* ─── TRUST RIBBON ───────────────────────────────────────── */
-    #trust {
-      background: var(--white);
-      border-bottom: 3px solid var(--cream2);
-      padding: 2.5rem 2rem;
-    }
-
-    .trust-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      gap: 3rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .trust-google {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      flex-shrink: 0;
-    }
-
-    .google-g {
-      width: 48px;
-      height: 48px;
-      background: white;
-      border: 2px solid #eee;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: #4285F4;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .trust-rating-block {
-      text-align: left;
-    }
-
-    .trust-score {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.6rem;
-      font-weight: 900;
-      color: var(--dark);
-    }
-
-    .trust-stars-row {
-      color: var(--gold);
-      font-size: 1.1rem;
-      letter-spacing: 0.05em;
-    }
-
-    .trust-count {
-      font-size: 0.8rem;
-      color: var(--gray);
-    }
-
-    .trust-divider {
-      width: 1px;
-      height: 60px;
-      background: var(--cream2);
-      flex-shrink: 0;
-    }
-
-    .trust-snippets {
-      display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .trust-snippet {
-      font-size: 0.88rem;
-      color: var(--dark);
-      max-width: 220px;
-      line-height: 1.5;
-      font-style: italic;
-      border-left: 3px solid var(--gold);
-      padding-left: 0.75rem;
-    }
-
-    .trust-snippet strong {
-      font-style: normal;
-      display: block;
-      font-size: 0.78rem;
-      color: var(--gray);
-      margin-top: 0.3rem;
-    }
-
-    /* ─── MEET MARVIN ────────────────────────────────────────── */
-    #marvin {
-      background: var(--dark);
-      padding: 6rem 2rem;
-    }
-
-    .marvin-inner {
-      max-width: 1000px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 4rem;
-      align-items: center;
-    }
-
-    .marvin-img-wrap {
-      text-align: center;
-    }
-
-    .marvin-avatar {
-      width: 200px;
-      height: 200px;
-      border: 5px solid var(--red);
-      box-shadow: 0 0 0 3px var(--gold), 0 16px 48px rgba(0,0,0,0.5);
-      display: block;
-      margin: 0 auto 1.2rem;
-    }
-
-    .marvin-name-badge {
-      background: var(--red);
-      color: var(--white);
-      display: inline-block;
-      padding: 0.4rem 1.2rem;
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .marvin-text h2 {
-      font-size: 2.4rem;
-      color: var(--white);
-      margin-bottom: 1rem;
-      line-height: 1.2;
-    }
-
-    .marvin-text h2 em {
-      color: var(--gold);
-      font-style: italic;
-    }
-
-    .marvin-text p {
-      color: rgba(255,255,255,0.78);
+      font-weight: 600;
       font-size: 1rem;
-      line-height: 1.8;
-      margin-bottom: 1.2rem;
     }
 
-    .marvin-quote {
-      border-left: 4px solid var(--gold);
-      padding: 1rem 1.5rem;
-      background: rgba(245,200,66,0.08);
-      margin-top: 1.5rem;
+    .trust-bar {
+      background: var(--primary);
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      padding: 18px 5%;
+    }
+    .trust-item {
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
     }
 
-    .marvin-quote p {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.25rem;
-      font-style: italic;
-      color: var(--gold) !important;
-      margin-bottom: 0.4rem !important;
-    }
-
-    .marvin-quote cite {
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.5);
-      font-style: normal;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    @media (max-width: 768px) {
-      .marvin-inner {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-        text-align: center;
-      }
-      .marvin-quote { text-align: left; }
-    }
-
-    /* ─── SERVICES ───────────────────────────────────────────── */
-    #services {
-      background: var(--cream);
-      padding: 6rem 2rem;
-    }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 3.5rem;
-    }
-
+    section { padding: 70px 6%; }
     .section-label {
       font-size: 0.78rem;
       font-weight: 700;
-      letter-spacing: 0.2em;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--red);
-      display: block;
-      margin-bottom: 0.6rem;
+      color: var(--accent);
+      margin-bottom: 10px;
     }
-
-    .section-header h2 {
-      font-size: 2.8rem;
-      color: var(--dark);
+    h2.section-title {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      color: var(--primary);
+      font-weight: 800;
+      margin-bottom: 16px;
       line-height: 1.2;
     }
-
-    .section-header p {
+    .section-sub {
       font-size: 1rem;
-      color: var(--gray);
-      max-width: 560px;
-      margin: 0.8rem auto 0;
-      line-height: 1.7;
+      color: #555;
+      max-width: 580px;
+      line-height: 1.65;
+      margin-bottom: 40px;
     }
 
     .services-grid {
-      max-width: 1100px;
-      margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5px;
-      background: var(--cream2);
-      border: 1.5px solid var(--cream2);
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
     }
-
     .service-card {
-      background: var(--white);
-      padding: 2.5rem 2rem;
-      transition: all 0.25s;
-      border-bottom: 3px solid transparent;
+      background: var(--light);
+      border-radius: 8px;
+      padding: 28px 24px;
+      border-left: 4px solid var(--accent);
     }
+    .service-icon { font-size: 2rem; margin-bottom: 12px; }
+    .service-card h3 { font-size: 1rem; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
+    .service-card p { font-size: 0.88rem; color: #555; line-height: 1.5; }
 
-    .service-card:hover {
-      background: var(--dark);
-      border-bottom-color: var(--gold);
-      transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(0,0,0,0.2);
-      z-index: 1;
-      position: relative;
-    }
-
-    .service-card:hover .service-icon { color: var(--gold); }
-    .service-card:hover .service-title { color: var(--white); }
-    .service-card:hover .service-desc { color: rgba(255,255,255,0.7); }
-    .service-card:hover .service-outcome { color: var(--gold); border-color: rgba(245,200,66,0.3); }
-
-    .service-icon {
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
-      display: block;
-      color: var(--red);
-      transition: color 0.25s;
-    }
-
-    .service-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--dark);
-      margin-bottom: 0.6rem;
-      transition: color 0.25s;
-    }
-
-    .service-desc {
-      font-size: 0.9rem;
-      color: var(--gray);
-      line-height: 1.6;
-      margin-bottom: 0.8rem;
-      transition: color 0.25s;
-    }
-
-    .service-outcome {
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--red);
-      border-top: 1px solid var(--cream2);
-      padding-top: 0.8rem;
-      transition: color 0.25s, border-color 0.25s;
-    }
-
-    @media (max-width: 900px) {
-      .services-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    @media (max-width: 560px) {
-      .services-grid { grid-template-columns: 1fr; }
-    }
-
-    /* ─── BEFORE / AFTER ─────────────────────────────────────── */
-
-    #beforeafter .section-header h2 { color: var(--white); }
-    #beforeafter .section-header .section-label { color: var(--gold); }
-    #beforeafter .section-header p { color: rgba(255,255,255,0.55); }
-
-    .ba-col.after
-
-    .ba-col.before
-
-    .ba-col.after
-
-    @media (max-width: 640px) {
-    }
-
-    /* ─── REVIEWS ────────────────────────────────────────────── */
-    #reviews {
-      background: var(--dark);
-      padding: 6rem 2rem;
-    }
-
-    #reviews .section-header h2 { color: var(--white); }
-    #reviews .section-header .section-label { color: var(--gold); }
-    #reviews .section-header p { color: rgba(255,255,255,0.55); }
-
-    .review-main-wrap {
-      max-width: 820px;
-      margin: 0 auto 3rem;
-      background: var(--dark2);
-      border: 1px solid rgba(245,200,66,0.2);
-      border-left: 5px solid var(--gold);
-      padding: 2.5rem 2.5rem 2rem;
-      position: relative;
-    }
-
-    .review-main-wrap::before {
-      content: '"';
-      font-family: 'Playfair Display', serif;
-      font-size: 8rem;
-      line-height: 0;
-      color: rgba(245,200,66,0.08);
-      position: absolute;
-      top: 3.5rem;
-      left: 1.5rem;
-    }
-
-    .review-stars {
-      color: var(--gold);
-      font-size: 1.2rem;
-      letter-spacing: 0.1em;
-      margin-bottom: 0.8rem;
-    }
-
-    .review-main-text {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.25rem;
-      font-style: italic;
-      color: var(--white);
-      line-height: 1.7;
-      margin-bottom: 1.2rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .review-author {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-    }
-
-    .review-author-initials {
-      width: 44px;
-      height: 44px;
-      background: var(--red);
-      color: var(--white);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 0.9rem;
-      flex-shrink: 0;
-    }
-
-    .review-author-name {
-      font-weight: 700;
-      color: var(--white);
-      font-size: 0.95rem;
-    }
-
-    .review-author-label {
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.45);
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      margin-top: 0.1rem;
-    }
-
-    .google-badge {
-      font-size: 0.7rem;
-      background: var(--white);
-      color: #4285F4;
-      font-weight: 700;
-      padding: 0.1rem 0.4rem;
-    }
-
-    .reviews-mini-grid {
-      max-width: 1100px;
-      margin: 0 auto;
+    .about-section {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1px;
-      background: rgba(255,255,255,0.05);
-    }
-
-    .review-mini {
-      background: var(--dark2);
-      padding: 1.5rem;
-      transition: background 0.2s;
-    }
-
-    .review-mini:hover { background: #1a1a2a; }
-
-    .review-mini .review-stars { font-size: 0.9rem; margin-bottom: 0.5rem; }
-
-    .review-mini-text {
-      font-size: 0.88rem;
-      color: rgba(255,255,255,0.72);
-      line-height: 1.6;
-      margin-bottom: 1rem;
-      font-style: italic;
-    }
-
-    .review-mini-author {
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--gold);
-    }
-
-    @media (max-width: 900px) {
-      .reviews-mini-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    @media (max-width: 540px) {
-      .reviews-mini-grid { grid-template-columns: 1fr; }
-    }
-
-    /* ─── CTA SECTION ────────────────────────────────────────── */
-    #cta {
-      background: var(--red);
-      padding: 6rem 2rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    #cta::before {
-      content: '★';
-      position: absolute;
-      font-size: 30rem;
-      color: rgba(255,255,255,0.03);
-      top: -4rem;
-      right: -4rem;
-      line-height: 1;
-    }
-
-    .cta-tag {
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.6);
-      display: block;
-      margin-bottom: 0.8rem;
-    }
-
-    #cta h2 {
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      color: var(--white);
-      line-height: 1.2;
-      margin-bottom: 1rem;
-    }
-
-    .cta-promise {
-      font-size: 1.15rem;
-      color: var(--gold);
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    .cta-sub {
-      font-size: 0.95rem;
-      color: rgba(255,255,255,0.72);
-      margin-bottom: 2.5rem;
-      max-width: 520px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .cta-actions {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 2.5rem;
-    }
-
-    .btn-gold {
-      background: var(--gold);
-      color: var(--dark);
-      padding: 1rem 2.5rem;
-      font-size: 1.05rem;
-      font-weight: 700;
-      text-decoration: none;
-      display: inline-flex;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
       align-items: center;
-      gap: 0.5rem;
-      transition: all 0.2s;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      padding: 80px 6%;
+      background: var(--light);
     }
-
-    .btn-gold:hover {
-      background: var(--white);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-    }
-
-    .btn-outline-white {
-      background: transparent;
-      color: var(--white);
-      padding: 1rem 2.5rem;
-      font-size: 1.05rem;
-      font-weight: 600;
-      text-decoration: none;
-      border: 2px solid rgba(255,255,255,0.5);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      transition: all 0.2s;
-    }
-
-    .btn-outline-white:hover {
-      border-color: var(--gold);
-      color: var(--gold);
-      transform: translateY(-2px);
-    }
-
-    .cta-guarantees {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .cta-guarantee {
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.7);
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .cta-guarantee .check { color: var(--gold); }
-
-    /* ─── GALLERY ────────────────────────────────────────────── */
-    #gallery {
-      padding: 6rem 2rem;
-      background: var(--cream2);
-    }
-
-    .gallery-grid {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-    }
-
-    .gallery-img {
+    @media (max-width: 768px) { .about-section { grid-template-columns: 1fr; gap: 32px; } }
+    .about-img {
       width: 100%;
-      aspect-ratio: 4/3;
+      height: 380px;
       object-fit: cover;
-      display: block;
-      filter: saturate(0.9);
-      transition: all 0.3s;
+      border-radius: 8px;
     }
-
-    .gallery-img:hover {
-      filter: saturate(1.2);
-      transform: scale(1.02);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-      position: relative;
-      z-index: 1;
+    .about-content .brand-name {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 6px;
     }
-
-    @media (max-width: 640px) {
-      .gallery-grid { grid-template-columns: 1fr; }
-    }
-
-    /* ─── FOOTER ─────────────────────────────────────────────── */
-    footer {
-      background: var(--dark);
-      border-top: 3px solid var(--red);
-      padding: 3rem 2rem;
-      text-align: center;
-    }
-
-    .footer-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      font-weight: 900;
-      color: var(--white);
-      margin-bottom: 0.3rem;
-    }
-
-    .footer-logo span { color: var(--gold); }
-
-    .footer-tagline {
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.45);
-      margin-bottom: 1.5rem;
-    }
-
-    .footer-info {
-      display: flex;
-      justify-content: center;
-      gap: 2.5rem;
-      flex-wrap: wrap;
-      margin-bottom: 2rem;
-    }
-
-    .footer-info-item {
+    .about-content .brand-location {
       font-size: 0.9rem;
-      color: rgba(255,255,255,0.65);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+      color: var(--accent);
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
     }
-
-    .footer-info-item a {
-      color: var(--gold);
-      text-decoration: none;
-    }
-
-    .footer-info-item a:hover { text-decoration: underline; }
-
-    .footer-copy {
-      font-size: 0.75rem;
-      color: rgba(255,255,255,0.25);
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding-top: 1.5rem;
-    }
-
-    /* ─── FLOAT BUTTON ───────────────────────────────────────── */
-    .float-call {
-      position: fixed;
-      bottom: 1.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 9999;
-      background: var(--red);
-      color: var(--white);
-      padding: 0.9rem 2rem;
+    .about-content p {
       font-size: 1rem;
-      font-weight: 700;
-      text-decoration: none;
-      border: 2px solid var(--gold);
-      box-shadow: 0 6px 32px rgba(139,26,26,0.7);
-      white-space: nowrap;
-      display: flex;
+      color: #444;
+      line-height: 1.75;
+      margin-bottom: 20px;
+    }
+    .about-pills { display: flex; flex-wrap: wrap; gap: 10px; }
+    .pill {
+      display: inline-flex;
       align-items: center;
-      gap: 0.6rem;
-      animation: floatPulse 2.5s ease-in-out infinite;
-      transition: background 0.2s, transform 0.2s;
+      gap: 6px;
+      background: var(--white);
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      padding: 7px 14px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary);
     }
 
-    .float-call:hover {
-      background: var(--gold);
-      color: var(--dark);
-      transform: translateX(-50%) translateY(-3px);
-      box-shadow: 0 10px 40px rgba(245,200,66,0.5);
-      animation: none;
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 28px;
     }
+    .why-item { text-align: center; padding: 24px 16px; }
+    .why-num { font-size: 2.4rem; font-weight: 800; color: var(--accent); margin-bottom: 6px; }
+    .why-item h3 { font-size: 0.95rem; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+    .why-item p { font-size: 0.85rem; color: #666; line-height: 1.5; }
 
-    @keyframes floatPulse {
-      0%, 100% { box-shadow: 0 6px 32px rgba(139,26,26,0.7); }
-      50%       { box-shadow: 0 6px 48px rgba(139,26,26,0.95), 0 0 0 6px rgba(245,200,66,0.15); }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
     }
-
-    /* ─── SCROLL ANIMATIONS ──────────────────────────────────── */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+    .review-card {
+      background: var(--white);
+      border: 1px solid #e8e8e8;
+      border-radius: 8px;
+      padding: 24px;
     }
+    .stars { color: #f5a623; font-size: 1rem; margin-bottom: 10px; }
+    .review-card p { font-size: 0.9rem; color: #444; line-height: 1.6; margin-bottom: 14px; font-style: italic; }
+    .reviewer { font-size: 0.82rem; font-weight: 700; color: var(--primary); }
 
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ─── ADDRESS BAR ────────────────────────────────────────── */
-    .address-bar {
-      background: var(--dark2);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      padding: 0.55rem 2rem;
+    .cta-section {
+      background: var(--primary);
       text-align: center;
-      font-size: 0.8rem;
-      color: rgba(255,255,255,0.5);
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      flex-wrap: wrap;
+      padding: 70px 6%;
+    }
+    .cta-section h2 { color: var(--white); font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; margin-bottom: 14px; }
+    .cta-section p { color: rgba(255,255,255,0.82); font-size: 1rem; margin-bottom: 32px; }
+    .btn-cta {
+      background: var(--accent);
+      color: #111;
+      padding: 16px 36px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.05rem;
     }
 
-    .address-bar span { display: inline-flex; align-items: center; gap: 0.4rem; }
-    .address-bar a { color: var(--gold); text-decoration: none; }
-    .address-bar a:hover { text-decoration: underline; }
+    footer {
+      background: #111;
+      color: rgba(255,255,255,0.65);
+      text-align: center;
+      padding: 28px 5%;
+      font-size: 0.82rem;
+    }
+    footer strong { color: var(--white); }
   </style>
 </head>
 <body>
 
-  <!-- FLOATING CALL BUTTON -->
-  <a href="tel:4699603301" class="float-call">
-    📞 Call Now - (469) 960-3301
-  </a>
+<nav>
+  <div class="nav-logo">Henry Family Roofing LLC</div>
+  <div class="nav-phone"><a href="tel:+14699603301">(469) 960-3301</a></div>
+</nav>
 
-  <!-- TOP INFO BAR -->
-  <div class="address-bar" style="margin-top:68px">
-    <span>📍 2102 Harvest Run, Mesquite, TX 75040</span>
-    <span>🕐 Mon–Sun · 6:00 AM – 10:00 PM</span>
-    <span>⭐⭐⭐⭐⭐ <a href="#reviews">204 Google Reviews</a></span>
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Licensed &amp; Insured - Mesquite TX</div>
+    <h1>Protect Your Home
+with a Solid Roof</h1>
+    <p>Quality materials, clean crews, and roofs that last. Serving Mesquite TX with honest estimates and solid work.</p>
+    <div class="hero-buttons">
+      <a href="tel:+14699603301" class="btn-primary">Call (469) 960-3301</a>
+      <a href="#services" class="btn-outline">Our Services</a>
+    </div>
   </div>
+</section>
 
-  <!-- NAV -->
-  <nav>
-    <div class="nav-brand">
-      <span class="nav-star">★</span>
-      <div class="nav-title">
-        Henry Family Roofing LLC
-        <span>Mesquite, TX</span>
-      </div>
+<div class="trust-bar">
+  <div class="trust-item"><span>&#11088;</span> 4.8 Stars (45 Reviews)</div>
+  <div class="trust-item"><span>&#128336;</span> Same-Day Service</div>
+  <div class="trust-item"><span>&#128737;</span> Licensed &amp; Insured</div>
+  <div class="trust-item"><span>&#128205;</span> Serving Mesquite TX</div>
+</div>
+
+<section id="services">
+  <div class="section-label">What We Do</div>
+  <h2 class="section-title">Roofing Services
+in Mesquite TX</h2>
+  <p class="section-sub">From minor repairs to full replacements, we protect Mesquite TX homes with quality workmanship.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">🏠</div>
+      <h3>Roof Replacement</h3>
+      <p>Full roof replacement with quality shingles and warranty.</p>
     </div>
-    <ul class="nav-links">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#marvin">About</a></li>
-      <li><a href="#reviews">Reviews</a></li>
-      <li><a href="tel:4699603301" class="nav-cta">📞 Call Us (469) 960-3301</a></li>
-    </ul>
-  </nav>
-
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content fade-in visible">
-      <div class="hero-badge">
-        <span class="stars">⭐⭐⭐⭐⭐</span>
-        204 Google Reviews - Mesquite's Most Trusted Roofer
-      </div>
-      <h1>
-        Your Roof Deserves<br />
-        <em>Craftsmanship, Not Just Coverage</em>
-      </h1>
-      <p class="hero-sub">
-        When storms hit Mesquite, you need a roofer who shows up - on time, every time.
-        Our Team oversees every project from first nail to final inspection.
-      </p>
-      <div class="hero-btns">
-        <a href="tel:4699603301" class="btn-primary">
-          📞 Call Us Now
-        </a>
-        <a href="#reviews" class="btn-secondary">
-          See 204 Reviews ↓
-        </a>
-      </div>
+    <div class="service-card">
+      <div class="service-icon">🔧</div>
+      <h3>Roof Repair</h3>
+      <p>Leaks, missing shingles, and storm damage fixed fast.</p>
     </div>
-    <div class="hero-stats">
-      <div class="hero-stats-inner">
-        <div class="stat">
-          <span class="stat-num">5.0★</span>
-          <span class="stat-label">Google Rating</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">204</span>
-          <span class="stat-label">Verified Reviews</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">15+</span>
-          <span class="stat-label">Years in Business</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">7-Day</span>
-          <span class="stat-label">Response Time</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">100%</span>
-          <span class="stat-label">Owner-Supervised</span>
-        </div>
-      </div>
+    <div class="service-card">
+      <div class="service-icon">🌧️</div>
+      <h3>Leak Detection</h3>
+      <p>We find the source of leaks others miss.</p>
     </div>
-  </section>
-
-  <!-- TRUST RIBBON -->
-  <section id="trust">
-    <div class="trust-inner fade-in">
-      <div class="trust-google">
-        <div class="google-g">G</div>
-        <div class="trust-rating-block">
-          <div class="trust-score">5.0</div>
-          <div class="trust-stars-row">★★★★★</div>
-          <div class="trust-count">204 Google reviews</div>
-        </div>
-      </div>
-      <div class="trust-divider"></div>
-      <div class="trust-snippets">
-        <div class="trust-snippet">
-          "Our team did a phenomenal job."
-          <strong>- Margie Martinez, Mesquite TX</strong>
-        </div>
-        <div class="trust-snippet">
-          "Reliable, Punctual, Committed - all 7 of my rental properties."
-          <strong>- Amit Makwana, Mesquite TX</strong>
-        </div>
-        <div class="trust-snippet">
-          "Left the yard cleaner than they found it."
-          <strong>- Sarah L., Mesquite TX</strong>
-        </div>
-      </div>
+    <div class="service-card">
+      <div class="service-icon">🌀</div>
+      <h3>Storm Damage</h3>
+      <p>Insurance claim help and storm damage repair after hail or wind.</p>
     </div>
-  </section>
-
-  <!-- MEET MARVIN -->
-  <section id="marvin">
-    <div class="marvin-inner fade-in">
-      <div class="marvin-img-wrap">
-        <img
-          src="https://ui-avatars.com/api/?name=OT&size=200&background=1a1a5c&color=fff&bold=true"
-          alt="Our Team at Henry Family Roofing LLC"
-          class="marvin-avatar"
-        />
-        <div class="marvin-name-badge">Our Team</div>
-      </div>
-      <div class="marvin-text">
-        <h2>Work With <em>Our Team</em>.<br />Start to Finish.</h2>
-        <p>
-          Henry Family Roofing LLC protects Mesquite TX homes with quality roofing. We show up on time, use quality materials, and stand behind our work.
-        </p>
-        <p>
-          With a perfect 5-star rating across 204 reviews, Henry Family Roofing LLC has built something rare
-          in the roofing industry. That accountability is why homeowners in Mesquite and surrounding areas trust him with their biggest investment.
-        </p>
-        <div class="marvin-quote">
-          <p>"Every roof I touch, I treat like it's my own home."</p>
-          <cite>- Our Team · Henry Family Roofing LLC</cite>
-        </div>
-      </div>
+    <div class="service-card">
+      <div class="service-icon">🔍</div>
+      <h3>Free Inspection</h3>
+      <p>No-cost roof inspection. Know what you're dealing with.</p>
     </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services">
-    <div class="section-header fade-in">
-      <span class="section-label">What We Do</span>
-      <h2>Expert Roofing. Every Type. Every Time.</h2>
-      <p>From hail damage to full replacements - Our crew handles it all with the same precision and care.</p>
+    <div class="service-card">
+      <div class="service-icon">🏗️</div>
+      <h3>Gutters</h3>
+      <p>Gutter install, repair, and cleaning to protect your foundation.</p>
     </div>
-    <div class="services-grid fade-in">
+  </div>
+</section>
 
-      <div class="service-card">
-        <span class="service-icon">🏚️</span>
-        <div class="service-title">Full Roof Replacement</div>
-        <p class="service-desc">
-          Complete tear-off and replacement using high-grade architectural shingles. We handle permits, haul-off, and cleanup - you just enjoy the result.
-        </p>
-        <div class="service-outcome">✓ 25–50 year manufacturer warranties available</div>
-      </div>
-
-      <div class="service-card">
-        <span class="service-icon">⛈️</span>
-        <div class="service-title">Storm & Hail Damage Repair</div>
-        <p class="service-desc">
-          Hail and wind don't wait for a convenient time. Our crew responds quickly, documents damage properly, and works directly with your insurance adjuster.
-        </p>
-        <div class="service-outcome">✓ Insurance claim guidance included</div>
-      </div>
-
-      <div class="service-card">
-        <span class="service-icon">🔧</span>
-        <div class="service-title">Roof Leak Repair</div>
-        <p class="service-desc">
-          Small leaks become big problems fast. We find the source, fix it right, and back our repair work so you won't be calling us back for the same spot.
-        </p>
-        <div class="service-outcome">✓ Same-week service on most repairs</div>
-      </div>
-
-      <div class="service-card">
-        <span class="service-icon">🏢</span>
-        <div class="service-title">Commercial Roofing</div>
-        <p class="service-desc">
-          Flat roofs, TPO, modified bitumen - we've handled multi-unit complexes and commercial properties throughout the Mesquite area without shutting down operations.
-        </p>
-        <div class="service-outcome">✓ Minimal disruption to your business</div>
-      </div>
-
-      <div class="service-card">
-        <span class="service-icon">🏘️</span>
-        <div class="service-title">Multi-Property & Rental Roofing</div>
-        <p class="service-desc">
-          Managing a portfolio of rentals? Our Team has replaced roofs on 7 properties in a single season for one client. Coordinated scheduling, consistent quality.
-        </p>
-        <div class="service-outcome">✓ Bulk project discounts available</div>
-      </div>
-
-      <div class="service-card">
-        <span class="service-icon">🔍</span>
-        <div class="service-title">Free Roof Inspection</div>
-        <p class="service-desc">
-          Not sure if you need a repair or replacement? We come out, gives you an honest assessment, and tells you exactly what's needed - no upsell pressure.
-        </p>
-        <div class="service-outcome">✓ Our team inspects it - always</div>
-      </div>
-
+<div class="about-section">
+  <img class="about-img" src="https://images.pexels.com/photos/7578882/pexels-photo-7578882.jpeg?w=1600&q=80" alt="Henry Family Roofing LLC">
+  <div class="about-content">
+    <div class="section-label">About Us</div>
+    <div class="brand-name">Henry Family Roofing LLC</div>
+    <div class="brand-location">Serving Mesquite TX &amp; Surrounding Areas</div>
+    <p>Your roof is your home's first line of defense. Henry Family Roofing LLC serves Mesquite TX with honest assessments, quality materials, and crews that clean up after themselves. No high-pressure sales. Just a solid roof done right.</p>
+    <div class="about-pills">
+      <span class="pill">&#10003; Licensed &amp; Insured</span>
+      <span class="pill">&#128205; Local &amp; Family-Owned</span>
+      <span class="pill">&#11088; 4.8 Stars on Google</span>
+      <span class="pill">&#128336; Same-Day Available</span>
     </div>
-  </section>
+  </div>
+</div>
 
-  <!-- BEFORE / AFTER -->
-  
+<section>
+  <div class="section-label">Why Choose Us</div>
+  <h2 class="section-title">Henry Family Roofing LLC<br>Mesquite TX Trusts</h2>
+  <div class="why-grid">
+    <div class="why-item">
+      <div class="why-num">60min</div>
+      <h3>Fast Response</h3>
+      <p>We aim to be at your door within 60 minutes for emergencies.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-num">100%</div>
+      <h3>Satisfaction Guarantee</h3>
+      <p>Not happy? We make it right. No questions asked.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-num">4.8&#11088;</div>
+      <h3>Top Rated</h3>
+      <p>Trusted by Mesquite TX homeowners. 45 five-star reviews.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-num">$0</div>
+      <h3>Free Estimate</h3>
+      <p>No charge to come out and tell you what it will cost.</p>
+    </div>
+  </div>
+</section>
 
-  <!-- REVIEWS -->
-  <section id="reviews">
-    <div class="section-header fade-in">
-      <span class="section-label">Real Customers · Real Results</span>
-      <h2 style="color:var(--white)">What Mesquite Homeowners Say</h2>
-      <p>204 five-star reviews don't happen by accident. They happen because Our Team shows up.</p>
+<section style="background: var(--light);">
+  <div class="section-label">What Customers Say</div>
+  <h2 class="section-title">Real Reviews from<br>Mesquite TX Homeowners</h2>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>"Outstanding workmanship. You can tell they take pride in their work. Roof looks great."</p>
+      <div class="reviewer">- Tim L., Mesquite TX</div>
     </div>
+    <div class="review-card">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>"Walked me through every step of the process. No surprises, no extra charges. Just great roofing."</p>
+      <div class="reviewer">- Sharon W., Mesquite TX</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>"Best roofing company in the area. Honest estimates and they stand behind their work."</p>
+      <div class="reviewer">- Eddie F., Mesquite TX</div>
+    </div>
+  </div>
+</section>
 
-    <div class="review-main-wrap fade-in">
-      <div class="review-stars">⭐⭐⭐⭐⭐</div>
-      <p class="review-main-text">
-        "Hello, last year my roof was damaged by wind and hail, and my sister recommended
-        Henry Family Roofing LLC because they had done excellent work on her house.
-        Our team did a phenomenal job. I couldn't be happier with the results -
-        the team was professional, the cleanup was immaculate, and Our Team was available
-        every step of the way."
-      </p>
-      <div class="review-author">
-        <div class="review-author-initials">MM</div>
-        <div>
-          <div class="review-author-name">Margie Martinez</div>
-          <div class="review-author-label">
-            <span class="google-badge">G</span>
-            Verified Google Review · Mesquite, TX
-          </div>
-        </div>
-      </div>
-    </div>
+<section class="cta-section">
+  <h2>Need Roofing in Mesquite TX?</h2>
+  <p>Call now for fast, reliable service. Free estimates. Same-day available.</p>
+  <a href="tel:+14699603301" class="btn-cta">Call (469) 960-3301 Now</a>
+</section>
 
-    <div class="reviews-mini-grid fade-in">
-      <div class="review-mini">
-        <div class="review-stars">⭐⭐⭐⭐⭐</div>
-        <p class="review-mini-text">
-          "Recently I had my entire roof replaced by Henry Family Roofing LLC, and I'm very happy with the results and working with the business owner, Our Team, from start to finish."
-        </p>
-        <div class="review-mini-author">- Brandon Ha</div>
-      </div>
-      <div class="review-mini">
-        <div class="review-stars">⭐⭐⭐⭐⭐</div>
-        <p class="review-mini-text">
-          "Our team is great to work with. I got my 7 rental houses roof done recently in April 2024. He and his crew is very Reliable, Punctual, Committed."
-        </p>
-        <div class="review-mini-author">- Amit Makwana</div>
-      </div>
-      <div class="review-mini">
-        <div class="review-stars">⭐⭐⭐⭐⭐</div>
-        <p class="review-mini-text">
-          "Honest, transparent and did excellent work. The crew was hardworking and left the yard cleaner than they found it."
-        </p>
-        <div class="review-mini-author">- Sarah L.</div>
-      </div>
-      <div class="review-mini">
-        <div class="review-stars">⭐⭐⭐⭐⭐</div>
-        <p class="review-mini-text">
-          "They replaced our entire roof and did a phenomenal job. Fair pricing, great communication."
-        </p>
-        <div class="review-mini-author">- Mike T.</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section id="cta">
-    <span class="cta-tag">Get Your Free Inspection</span>
-    <h2>Ready for a Roof That<br />Actually Lasts?</h2>
-    <p class="cta-promise">We will come out. No salesperson. No pressure.</p>
-    <p class="cta-sub">
-      Call today and get a free, honest assessment from the owner directly.
-      We've earned 204 five-star reviews by telling homeowners the truth - not what sells.
-    </p>
-    <div class="cta-actions">
-      <a href="tel:4699603301" class="btn-gold">
-        📞 Call (469) 960-3301
-      </a>
-      <a href="#services" class="btn-outline-white">
-        See Our Services ↑
-      </a>
-    </div>
-    <div class="cta-guarantees">
-      <div class="cta-guarantee"><span class="check">✓</span> Free Inspection</div>
-      <div class="cta-guarantee"><span class="check">✓</span> No Salespeople</div>
-      <div class="cta-guarantee"><span class="check">✓</span> Owner-Supervised Work</div>
-      <div class="cta-guarantee"><span class="check">✓</span> Insurance Help Available</div>
-      <div class="cta-guarantee"><span class="check">✓</span> Mon–Sun 6 AM – 10 PM</div>
-    </div>
-  </section>
-
-  <!-- GALLERY -->
-  <section id="gallery">
-    <div class="section-header fade-in">
-      <span class="section-label">Our Work</span>
-      <h2>Built Proud in Mesquite, TX</h2>
-    </div>
-    <div class="gallery-grid fade-in">
-      <img
-        class="gallery-img"
-        src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
-        alt="Roof replacement project"
-        loading="lazy"
-      />
-      <img
-        class="gallery-img"
-        src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
-        alt="Roofing crew at work"
-        loading="lazy"
-      />
-      <img
-        class="gallery-img"
-        src="https://images.unsplash.com/photo-1605152276897-4f618f831968?w=800&q=80"
-        alt="Completed roof installation"
-        loading="lazy"
-      />
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-logo">
-      <span>Henry Family Roofing LLC</span>
-    </div>
-    <div class="footer-tagline">Mesquite's Most Trusted Roofer · 5★ · 204 Reviews</div>
-    <div class="footer-info">
-      <div class="footer-info-item">
-        📞 <a href="tel:4699603301">(469) 960-3301</a>
-      </div>
-      <div class="footer-info-item">
-        📍 2102 Harvest Run, Mesquite, TX 75040
-      </div>
-      <div class="footer-info-item">
-        🕐 Mon–Sun · 6:00 AM – 10:00 PM
-      </div>
-    </div>
-    <div class="footer-copy">
-      © 2024 Henry Family Roofing LLC. All rights reserved. · Licensed & Insured
-    </div>
-  </footer>
-
-  <script>
-    // Fade-in on scroll
-    const fadeEls = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    fadeEls.forEach(el => observer.observe(el));
-
-    // Hide float button when near footer to avoid overlap
-    const floatBtn = document.querySelector('.float-call');
-    window.addEventListener('scroll', () => {
-      const footer = document.querySelector('footer');
-      const footerTop = footer.getBoundingClientRect().top;
-      floatBtn.style.opacity = footerTop < 120 ? '0' : '1';
-      floatBtn.style.pointerEvents = footerTop < 120 ? 'none' : 'auto';
-    });
-  </script>
+<footer>
+  <strong>Henry Family Roofing LLC</strong> | Mesquite TX | (469) 960-3301 | Licensed &amp; Insured<br>
+  <span style="opacity:0.5;font-size:0.75rem;">Professional roofing services in Mesquite TX and surrounding areas.</span>
+</footer>
 
 </body>
 </html>

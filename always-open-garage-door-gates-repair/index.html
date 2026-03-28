@@ -1,1124 +1,410 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Always Open Garage Door and Gates - Garland TX</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Always Open Garage Door and Gates | Garage Door in Garland TX</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-
-      /* === BRAND OVERRIDE === */
-      --black:   #1a3a5c;
-      --accent:  #ff4444;
-      --accent2: #ff4444;
-      --darker:  #1a3a5c;
-      --black:   #111111;
-      --accent:  #f97316;
-      --accent2: #ea6c0a;
-      --dark:    #1f2937;
-      --darker:  #161c26;
-      --gold:    #fbbf24;
-      --light:   #f9fafb;
-      --red:     #dc2626;
-      --gray:    #374151;
-      --muted:   #9ca3af;
+      --primary: #111111;
+      --accent: #e87520;
+      --text: #1a1a1a;
+      --light: #f8f8f8;
+      --white: #ffffff;
     }
+    body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--text); background: var(--white); }
 
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--black);
-      color: var(--light);
-      overflow-x: hidden;
-    }
-
-    /* ───────────────────────────────────────────
-       TOP BANNER
-    ─────────────────────────────────────────── */
-    .top-banner {
-      background: var(--gold);
-      color: #111;
-      text-align: center;
-      padding: 10px 16px;
-      font-family: 'Rajdhani', sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
-      letter-spacing: 0.04em;
-      position: relative;
-      z-index: 200;
-    }
-    .top-banner span { margin: 0 6px; }
-
-    /* ───────────────────────────────────────────
-       STICKY NAV
-    ─────────────────────────────────────────── */
     nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: #0a0a0a;
-      border-bottom: 2px solid var(--accent);
+      background: var(--primary);
+      padding: 0 5%;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 5%;
       height: 64px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-    .nav-logo {
-      font-family: 'Rajdhani', sans-serif;
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--light);
+    .nav-logo { color: var(--white); font-size: 1.2rem; font-weight: 700; letter-spacing: 0.5px; }
+    .nav-phone a {
+      color: var(--white);
       text-decoration: none;
-      letter-spacing: 0.06em;
-    }
-    .nav-logo span { color: var(--accent); }
-    .nav-links {
-      display: flex;
-      gap: 32px;
-      list-style: none;
-    }
-    .nav-links a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 0.875rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--accent); }
-    .nav-cta {
+      font-size: 1rem;
+      font-weight: 600;
       background: var(--accent);
       color: #fff;
-      font-family: 'Rajdhani', sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
-      padding: 10px 22px;
-      border: none;
-      cursor: pointer;
-      letter-spacing: 0.06em;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.15s;
-      clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+      padding: 8px 18px;
+      border-radius: 4px;
     }
-    .nav-cta:hover { background: var(--accent2); transform: translateY(-1px); }
 
-    /* ───────────────────────────────────────────
-       HERO
-    ─────────────────────────────────────────── */
     .hero {
       position: relative;
-      min-height: 100vh;
+      min-height: 520px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      text-align: center;
       overflow: hidden;
     }
     .hero-bg {
       position: absolute;
       inset: 0;
-      background-image: url('https://images.pexels.com/photos/1797428/pexels-photo-1797428.jpeg?w=1600&q=80');
+      background-image: url('https://images.pexels.com/photos/6775268/pexels-photo-6775268.jpeg?w=1600&q=80');
       background-size: cover;
       background-position: center;
-      filter: brightness(0.22) saturate(0.6);
-      z-index: 0;
-    }
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(17,17,17,0.4) 0%, rgba(17,17,17,0.85) 100%);
-      z-index: 1;
+      filter: brightness(0.35);
     }
     .hero-content {
       position: relative;
       z-index: 2;
-      max-width: 860px;
-      padding: 0 24px;
+      padding: 60px 6%;
+      max-width: 680px;
     }
-    .hero-eyebrow {
-      font-family: 'Rajdhani', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 20px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .hero-eyebrow::before,
-    .hero-eyebrow::after {
-      content: '';
-      display: block;
-      width: 40px;
-      height: 1px;
+    .hero-badge {
+      display: inline-block;
       background: var(--accent);
-      opacity: 0.7;
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 3px;
+      margin-bottom: 20px;
     }
     .hero h1 {
-      font-family: 'Rajdhani', sans-serif;
-      font-size: clamp(2.8rem, 6vw, 5.5rem);
-      font-weight: 700;
-      line-height: 1.0;
-      color: #fff;
-      letter-spacing: 0.01em;
-      margin-bottom: 24px;
+      color: var(--white);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 16px;
     }
-    .hero h1 span { color: var(--accent); }
-
-    /* Response Badge */
-    .response-badge {
-      display: inline-flex;
-      flex-direction: column;
-      align-items: center;
-      background: rgba(249,115,22,0.12);
-      border: 2px solid var(--accent);
-      padding: 28px 48px;
-      margin: 28px auto;
-      position: relative;
-    }
-    .response-badge::before,
-    .response-badge::after {
-      content: '';
-      position: absolute;
-      width: 16px;
-      height: 16px;
-      border-color: var(--accent);
-      border-style: solid;
-    }
-    .response-badge::before {
-      top: -2px; left: -2px;
-      border-width: 2px 0 0 2px;
-    }
-    .response-badge::after {
-      bottom: -2px; right: -2px;
-      border-width: 0 2px 2px 0;
-    }
-    .badge-icon {
-      font-size: 2.4rem;
-      line-height: 1;
-      margin-bottom: 4px;
-    }
-    .badge-label {
-      font-family: 'Rajdhani', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 4px;
-    }
-    .badge-time {
-      font-family: 'Rajdhani', sans-serif;
-      font-size: clamp(2.4rem, 5vw, 3.6rem);
-      font-weight: 700;
-      color: var(--accent);
-      letter-spacing: 0.04em;
-      line-height: 1;
-    }
-
-    .hero-sub {
+    .hero p {
+      color: rgba(255,255,255,0.88);
       font-size: 1.1rem;
-      color: #d1d5db;
+      line-height: 1.6;
+      margin-bottom: 32px;
       max-width: 520px;
-      margin: 0 auto 32px;
-      line-height: 1.65;
     }
-    .hero-actions {
-      display: flex;
-      gap: 16px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+    .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
     .btn-primary {
       background: var(--accent);
       color: #fff;
-      font-family: 'Rajdhani', sans-serif;
-      font-weight: 700;
-      font-size: 1.1rem;
-      padding: 16px 36px;
-      letter-spacing: 0.08em;
+      padding: 14px 28px;
+      border-radius: 4px;
       text-decoration: none;
-      clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
-      transition: background 0.2s, transform 0.15s;
-      display: inline-block;
+      font-weight: 700;
+      font-size: 1rem;
     }
-    .btn-primary:hover { background: var(--accent2); transform: translateY(-2px); }
     .btn-outline {
-      border: 2px solid rgba(249,115,22,0.5);
-      color: var(--light);
-      font-family: 'Rajdhani', sans-serif;
-      font-weight: 700;
-      font-size: 1.1rem;
-      padding: 16px 36px;
-      letter-spacing: 0.08em;
+      background: transparent;
+      color: var(--white);
+      padding: 14px 28px;
+      border-radius: 4px;
+      border: 2px solid rgba(255,255,255,0.7);
       text-decoration: none;
-      transition: border-color 0.2s, color 0.2s;
-      display: inline-block;
+      font-weight: 600;
+      font-size: 1rem;
     }
-    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
 
-    /* Hero mini stats */
-    .hero-stats {
+    .trust-bar {
+      background: var(--primary);
       display: flex;
       justify-content: center;
-      gap: 48px;
-      margin-top: 48px;
+      gap: 40px;
       flex-wrap: wrap;
+      padding: 18px 5%;
     }
-    .hero-stat { text-align: center; }
-    .hero-stat-num {
-      font-family: 'Rajdhani', sans-serif;
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--gold);
-      line-height: 1;
-    }
-    .hero-stat-lbl {
-      font-size: 0.75rem;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-top: 4px;
-    }
-
-    /* ───────────────────────────────────────────
-       SPEED STATS RIBBON
-    ─────────────────────────────────────────── */
-    .ribbon {
-      background: var(--accent);
-      padding: 0;
-    }
-    .ribbon-inner {
+    .trust-item {
+      color: var(--white);
       display: flex;
-      align-items: stretch;
-    }
-    .ribbon-item {
-      flex: 1;
-      text-align: center;
-      padding: 22px 16px;
-      border-right: 1px solid rgba(255,255,255,0.2);
-      position: relative;
-    }
-    .ribbon-item:last-child { border-right: none; }
-    .ribbon-num {
-      font-family: 'Rajdhani', sans-serif;
-      font-size: 2rem;
-      font-weight: 700;
-      color: #fff;
-      line-height: 1;
-      display: block;
-    }
-    .ribbon-lbl {
-      font-size: 0.7rem;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
       font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: rgba(255,255,255,0.8);
-      margin-top: 4px;
-      display: block;
     }
 
-    /* ───────────────────────────────────────────
-       SECTION SHARED
-    ─────────────────────────────────────────── */
-    section { padding: 80px 5%; }
-    .section-tag {
-      font-family: 'Rajdhani', sans-serif;
-      font-size: 0.75rem;
+    section { padding: 70px 6%; }
+    .section-label {
+      font-size: 0.78rem;
       font-weight: 700;
-      letter-spacing: 0.25em;
+      letter-spacing: 2px;
       text-transform: uppercase;
       color: var(--accent);
       margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
     }
-    .section-tag::after {
-      content: '';
-      display: block;
-      flex: 1;
-      max-width: 60px;
-      height: 1px;
-      background: var(--accent);
-      opacity: 0.5;
+    h2.section-title {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      color: var(--primary);
+      font-weight: 800;
+      margin-bottom: 16px;
+      line-height: 1.2;
     }
-    .section-title {
-      font-family: 'Rajdhani', sans-serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 700;
-      color: #fff;
-      line-height: 1.1;
-      letter-spacing: 0.02em;
-    }
-    .section-title span { color: var(--accent); }
     .section-sub {
-      color: var(--muted);
       font-size: 1rem;
-      max-width: 520px;
-      margin-top: 12px;
+      color: #555;
+      max-width: 580px;
       line-height: 1.65;
+      margin-bottom: 40px;
     }
 
-    /* ───────────────────────────────────────────
-       COMMON PROBLEMS
-    ─────────────────────────────────────────── */
-    #problems { background: var(--darker); }
-    .problems-header { margin-bottom: 48px; }
-    .problems-grid {
+    .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 24px;
     }
-    .problem-card {
-      background: var(--dark);
-      border: 1px solid rgba(249,115,22,0.15);
-      padding: 28px;
-      position: relative;
-      overflow: hidden;
-      transition: border-color 0.25s, transform 0.2s;
+    .service-card {
+      background: var(--light);
+      border-radius: 8px;
+      padding: 28px 24px;
+      border-left: 4px solid var(--accent);
     }
-    .problem-card:hover {
-      border-color: var(--accent);
-      transform: translateY(-4px);
-    }
-    .problem-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 4px;
-      height: 100%;
-      background: var(--accent);
-      transform: scaleY(0);
-      transform-origin: bottom;
-      transition: transform 0.3s;
-    }
-    .problem-card:hover::before { transform: scaleY(1); }
-    .problem-icon {
-      font-size: 2rem;
-      margin-bottom: 14px;
-      display: block;
-    }
-    .problem-name {
-      font-family: 'Rajdhani', sans-serif;
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: #fff;
-      letter-spacing: 0.04em;
-      margin-bottom: 8px;
-    }
-    .problem-desc {
-      color: var(--muted);
-      font-size: 0.875rem;
-      line-height: 1.6;
-      margin-bottom: 14px;
-    }
-    .problem-time {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(249,115,22,0.12);
-      border: 1px solid rgba(249,115,22,0.35);
-      color: var(--accent);
-      font-family: 'Rajdhani', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      padding: 5px 12px;
-      text-transform: uppercase;
-    }
+    .service-icon { font-size: 2rem; margin-bottom: 12px; }
+    .service-card h3 { font-size: 1rem; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
+    .service-card p { font-size: 0.88rem; color: #555; line-height: 1.5; }
 
-    /* ───────────────────────────────────────────
-       SERVICES
-    ─────────────────────────────────────────── */
-    #services { background: var(--black); }
-    .services-header { margin-bottom: 48px; }
-    .services-list { display: flex; flex-direction: column; gap: 4px; }
-    .service-row {
-      display: flex;
+    .about-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
       align-items: center;
-      justify-content: space-between;
-      background: var(--dark);
-      border: 1px solid rgba(255,255,255,0.06);
-      padding: 22px 32px;
-      gap: 16px;
-      transition: background 0.2s, border-color 0.2s;
-      flex-wrap: wrap;
+      padding: 80px 6%;
+      background: var(--light);
     }
-    .service-row:hover {
-      background: #252f3f;
-      border-color: rgba(249,115,22,0.3);
-    }
-    .service-name {
-      font-family: 'Rajdhani', sans-serif;
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #fff;
-      letter-spacing: 0.04em;
-      flex: 1;
-    }
-    .service-time {
-      font-size: 0.8rem;
-      color: var(--muted);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .service-time .dot {
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: var(--accent);
-      display: inline-block;
-      flex-shrink: 0;
-    }
-    .service-price {
-      font-family: 'Rajdhani', sans-serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--gold);
-      white-space: nowrap;
-    }
-    .service-arrow {
-      color: var(--accent);
-      font-size: 1.2rem;
-      opacity: 0.7;
-    }
-
-    /* ───────────────────────────────────────────
-       BRAND STORY
-    ─────────────────────────────────────────── */
-    #story {
-      background: var(--darker);
-      display: flex;
-      gap: 64px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .story-img {
-      flex: 1;
-      min-width: 280px;
-      max-width: 480px;
-    }
-    .story-img img {
+    @media (max-width: 768px) { .about-section { grid-template-columns: 1fr; gap: 32px; } }
+    .about-img {
       width: 100%;
-      height: 360px;
+      height: 380px;
       object-fit: cover;
-      filter: brightness(0.85) saturate(0.7);
-      border: 2px solid rgba(249,115,22,0.2);
+      border-radius: 8px;
     }
-    .story-text { flex: 1; min-width: 280px; }
-    .story-quote {
-      font-size: 1.1rem;
+    .about-content .brand-name {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+    .about-content .brand-location {
+      font-size: 0.9rem;
+      color: var(--accent);
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .about-content p {
+      font-size: 1rem;
+      color: #444;
       line-height: 1.75;
-      color: #d1d5db;
-      border-left: 3px solid var(--accent);
-      padding-left: 24px;
-      margin-top: 24px;
-      font-style: italic;
+      margin-bottom: 20px;
     }
-    .story-badge {
+    .about-pills { display: flex; flex-wrap: wrap; gap: 10px; }
+    .pill {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      background: rgba(249,115,22,0.1);
-      border: 1px solid rgba(249,115,22,0.3);
-      padding: 10px 20px;
-      margin-top: 28px;
-      font-family: 'Rajdhani', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      color: var(--accent);
+      gap: 6px;
+      background: var(--white);
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      padding: 7px 14px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary);
     }
 
-    /* ───────────────────────────────────────────
-       REVIEWS
-    ─────────────────────────────────────────── */
-    #reviews { background: var(--black); }
-    .reviews-header { margin-bottom: 48px; }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 28px;
+    }
+    .why-item { text-align: center; padding: 24px 16px; }
+    .why-num { font-size: 2.4rem; font-weight: 800; color: var(--accent); margin-bottom: 6px; }
+    .why-item h3 { font-size: 0.95rem; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+    .why-item p { font-size: 0.85rem; color: #666; line-height: 1.5; }
+
     .reviews-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 24px;
     }
     .review-card {
-      background: var(--dark);
-      border: 1px solid rgba(255,255,255,0.07);
-      padding: 32px 28px;
-      position: relative;
-      transition: border-color 0.25s;
+      background: var(--white);
+      border: 1px solid #e8e8e8;
+      border-radius: 8px;
+      padding: 24px;
     }
-    .review-card:hover { border-color: rgba(249,115,22,0.4); }
-    .review-stars {
-      color: var(--gold);
-      font-size: 1rem;
-      letter-spacing: 2px;
-      margin-bottom: 16px;
-    }
-    .review-text {
-      color: #e5e7eb;
-      font-size: 0.95rem;
-      line-height: 1.65;
-      margin-bottom: 20px;
-      font-style: italic;
-    }
-    .review-author {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .review-name {
-      font-family: 'Rajdhani', sans-serif;
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: #fff;
-      letter-spacing: 0.06em;
-    }
-    .review-badge-speed {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--accent);
-      background: rgba(249,115,22,0.12);
-      border: 1px solid rgba(249,115,22,0.3);
-      padding: 3px 10px;
-    }
-    .quote-mark {
-      position: absolute;
-      top: 16px; right: 20px;
-      font-size: 3.5rem;
-      color: rgba(249,115,22,0.08);
-      font-family: Georgia, serif;
-      line-height: 1;
-      user-select: none;
-    }
+    .stars { color: #f5a623; font-size: 1rem; margin-bottom: 10px; }
+    .review-card p { font-size: 0.9rem; color: #444; line-height: 1.6; margin-bottom: 14px; font-style: italic; }
+    .reviewer { font-size: 0.82rem; font-weight: 700; color: var(--primary); }
 
-    /* ───────────────────────────────────────────
-       EMERGENCY CTA
-    ─────────────────────────────────────────── */
-    .emergency {
-      background: linear-gradient(135deg, #1a0a0a 0%, #2c1a0a 50%, #1a0a0a 100%);
-      border-top: 3px solid var(--red);
-      border-bottom: 3px solid var(--accent);
-      padding: 80px 5%;
+    .cta-section {
+      background: var(--primary);
       text-align: center;
-      position: relative;
-      overflow: hidden;
+      padding: 70px 6%;
     }
-    .emergency::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at center, rgba(220,38,38,0.08) 0%, transparent 70%);
-    }
-    .emergency-pulse {
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      width: 600px; height: 600px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(249,115,22,0.04) 0%, transparent 70%);
-      animation: pulse-bg 3s ease-in-out infinite;
-    }
-    @keyframes pulse-bg {
-      0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
-      50% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
-    }
-    .emergency-content { position: relative; z-index: 1; }
-    .emergency-label {
-      font-family: 'Rajdhani', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--red);
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-    }
-    .emergency-label::before,
-    .emergency-label::after {
-      content: '';
-      display: block;
-      width: 40px;
-      height: 1px;
-      background: var(--red);
-    }
-    .emergency h2 {
-      font-family: 'Rajdhani', sans-serif;
-      font-size: clamp(2rem, 5vw, 3.8rem);
-      font-weight: 700;
-      color: #fff;
-      line-height: 1.1;
-      letter-spacing: 0.01em;
-      margin-bottom: 12px;
-    }
-    .emergency h2 span { color: var(--accent); }
-    .emergency p {
-      color: #d1d5db;
-      font-size: 1.05rem;
-      margin-bottom: 36px;
-    }
-    .btn-emergency {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      background: linear-gradient(135deg, var(--red), var(--accent));
-      color: #fff;
-      font-family: 'Rajdhani', sans-serif;
-      font-weight: 700;
-      font-size: 1.3rem;
-      padding: 20px 48px;
-      text-decoration: none;
-      letter-spacing: 0.08em;
-      clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
-      transition: opacity 0.2s, transform 0.15s;
-      box-shadow: 0 0 40px rgba(249,115,22,0.25);
-    }
-    .btn-emergency:hover { opacity: 0.9; transform: translateY(-3px); }
-    .emergency-note {
-      margin-top: 20px;
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-
-    /* ───────────────────────────────────────────
-       FOOTER
-    ─────────────────────────────────────────── */
-    footer {
-      background: #0a0a0a;
-      border-top: 1px solid rgba(255,255,255,0.06);
-      padding: 48px 5% 32px;
-    }
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 32px;
-      margin-bottom: 40px;
-    }
-    .footer-brand .nav-logo { display: block; margin-bottom: 10px; font-size: 1.5rem; }
-    .footer-brand p {
-      color: var(--muted);
-      font-size: 0.85rem;
-      max-width: 260px;
-      line-height: 1.6;
-    }
-    .footer-col h4 {
-      font-family: 'Rajdhani', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 16px;
-    }
-    .footer-col ul { list-style: none; }
-    .footer-col ul li {
-      color: var(--muted);
-      font-size: 0.875rem;
-      margin-bottom: 8px;
-    }
-    .footer-phone {
-      font-family: 'Rajdhani', sans-serif;
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--accent);
-    }
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.06);
-      padding-top: 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .footer-bottom p { color: var(--muted); font-size: 0.8rem; }
-    .footer-stars { color: var(--gold); letter-spacing: 2px; }
-
-    /* ───────────────────────────────────────────
-       FLOAT BUTTON
-    ─────────────────────────────────────────── */
-    .float-btn {
-      position: fixed;
-      bottom: 28px;
-      right: 28px;
-      z-index: 999;
+    .cta-section h2 { color: var(--white); font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; margin-bottom: 14px; }
+    .cta-section p { color: rgba(255,255,255,0.82); font-size: 1rem; margin-bottom: 32px; }
+    .btn-cta {
       background: var(--accent);
       color: #fff;
-      font-family: 'Rajdhani', sans-serif;
-      font-weight: 700;
-      font-size: 0.95rem;
-      letter-spacing: 0.06em;
-      padding: 14px 22px 14px 18px;
+      padding: 16px 36px;
+      border-radius: 4px;
       text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
-      box-shadow: 0 4px 24px rgba(249,115,22,0.45);
-      animation: float-pulse 2.4s ease-in-out infinite;
-    }
-    .float-btn:hover { background: var(--accent2); animation: none; }
-    .float-icon { font-size: 1.2rem; animation: ring 2.4s ease-in-out infinite; }
-    @keyframes float-pulse {
-      0%, 100% { box-shadow: 0 4px 24px rgba(249,115,22,0.45); transform: scale(1); }
-      50% { box-shadow: 0 4px 40px rgba(249,115,22,0.75); transform: scale(1.04); }
-    }
-    @keyframes ring {
-      0%, 100% { transform: rotate(0deg); }
-      10% { transform: rotate(-12deg); }
-      20% { transform: rotate(12deg); }
-      30% { transform: rotate(-8deg); }
-      40% { transform: rotate(8deg); }
-      50%, 100% { transform: rotate(0deg); }
+      font-weight: 700;
+      font-size: 1.05rem;
     }
 
-    /* ───────────────────────────────────────────
-       RESPONSIVE
-    ─────────────────────────────────────────── */
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .ribbon-inner { flex-wrap: wrap; }
-      .ribbon-item { flex: 1 1 48%; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.2); }
-      #story { flex-direction: column; }
-      .hero-stats { gap: 28px; }
-      .service-row { flex-direction: column; align-items: flex-start; gap: 8px; }
+    footer {
+      background: #111;
+      color: rgba(255,255,255,0.65);
+      text-align: center;
+      padding: 28px 5%;
+      font-size: 0.82rem;
     }
+    footer strong { color: var(--white); }
   </style>
 </head>
 <body>
 
-  <!-- TOP BANNER -->
-  <div class="top-banner">
-    ⭐⭐⭐⭐⭐ <strong>35 Google Reviews</strong>
-    <span>-</span>
-    Garland's Fastest Garage Door Repair
-    <span>-</span>
-    Same-Day Service · Garland, TX
-  </div>
+<nav>
+  <div class="nav-logo">Always Open Garage Door and Gates</div>
+  <div class="nav-phone"><a href="tel:+14694377423">(469) 437-7423</a></div>
+</nav>
 
-  <!-- STICKY NAV -->
-  <nav>
-    <a href="#" class="nav-logo">ALWAYS OPEN GARAGE D</a>
-    <ul class="nav-links">
-      <li><a href="#problems">Problems</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#reviews">Reviews</a></li>
-      <li><a href="#story">About</a></li>
-    </ul>
-    <a href="tel:4694377423" class="nav-cta">📞 CALL NOW</a>
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="hero-eyebrow">Garland TX · Licensed &amp; Insured</div>
-      <h1>Garage Door Down?<br/><span>We're There Fast.</span></h1>
-
-      <div class="response-badge">
-        <span class="badge-icon">⚡</span>
-        <span class="badge-label">Average Response Time</span>
-        <span class="badge-time">2 HOURS</span>
-      </div>
-
-      <p class="hero-sub">
-        A broken garage door is a security risk - not just an inconvenience.
-        We stock parts for every major brand and fix 95% of problems in a single visit.
-      </p>
-
-      <div class="hero-actions">
-        <a href="tel:4694377423" class="btn-primary">📞 (469) 437-7423 - CALL NOW</a>
-        <a href="#services" class="btn-outline">View Services</a>
-      </div>
-
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <div class="hero-stat-num">95%</div>
-          <div class="hero-stat-lbl">Single-Visit Fix</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num">5★</div>
-          <div class="hero-stat-lbl">35 Reviews</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num">∞</div>
-          <div class="hero-stat-lbl">Parts In Stock</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num">0</div>
-          <div class="hero-stat-lbl">Hidden Fees</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SPEED STATS RIBBON -->
-  <div class="ribbon">
-    <div class="ribbon-inner">
-      <div class="ribbon-item">
-        <span class="ribbon-num">⚡ 2hr</span>
-        <span class="ribbon-lbl">Avg Response</span>
-      </div>
-      <div class="ribbon-item">
-        <span class="ribbon-num">🔧 1hr</span>
-        <span class="ribbon-lbl">Avg Repair</span>
-      </div>
-      <div class="ribbon-item">
-        <span class="ribbon-num">📦 Same Day</span>
-        <span class="ribbon-lbl">Parts Available</span>
-      </div>
-      <div class="ribbon-item">
-        <span class="ribbon-num">⭐ 5★</span>
-        <span class="ribbon-lbl">35 Google Reviews</span>
-      </div>
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Licensed &amp; Insured - Garland TX</div>
+    <h1>Fast Garage Door
+Fix in Garland TX</h1>
+    <p>Same-day service for broken springs, cables, openers, and full door replacements. Serving Garland TX.</p>
+    <div class="hero-buttons">
+      <a href="tel:+14694377423" class="btn-primary">Call (469) 437-7423</a>
+      <a href="#services" class="btn-outline">Our Services</a>
     </div>
   </div>
+</section>
 
-  <!-- COMMON PROBLEMS -->
-  <section id="problems">
-    <div class="problems-header">
-      <div class="section-tag">Diagnostics</div>
-      <h2 class="section-title">Common Problems <span>We Fix</span></h2>
-      <p class="section-sub">Most garage door failures follow predictable patterns. We've seen them all - and we come stocked to fix them fast.</p>
+<div class="trust-bar">
+  <div class="trust-item"><span>&#11088;</span> 4.8 Stars (48 Reviews)</div>
+  <div class="trust-item"><span>&#128336;</span> Same-Day Service</div>
+  <div class="trust-item"><span>&#128737;</span> Licensed &amp; Insured</div>
+  <div class="trust-item"><span>&#128205;</span> Serving Garland TX</div>
+</div>
+
+<section id="services">
+  <div class="section-label">What We Do</div>
+  <h2 class="section-title">Garage Door Services
+in Garland TX</h2>
+  <p class="section-sub">From springs and cables to full door replacements, we fix it right the first time.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">🔧</div>
+      <h3>Spring Repair</h3>
+      <p>Broken spring? We carry parts and fix it same day.</p>
     </div>
-    <div class="problems-grid">
-
-      <div class="problem-card">
-        <span class="problem-icon">🌀</span>
-        <div class="problem-name">Broken Spring</div>
-        <p class="problem-desc">Most common failure. We carry springs for all door sizes. Don't risk DIY - springs are under extreme tension.</p>
-        <span class="problem-time">⚡ Fixed in 1 Hour</span>
-      </div>
-
-      <div class="problem-card">
-        <span class="problem-icon">🚪</span>
-        <div class="problem-name">Door Won't Open</div>
-        <p class="problem-desc">Opener failure or track issue? We diagnose the root cause and get your door moving again - same visit.</p>
-        <span class="problem-time">⚡ Fixed Same Visit</span>
-      </div>
-
-      <div class="problem-card">
-        <span class="problem-icon">🔊</span>
-        <div class="problem-name">Noisy Door</div>
-        <p class="problem-desc">Grinding or squeaking? Worn rollers or loose hardware are usually to blame. Lubrication and adjustment fix it fast.</p>
-        <span class="problem-time">⚡ Fixed in 30 Minutes</span>
-      </div>
-
-      <div class="problem-card">
-        <span class="problem-icon">⚠️</span>
-        <div class="problem-name">Off Track</div>
-        <p class="problem-desc">Door jumped the track? We realign it safely without causing further damage to your door or opener system.</p>
-        <span class="problem-time">⚡ Fixed Same Visit</span>
-      </div>
-
-      <div class="problem-card">
-        <span class="problem-icon">🛡️</span>
-        <div class="problem-name">Panel Damage</div>
-        <p class="problem-desc">Dented or damaged panel? We stock common sizes for most manufacturers and replace them the same day.</p>
-        <span class="problem-time">⚡ Replaced Same Day</span>
-      </div>
-
-      <div class="problem-card">
-        <span class="problem-icon">📡</span>
-        <div class="problem-name">Remote Not Working</div>
-        <p class="problem-desc">New remote or reprogram your existing one? We handle all major brands and have remotes on hand.</p>
-        <span class="problem-time">⚡ Done in Minutes</span>
-      </div>
-
+    <div class="service-card">
+      <div class="service-icon">📡</div>
+      <h3>Opener Repair</h3>
+      <p>Garage door opener not working? We diagnose and fix fast.</p>
     </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services">
-    <div class="services-header">
-      <div class="section-tag">Pricing</div>
-      <h2 class="section-title">Our <span>Services</span></h2>
-      <p class="section-sub">Upfront pricing. No hidden fees. No surprises - just honest work done right the first time.</p>
+    <div class="service-card">
+      <div class="service-icon">🚪</div>
+      <h3>New Door Install</h3>
+      <p>Full door replacement with same-day or next-day install.</p>
     </div>
-    <div class="services-list">
-
-      <div class="service-row">
-        <span class="service-name">🌀 Spring Replacement</span>
-        <span class="service-time"><span class="dot"></span> Fixed in ~1 hour</span>
-        <span class="service-price">$149 – $229</span>
-        <span class="service-arrow">→</span>
-      </div>
-
-      <div class="service-row">
-        <span class="service-name">⚙️ Opener Repair / Replacement</span>
-        <span class="service-time"><span class="dot"></span> Same visit</span>
-        <span class="service-price">$99 – $299</span>
-        <span class="service-arrow">→</span>
-      </div>
-
-      <div class="service-row">
-        <span class="service-name">🛤️ Track Realignment</span>
-        <span class="service-time"><span class="dot"></span> 1–2 hours</span>
-        <span class="service-price">$89 – $159</span>
-        <span class="service-arrow">→</span>
-      </div>
-
-      <div class="service-row">
-        <span class="service-name">🛡️ Panel Replacement</span>
-        <span class="service-time"><span class="dot"></span> Same day</span>
-        <span class="service-price">$199 – $449</span>
-        <span class="service-arrow">→</span>
-      </div>
-
-      <div class="service-row">
-        <span class="service-name">🔧 Full Tune-Up &amp; Maintenance</span>
-        <span class="service-time"><span class="dot"></span> ~45 minutes</span>
-        <span class="service-price">$79 – $99</span>
-        <span class="service-arrow">→</span>
-      </div>
-
-      <div class="service-row">
-        <span class="service-name">📡 Remote / Keypad Programming</span>
-        <span class="service-time"><span class="dot"></span> Under 30 min</span>
-        <span class="service-price">$39 – $69</span>
-        <span class="service-arrow">→</span>
-      </div>
-
-      <div class="service-row">
-        <span class="service-name">🚪 New Garage Door Installation</span>
-        <span class="service-time"><span class="dot"></span> Same or next day</span>
-        <span class="service-price">$599 – $1,499</span>
-        <span class="service-arrow">→</span>
-      </div>
-
+    <div class="service-card">
+      <div class="service-icon">🔩</div>
+      <h3>Cable Repair</h3>
+      <p>Snapped cables repaired safely by trained technicians.</p>
     </div>
-  </section>
-
-  <!-- BRAND STORY -->
-  <section id="story">
-    <div class="story-img">
-      <img src="https://images.pexels.com/photos/1797428/pexels-photo-1797428.jpeg?w=1600&q=80" alt="Garage Door Technician at Work" />
+    <div class="service-card">
+      <div class="service-icon">⚙️</div>
+      <h3>Panel Replacement</h3>
+      <p>Damaged panel sections replaced without full door swap.</p>
     </div>
-    <div class="story-text">
-      <div class="section-tag">Our Story</div>
-      <h2 class="section-title">Built on <span>Speed.</span><br/>Trusted for Quality.</h2>
-      <p class="story-quote">
-        "Always Open Garage Door and Gates fixes garage doors fast in Garland TX. Same-day service, upfront pricing, no surprises."
-      </p>
-      <div class="story-badge">
-        ✅ Licensed &amp; Insured · Serving Garland TX Since Day One
-      </div>
-    </div>
-  </section>
-
-  <!-- REVIEWS -->
-  <section id="reviews">
-    <div class="reviews-header">
-      <div class="section-tag">Social Proof</div>
-      <h2 class="section-title">What <span>Garland Says</span></h2>
-      <p class="section-sub">35 five-star reviews and counting. Real customers, real speed, real results.</p>
-    </div>
-    <div class="reviews-grid">
-
-      <div class="review-card">
-        <span class="quote-mark">"</span>
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Fixed my garage door in under an hour - incredible response time. I called at 9am and it was done before lunch."</p>
-        <div class="review-author">
-          <span class="review-name">- Kevin M.</span>
-          <span class="review-badge-speed">⚡ Under 1 Hour</span>
-        </div>
-      </div>
-
-      <div class="review-card">
-        <span class="quote-mark">"</span>
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Very fair pricing and absolutely no hidden fees. The technician explained everything upfront. Exactly what I needed."</p>
-        <div class="review-author">
-          <span class="review-name">- Sandra T.</span>
-          <span class="review-badge-speed">💰 No Hidden Fees</span>
-        </div>
-      </div>
-
-      <div class="review-card">
-        <span class="quote-mark">"</span>
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Showed up within 2 hours of calling. Professional, clean, and had my door working perfectly. Will call again."</p>
-        <div class="review-author">
-          <span class="review-name">- James H.</span>
-          <span class="review-badge-speed">⚡ 2hr Response</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- EMERGENCY CTA -->
-  <div class="emergency">
-    <div class="emergency-pulse"></div>
-    <div class="emergency-content">
-      <div class="emergency-label">Emergency Service</div>
-      <h2>Garage door won't open?<br/><span>Call now - we're on our way.</span></h2>
-      <p>Don't leave your home unsecured. We respond fast, fix right, and charge fair.</p>
-      <a href="tel:4694377423" class="btn-emergency">
-        📞 (469) 437-7423 - CALL NOW
-      </a>
-      <p class="emergency-note">Available for emergency service · Garland TX and surrounding areas</p>
+    <div class="service-card">
+      <div class="service-icon">🔍</div>
+      <h3>Safety Tune-Up</h3>
+      <p>Full safety inspection and lubrication to prevent breakdowns.</p>
     </div>
   </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <a href="#" class="nav-logo">ALWAYS OPEN GARAGE D</a>
-        <p>Garland's fastest garage door repair service. Licensed, insured, and always stocked to fix your problem same visit.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul>
-          <li>Spring Replacement</li>
-          <li>Opener Repair</li>
-          <li>Track Realignment</li>
-          <li>Panel Replacement</li>
-          <li>New Door Installation</li>
-          <li>Maintenance &amp; Tune-Up</li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul>
-          <li class="footer-phone"><a href="tel:4694377423" style="color:inherit;text-decoration:none;">(469) 437-7423</a></li>
-          <li>Garland, TX</li>
-          <li style="color:#f97316;">⭐⭐⭐⭐⭐ 35 Reviews</li>
-          <li>Licensed &amp; Insured</li>
-        </ul>
-      </div>
+<div class="about-section">
+  <img class="about-img" src="https://images.pexels.com/photos/6775268/pexels-photo-6775268.jpeg?w=1600&q=80" alt="Always Open Garage Door and Gates">
+  <div class="about-content">
+    <div class="section-label">About Us</div>
+    <div class="brand-name">Always Open Garage Door and Gates</div>
+    <div class="brand-location">Serving Garland TX &amp; Surrounding Areas</div>
+    <p>Always Open Garage Door and Gates fixes garage doors fast across Garland TX. A broken door is a security risk and a daily frustration. We stock parts on our trucks so most repairs are done in one visit. Upfront pricing, no surprises.</p>
+    <div class="about-pills">
+      <span class="pill">&#10003; Licensed &amp; Insured</span>
+      <span class="pill">&#128205; Local &amp; Family-Owned</span>
+      <span class="pill">&#11088; 4.8 Stars on Google</span>
+      <span class="pill">&#128336; Same-Day Available</span>
     </div>
-    <div class="footer-bottom">
-      <p>© 2024 Always Open Garage Door and Gates · Garland TX · All rights reserved.</p>
-      <span class="footer-stars">★★★★★ 5.0 · 35 Reviews</span>
-    </div>
-  </footer>
+  </div>
+</div>
 
-  <!-- FLOAT BUTTON -->
-  <a href="tel:4694377423" class="float-btn">
-    <span class="float-icon">📞</span>
-    CALL NOW
-  </a>
+<section>
+  <div class="section-label">Why Choose Us</div>
+  <h2 class="section-title">Always Open Garage Door and Gates<br>Garland TX Trusts</h2>
+  <div class="why-grid">
+    <div class="why-item">
+      <div class="why-num">60min</div>
+      <h3>Fast Response</h3>
+      <p>We aim to be at your door within 60 minutes for emergencies.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-num">100%</div>
+      <h3>Satisfaction Guarantee</h3>
+      <p>Not happy? We make it right. No questions asked.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-num">4.8&#11088;</div>
+      <h3>Top Rated</h3>
+      <p>Trusted by Garland TX homeowners. 48 five-star reviews.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-num">$0</div>
+      <h3>Free Estimate</h3>
+      <p>No charge to come out and tell you what it will cost.</p>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--light);">
+  <div class="section-label">What Customers Say</div>
+  <h2 class="section-title">Real Reviews from<br>Garland TX Homeowners</h2>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>"Called at 7am, someone was here by 9am. Replaced both springs and the cable. In and out fast."</p>
+      <div class="reviewer">- Wanda K., Garland TX</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>"Replaced our old opener and it is so quiet now. Great install and they explained everything."</p>
+      <div class="reviewer">- Chris H., Garland TX</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>"Best garage door company I have used. Honest pricing and the work is done right the first time."</p>
+      <div class="reviewer">- Bob F., Garland TX</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Need Garage Door Repair in Garland TX?</h2>
+  <p>Call now for fast, reliable service. Free estimates. Same-day available.</p>
+  <a href="tel:+14694377423" class="btn-cta">Call (469) 437-7423 Now</a>
+</section>
+
+<footer>
+  <strong>Always Open Garage Door and Gates</strong> | Garland TX | (469) 437-7423 | Licensed &amp; Insured<br>
+  <span style="opacity:0.5;font-size:0.75rem;">Garage door repair and installation in Garland TX and surrounding areas.</span>
+</footer>
 
 </body>
 </html>
