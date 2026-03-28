@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Have Pesticide Will Travel - Grand, TX</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green-dark: #1b4332;
+      --green-mid: #2d6a4f;
+      --green-accent: #52b788;
+      --green-light: #b7e4c7;
+      --gold: #f5c842;
+      --gold-dark: #d4a017;
+      --bg: #f8fffe;
+      --white: #ffffff;
+      --gray-light: #f1f5f4;
+      --gray: #6b7280;
+      --gray-dark: #374151;
+      --shadow: 0 4px 24px rgba(27,67,50,0.10);
+      --shadow-lg: 0 8px 40px rgba(27,67,50,0.16);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--gray-dark);
+      line-height: 1.6;
+    }
+
+    /* ── YELLOW BANNER ── */
+    .top-banner {
+      background: var(--gold);
+      color: var(--green-dark);
+      text-align: center;
+      padding: 10px 16px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.01em;
+      position: relative;
+      z-index: 101;
+    }
+    .top-banner .stars { color: #c8890a; margin-right: 6px; font-size: 1.05rem; }
+
+    /* ── STICKY NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--green-dark);
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 66px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+    }
+    .nav-logo {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav-logo .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--green-accent);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.82);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta {
+      background: var(--gold);
+      color: var(--green-dark) !important;
+      font-weight: 700 !important;
+      padding: 9px 20px;
+      border-radius: 8px;
+      transition: background 0.2s, transform 0.15s !important;
+    }
+    .nav-cta:hover { background: #ffd84d !important; transform: translateY(-1px); }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--green-dark);
+      color: var(--white);
+      min-height: 580px;
+      display: flex;
+      align-items: center;
+      padding: 80px 5%;
+      overflow: hidden;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(82,183,136,0.12) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .hero-left h1 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.18;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+    .hero-left h1 span { color: var(--green-accent); }
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.76);
+      margin-bottom: 32px;
+      max-width: 460px;
+    }
+    .hero-checklist {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 40px;
+    }
+    .hero-checklist li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .hero-checklist .check {
+      width: 32px;
+      height: 32px;
+      background: var(--green-accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1rem;
+    }
+    .hero-btns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--green-dark);
+      font-weight: 700;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      padding: 14px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 4px 16px rgba(245,200,66,0.35);
+    }
+    .btn-primary:hover { background: #ffd84d; transform: translateY(-2px); box-shadow: 0 6px 24px rgba(245,200,66,0.5); }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      font-weight: 600;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      padding: 14px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      border: 2px solid rgba(255,255,255,0.35);
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+    .hero-right {
+      position: relative;
+    }
+    .hero-img-wrap {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+      position: relative;
+    }
+    .hero-img-wrap img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: block;
+    }
+    .hero-badge {
+      position: absolute;
+      bottom: -18px;
+      left: -18px;
+      background: var(--white);
+      color: var(--green-dark);
+      border-radius: 14px;
+      padding: 14px 20px;
+      box-shadow: var(--shadow-lg);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .hero-badge .badge-icon {
+      font-size: 1.8rem;
+    }
+    .hero-badge-sub { font-size: 0.75rem; font-weight: 400; color: var(--gray); }
+
+    /* ── SECTION GENERIC ── */
+    section { padding: 80px 5%; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-tag {
+      display: inline-block;
+      background: var(--green-light);
+      color: var(--green-dark);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 50px;
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      font-weight: 700;
+      color: var(--green-dark);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      font-size: 1.05rem;
+      color: var(--gray);
+      max-width: 560px;
+      margin-bottom: 48px;
+    }
+
+    /* ── THE PROCESS ── */
+    .process-section { background: var(--white); }
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      position: relative;
+      margin-top: 16px;
+    }
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 44px;
+      left: calc(16.66% + 28px);
+      right: calc(16.66% + 28px);
+      height: 2px;
+      background: linear-gradient(90deg, var(--green-accent), var(--green-accent));
+      z-index: 0;
+    }
+    .process-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+    .step-num {
+      width: 88px;
+      height: 88px;
+      background: var(--green-dark);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+      position: relative;
+      box-shadow: 0 8px 24px rgba(27,67,50,0.22);
+      border: 4px solid var(--green-accent);
+    }
+    .step-icon-badge {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      width: 28px;
+      height: 28px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+    }
+    .process-step h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-bottom: 10px;
+    }
+    .process-step p {
+      font-size: 0.95rem;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+    .process-arrow {
+      position: absolute;
+      top: 36px;
+      right: -16px;
+      font-size: 1.4rem;
+      color: var(--green-accent);
+      z-index: 2;
+    }
+
+    /* ── PEST TYPES ── */
+    .pests-section { background: var(--bg); }
+    .pest-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 16px;
+    }
+    .pest-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 28px 16px 24px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      border: 2px solid transparent;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+      cursor: default;
+    }
+    .pest-card:hover {
+      border-color: var(--green-accent);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    .pest-icon { font-size: 2.5rem; margin-bottom: 12px; display: block; }
+    .pest-name {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--green-dark);
+    }
+
+    /* ── SERVICES ── */
+    .services-section { background: var(--white); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .service-card {
+      background: var(--bg);
+      border-radius: 16px;
+      padding: 28px 24px;
+      border-left: 4px solid var(--green-accent);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .service-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+    .service-icon { font-size: 2rem; margin-bottom: 12px; }
+    .service-card h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-bottom: 8px;
+    }
+    .service-outcome {
+      font-size: 0.92rem;
+      color: var(--gray);
+      line-height: 1.55;
+    }
+
+    /* ── WHY LOCAL ── */
+    .local-section { background: var(--bg); }
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .compare-col {
+      border-radius: 20px;
+      padding: 36px 32px;
+    }
+    .compare-col.local {
+      background: var(--green-dark);
+      color: var(--white);
+    }
+    .compare-col.national {
+      background: var(--white);
+      border: 2px solid #e5e7eb;
+    }
+    .compare-col h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .compare-col.local h3 { color: var(--white); }
+    .compare-col.national h3 { color: var(--gray-dark); }
+    .compare-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+    .compare-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.96rem;
+      line-height: 1.5;
+    }
+    .compare-col.local .compare-list li { color: rgba(255,255,255,0.9); }
+    .compare-col.national .compare-list li { color: var(--gray); }
+    .compare-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .compare-col.local .compare-icon { background: var(--green-accent); color: white; }
+    .compare-col.national .compare-icon { background: #fee2e2; color: #dc2626; }
+    .brand-story {
+      margin-top: 48px;
+      background: var(--green-dark);
+      color: var(--white);
+      border-radius: 20px;
+      padding: 40px 44px;
+      position: relative;
+      overflow: hidden;
+    }
+    .brand-story::before {
+      content: '"';
+      position: absolute;
+      top: -20px;
+      left: 24px;
+      font-size: 12rem;
+      color: rgba(82,183,136,0.15);
+      font-family: Georgia, serif;
+      line-height: 1;
+    }
+    .brand-story p {
+      font-size: 1.12rem;
+      line-height: 1.75;
+      font-style: italic;
+      color: rgba(255,255,255,0.9);
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+    }
+    .brand-story-sig {
+      margin-top: 16px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      color: var(--green-accent);
+      font-size: 0.95rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── REVIEWS ── */
+    .reviews-section {
+      background: var(--green-dark);
+      color: var(--white);
+    }
+    .reviews-section .section-title { color: var(--white); }
+    .reviews-section .section-sub { color: rgba(255,255,255,0.65); }
+    .reviews-section .section-tag { background: rgba(82,183,136,0.25); color: var(--green-light); }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .review-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      padding: 28px 24px;
+      backdrop-filter: blur(4px);
+      transition: background 0.2s, transform 0.2s;
+    }
+    .review-card:hover { background: rgba(255,255,255,0.11); transform: translateY(-3px); }
+    .review-stars { color: var(--gold); font-size: 1.1rem; margin-bottom: 14px; }
+    .review-text {
+      font-size: 0.97rem;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.88);
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+    .review-author {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--green-accent);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .review-author::before {
+      content: '';
+      width: 28px;
+      height: 2px;
+      background: var(--green-accent);
+      display: block;
+    }
+    .review-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 40px;
+      justify-content: center;
+    }
+    .review-badge-text {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.6);
+    }
+    .review-badge-text strong { color: var(--white); }
+
+    /* ── CTA ── */
+    .cta-section {
+      background: linear-gradient(135deg, var(--green-accent) 0%, var(--green-mid) 100%);
+      color: var(--white);
+      text-align: center;
+    }
+    .cta-section .section-title { color: var(--white); }
+    .cta-guarantee {
+      font-size: 1.5rem;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .cta-sub {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 36px;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-badges {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+    .cta-badge {
+      background: rgba(255,255,255,0.15);
+      border: 2px solid rgba(255,255,255,0.3);
+      border-radius: 50px;
+      padding: 8px 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--white);
+      backdrop-filter: blur(4px);
+    }
+    .cta-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--white);
+      text-decoration: none;
+      margin-bottom: 20px;
+      transition: opacity 0.2s;
+    }
+    .cta-phone:hover { opacity: 0.85; }
+    .cta-phone .phone-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+    .cta-note { font-size: 0.88rem; color: rgba(255,255,255,0.65); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0f2b1e;
+      color: rgba(255,255,255,0.6);
+      padding: 40px 5%;
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .footer-logo {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--white);
+    }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--white); }
+    .footer-copy { font-size: 0.82rem; }
+
+    /* ── FLOAT BUTTON ── */
+    .float-btn {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 999;
+      background: var(--green-accent);
+      color: var(--white);
+      border: none;
+      border-radius: 50px;
+      padding: 15px 24px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 6px 28px rgba(82,183,136,0.45);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+      animation: floatPulse 3s ease-in-out infinite;
+    }
+    .float-btn:hover {
+      background: var(--green-mid);
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 10px 36px rgba(82,183,136,0.55);
+    }
+    @keyframes floatPulse {
+      0%, 100% { box-shadow: 0 6px 28px rgba(82,183,136,0.45); }
+      50% { box-shadow: 0 8px 36px rgba(82,183,136,0.65); }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .pest-grid { grid-template-columns: repeat(3, 1fr); }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      nav { padding: 0 4%; }
+      .nav-links { display: none; }
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .hero-right { display: none; }
+      .process-steps { grid-template-columns: 1fr; gap: 32px; }
+      .process-steps::before { display: none; }
+      .pest-grid { grid-template-columns: repeat(3, 1fr); }
+      .services-grid { grid-template-columns: 1fr; }
+      .compare-grid { grid-template-columns: 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .float-btn span.btn-text { display: none; }
+      .float-btn { border-radius: 50%; width: 60px; height: 60px; padding: 0; justify-content: center; }
+    }
+    @media (max-width: 480px) {
+      .pest-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- YELLOW BANNER -->
+  <div class="top-banner">
+    <span class="stars">⭐⭐⭐⭐⭐</span>
+    5.0 · 11 Google Reviews - <strong>Grand's Local Pest Experts</strong>
+  </div>
+
+  <!-- STICKY NAV -->
+  <nav>
+    <a href="#" class="nav-logo">
+      <div class="logo-icon">🐛</div>
+      Have Pesticide Will Travel
+    </a>
+    <ul class="nav-links">
+      <li><a href="#process">Our Process</a></li>
+      <li><a href="#pests">Pest Types</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="tel:9452034241" class="nav-cta">📞 Call Now</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <h1>Grand's <span>Local Pest</span><br>Experts You Trust</h1>
+        <p class="hero-subtitle">Serving Grand, TX families with safe, effective pest control - no shortcuts, no national chain scripts.</p>
+        <ul class="hero-checklist">
+          <li>
+            <span class="check">✅</span>
+            Eco-Friendly Products
+          </li>
+          <li>
+            <span class="check">✅</span>
+            Safe for Kids & Pets
+          </li>
+          <li>
+            <span class="check">✅</span>
+            100% Satisfaction Guaranteed
+          </li>
+          <li>
+            <span class="check">✅</span>
+            Licensed & Insured - Grand, TX
+          </li>
+        </ul>
+        <div class="hero-btns">
+          <a href="tel:9452034241" class="btn-primary">📞 (972) 262-9841</a>
+          <a href="#process" class="btn-outline">See Our Process →</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-img-wrap">
+          <img src="https://images.pexels.com/photos/5824883/pexels-photo-5824883.jpeg?w=1600&q=80" alt="Pest control professional at work" loading="eager" />
+        </div>
+        <div class="hero-badge">
+          <span class="badge-icon">🏅</span>
+          <div>
+            <div>5★ Rated in Grand</div>
+            <div class="hero-badge-sub">9 verified Google reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE PROCESS -->
+  <section class="process-section" id="process">
+    <div class="section-inner">
+      <span class="section-tag">How It Works</span>
+      <h2 class="section-title">A Methodical 3-Step Process</h2>
+      <p class="section-sub">We don't guess. We inspect, treat with precision, and guarantee the result. Every single time.</p>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">
+            1
+            <span class="step-icon-badge">🔍</span>
+          </div>
+          <h3>Inspect</h3>
+          <p>We identify pest species, entry points, and infestation levels before touching a single product. No assumptions.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">
+            2
+            <span class="step-icon-badge">🧪</span>
+          </div>
+          <h3>Treat</h3>
+          <p>Targeted, eco-friendly treatment applied precisely where needed - inside, outside, and every entry point.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">
+            3
+            <span class="step-icon-badge">✅</span>
+          </div>
+          <h3>Guarantee</h3>
+          <p>If pests return between treatments, so do we - at no extra charge. That's the Have Pesticide Will Travel promise.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PEST TYPES -->
+  <section class="pests-section" id="pests">
+    <div class="section-inner">
+      <span class="section-tag">We Handle</span>
+      <h2 class="section-title">Every Pest. Handled.</h2>
+      <p class="section-sub">From common household nuisances to serious infestations - we've got Grand covered.</p>
+      <div class="pest-grid">
+        <div class="pest-card">
+          <span class="pest-icon">🐜</span>
+          <div class="pest-name">Ants</div>
+        </div>
+        <div class="pest-card">
+          <span class="pest-icon">🕷️</span>
+          <div class="pest-name">Spiders</div>
+        </div>
+        <div class="pest-card">
+          <span class="pest-icon">🪳</span>
+          <div class="pest-name">Roaches</div>
+        </div>
+        <div class="pest-card">
+          <span class="pest-icon">🐭</span>
+          <div class="pest-name">Rodents</div>
+        </div>
+        <div class="pest-card">
+          <span class="pest-icon">🦟</span>
+          <div class="pest-name">Mosquitoes</div>
+        </div>
+        <div class="pest-card">
+          <span class="pest-icon">🐝</span>
+          <div class="pest-name">Wasps</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services-section" id="services">
+    <div class="section-inner">
+      <span class="section-tag">Services</span>
+      <h2 class="section-title">Treatments That Actually Work</h2>
+      <p class="section-sub">Every service comes with a guarantee. We measure success by results, not visits.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🐜</div>
+          <h3>General Pest Control</h3>
+          <p class="service-outcome">One treatment eliminates ants, roaches, spiders. Guaranteed.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🐭</div>
+          <h3>Rodent Control</h3>
+          <p class="service-outcome">Mice or rats? We seal entry points and remove them completely.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🦟</div>
+          <h3>Mosquito Treatment</h3>
+          <p class="service-outcome">Enjoy your backyard again. Monthly treatment keeps mosquitoes away.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏠</div>
+          <h3>Termite Inspection</h3>
+          <p class="service-outcome">Protect your biggest investment. Early detection saves thousands.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🐝</div>
+          <h3>Wasp & Bee Removal</h3>
+          <p class="service-outcome">Nest near your home? Safely removed, no risk to your family.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏢</div>
+          <h3>Commercial Pest Control</h3>
+          <p class="service-outcome">Keep your business pest-free. Discreet, effective, recurring service.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY LOCAL BEATS NATIONAL -->
+  <section class="local-section" id="why-local">
+    <div class="section-inner">
+      <span class="section-tag">Why We're Different</span>
+      <h2 class="section-title">Local Beats National. Every Time.</h2>
+      <p class="section-sub">Big chains send a different tech every time. We send people who know your home.</p>
+      <div class="compare-grid">
+        <div class="compare-col local">
+          <h3>🏡 Have Pesticide Will Travel <span style="color:var(--green-light);font-size:0.85rem;font-weight:500;">(Local)</span></h3>
+          <ul class="compare-list">
+            <li>
+              <span class="compare-icon">✓</span>
+              Same technician every visit - we know your home
+            </li>
+            <li>
+              <span class="compare-icon">✓</span>
+              Eco-friendly, pet-safe products always
+            </li>
+            <li>
+              <span class="compare-icon">✓</span>
+              Transparent pricing - no surprise upsells
+            </li>
+            <li>
+              <span class="compare-icon">✓</span>
+              Respond within 24 hours - often same day
+            </li>
+            <li>
+              <span class="compare-icon">✓</span>
+              Free re-treatment if pests return
+            </li>
+            <li>
+              <span class="compare-icon">✓</span>
+              You talk to the owner, not a call center
+            </li>
+          </ul>
+        </div>
+        <div class="compare-col national">
+          <h3>🏭 Big National Chains</h3>
+          <ul class="compare-list">
+            <li>
+              <span class="compare-icon">✗</span>
+              Different tech every time - no continuity
+            </li>
+            <li>
+              <span class="compare-icon">✗</span>
+              Harsh chemicals as default treatment
+            </li>
+            <li>
+              <span class="compare-icon">✗</span>
+              Hidden fees and aggressive upsells
+            </li>
+            <li>
+              <span class="compare-icon">✗</span>
+              Slow scheduling - weeks of waiting
+            </li>
+            <li>
+              <span class="compare-icon">✗</span>
+              No-return policies buried in fine print
+            </li>
+            <li>
+              <span class="compare-icon">✗</span>
+              Call centers that don't know your situation
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="brand-story">
+        <p>"Have Pesticide Will Travel was built on a simple idea: Grand families deserve better than the big national chains. We're local, we're thorough, and we use products that are safe for your kids and pets. When we treat your home, we treat it like our own."</p>
+        <div class="brand-story-sig">- The Have Pesticide Will Travel Team, Grand, TX</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews-section" id="reviews">
+    <div class="section-inner">
+      <span class="section-tag">Customer Reviews</span>
+      <h2 class="section-title">What Grand Families Say</h2>
+      <p class="section-sub">Real reviews. Real results. No scripts, no cherry-picking.</p>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <p class="review-text">"Haven't seen a bug since they came out - incredible results."</p>
+          <div class="review-author">Susan B.</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <p class="review-text">"Very thorough and explained everything they were doing. You could tell they actually care."</p>
+          <div class="review-author">Mark T.</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <p class="review-text">"Way better than the big national companies. Local and personal - exactly what I wanted."</p>
+          <div class="review-author">Angela R.</div>
+        </div>
+      </div>
+      <div class="review-badge">
+        <span style="font-size:1.4rem;">🌿</span>
+        <span class="review-badge-text"><strong>Chris L.</strong> also said: "Used eco-friendly products which I really appreciated." - another happy Grand customer.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="cta">
+    <div class="section-inner" style="text-align:center;">
+      <span class="section-tag" style="background:rgba(255,255,255,0.2);color:white;">Guarantee</span>
+      <h2 class="section-title" style="color:white;margin-bottom:8px;">No Bugs Guaranteed -<br>Or We Come Back Free</h2>
+      <p class="cta-sub">One call and Grand's most trusted pest team is on their way. Most jobs handled same week.</p>
+      <div class="cta-badges">
+        <span class="cta-badge">🌿 Eco-Friendly</span>
+        <span class="cta-badge">🐾 Pet Safe</span>
+        <span class="cta-badge">🏅 5★ Rated</span>
+        <span class="cta-badge">📍 Grand, TX</span>
+      </div>
+      <div>
+        <a href="tel:9452034241" class="cta-phone">
+          <span class="phone-icon">📞</span>
+          (972) 262-9841
+        </a>
+      </div>
+      <p class="cta-note">Mon–Sat · Fast response · Free estimates</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">🐛 Have Pesticide Will Travel</div>
+      <ul class="footer-links">
+        <li><a href="#process">Process</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="tel:9452034241">(972) 262-9841</a></li>
+      </ul>
+      <span class="footer-copy">© 2025 Have Pesticide Will Travel · Grand, TX</span>
+    </div>
+  </footer>
+
+  <!-- FLOAT BUTTON -->
+  <a href="tel:9452034241" class="float-btn">
+    <span>📞</span>
+    <span class="btn-text">Call Now</span>
+  </a>
+
+</body>
+</html>
