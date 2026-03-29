@@ -6,405 +6,140 @@
   <title>Starwood Roofing | Roofing in Grand Prairie TX</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --primary: #2c1810;
-      --accent: #c9a227;
-      --text: #1a1a1a;
-      --light: #f8f8f8;
-      --white: #ffffff;
-    }
-    body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--text); background: var(--white); }
+    :root { --primary: #2c1810; --accent: #c9a227; --white: #fff; --light: #faf8f4; --text: #1a1a1a; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--text); }
 
-    nav {
-      background: var(--primary);
-      padding: 0 5%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 64px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .nav-logo { color: var(--white); font-size: 1.2rem; font-weight: 700; letter-spacing: 0.5px; }
-    .nav-phone a {
-      color: var(--white);
-      text-decoration: none;
-      font-size: 1rem;
-      font-weight: 600;
-      background: var(--accent);
-      color: #111;
-      padding: 8px 18px;
-      border-radius: 4px;
-    }
+    nav { background: var(--primary); display: flex; align-items: center; justify-content: space-between; padding: 0 6%; height: 62px; position: sticky; top: 0; z-index: 100; }
+    .nav-logo { color: #fff; font-weight: 700; font-size: 1.1rem; }
+    .nav-cta a { background: var(--accent); color: #111; padding: 8px 20px; border-radius: 4px; text-decoration: none; font-weight: 700; }
 
-    .hero {
-      position: relative;
-      min-height: 520px;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-    }
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background-image: url('https://images.pexels.com/photos/33404981/pexels-photo-33404981.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-      background-size: cover;
-      background-position: center;
-      filter: brightness(0.35);
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      padding: 60px 6%;
-      max-width: 680px;
-    }
-    .hero-badge {
-      display: inline-block;
-      background: var(--accent);
-      color: #111;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      padding: 5px 14px;
-      border-radius: 3px;
-      margin-bottom: 20px;
-    }
-    .hero h1 {
-      color: var(--white);
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 800;
-      line-height: 1.15;
-      margin-bottom: 16px;
-    }
-    .hero p {
-      color: rgba(255,255,255,0.88);
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin-bottom: 32px;
-      max-width: 520px;
-    }
-    .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
-    .btn-primary {
-      background: var(--accent);
-      color: #111;
-      padding: 14px 28px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1rem;
-    }
-    .btn-outline {
-      background: transparent;
-      color: var(--white);
-      padding: 14px 28px;
-      border-radius: 4px;
-      border: 2px solid rgba(255,255,255,0.7);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-    }
+    /* HERO — full screen centered */
+    .hero { position: relative; min-height: 580px; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .hero-bg { position: absolute; inset: 0; background-image: url('https://images.pexels.com/photos/33404981/pexels-photo-33404981.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'); background-size: cover; background-position: center; filter: brightness(0.25); }
+    .hero-content { position: relative; z-index: 2; padding: 70px 6%; max-width: 760px; }
+    .hero-tag { display: inline-block; background: var(--accent); color: #111; font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 12px; border-radius: 3px; margin-bottom: 22px; }
+    .hero-content h1 { color: #fff; font-size: clamp(2.2rem, 4.2vw, 3.2rem); font-weight: 800; line-height: 1.15; margin-bottom: 18px; }
+    .hero-content h1 span { color: var(--accent); }
+    .hero-content p { color: rgba(255,255,255,0.85); font-size: 1.05rem; line-height: 1.65; margin-bottom: 32px; max-width: 560px; margin-left: auto; margin-right: auto; }
+    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+    .btn-main { background: var(--accent); color: #111; padding: 13px 26px; border-radius: 4px; text-decoration: none; font-weight: 700; }
+    .btn-ghost { background: transparent; color: #fff; padding: 13px 26px; border-radius: 4px; border: 2px solid rgba(255,255,255,0.5); text-decoration: none; font-weight: 600; }
 
-    .trust-bar {
-      background: var(--primary);
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      flex-wrap: wrap;
-      padding: 18px 5%;
-    }
-    .trust-item {
-      color: var(--white);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
+    /* STATS BAR */
+    .stats-bar { background: var(--accent); display: flex; justify-content: center; flex-wrap: wrap; gap: 0; }
+    .stat { color: #111; padding: 18px 32px; border-right: 1px solid rgba(0,0,0,0.12); text-align: center; }
+    .stat:last-child { border-right: none; }
+    .stat-num { font-size: 1.8rem; font-weight: 800; display: block; line-height: 1; }
+    .stat-label { font-size: 0.78rem; font-weight: 600; opacity: 0.75; }
 
-    section { padding: 70px 6%; }
-    .section-label {
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 10px;
-    }
-    h2.section-title {
-      font-size: clamp(1.6rem, 3vw, 2.2rem);
-      color: var(--primary);
-      font-weight: 800;
-      margin-bottom: 16px;
-      line-height: 1.2;
-    }
-    .section-sub {
-      font-size: 1rem;
-      color: #555;
-      max-width: 580px;
-      line-height: 1.65;
-      margin-bottom: 40px;
-    }
+    section { padding: 72px 6%; }
+    .sec-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    h2.sec-title { font-size: clamp(1.5rem, 2.8vw, 2.1rem); color: var(--primary); font-weight: 800; line-height: 1.2; margin-bottom: 14px; }
+    .sec-sub { font-size: 1rem; color: #555; line-height: 1.7; margin-bottom: 36px; max-width: 560px; }
 
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 24px;
-    }
-    .service-card {
-      background: var(--light);
-      border-radius: 8px;
-      padding: 28px 24px;
-      border-left: 4px solid var(--accent);
-    }
-    .service-icon { font-size: 2rem; margin-bottom: 12px; }
-    .service-card h3 { font-size: 1rem; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
-    .service-card p { font-size: 0.88rem; color: #555; line-height: 1.5; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px,1fr)); gap: 20px; }
+    .svc { background: var(--light); border-top: 4px solid var(--accent); border-radius: 6px; padding: 26px 22px; }
+    .svc-icon { font-size: 1.8rem; margin-bottom: 10px; }
+    .svc h3 { font-size: 0.95rem; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+    .svc p { font-size: 0.85rem; color: #555; line-height: 1.5; }
 
-    .about-section {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-      padding: 80px 6%;
-      background: var(--light);
-    }
-    @media (max-width: 768px) { .about-section { grid-template-columns: 1fr; gap: 32px; } }
-    .about-img {
-      width: 100%;
-      height: 380px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-    .about-content .brand-name {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--primary);
-      margin-bottom: 6px;
-    }
-    .about-content .brand-location {
-      font-size: 0.9rem;
-      color: var(--accent);
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
-    .about-content p {
-      font-size: 1rem;
-      color: #444;
-      line-height: 1.75;
-      margin-bottom: 20px;
-    }
-    .about-pills { display: flex; flex-wrap: wrap; gap: 10px; }
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--white);
-      border: 1px solid #ddd;
-      border-radius: 20px;
-      padding: 7px 14px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--primary);
-    }
+    .about { background: var(--light); display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; padding: 72px 6%; }
+    @media(max-width:768px) { .about { grid-template-columns: 1fr; } }
+    .about-img { width: 100%; height: 360px; object-fit: cover; border-radius: 8px; }
+    .about-name { font-size: 1.7rem; font-weight: 800; color: var(--primary); margin-bottom: 4px; }
+    .about-city { font-size: 0.85rem; color: var(--accent); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 18px; }
+    .about p { font-size: 0.98rem; color: #444; line-height: 1.75; margin-bottom: 18px; }
+    .pills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .pill { background: #fff; border: 1px solid #ddd; border-radius: 20px; padding: 6px 14px; font-size: 0.82rem; font-weight: 600; color: var(--primary); }
 
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 28px;
-    }
-    .why-item { text-align: center; padding: 24px 16px; }
-    .why-num { font-size: 2.4rem; font-weight: 800; color: var(--accent); margin-bottom: 6px; }
-    .why-item h3 { font-size: 0.95rem; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
-    .why-item p { font-size: 0.85rem; color: #666; line-height: 1.5; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px,1fr)); gap: 20px; }
+    .review { border: 1px solid #e5e5e5; border-radius: 8px; padding: 22px; background: #fff; }
+    .stars { color: #f5a623; margin-bottom: 10px; }
+    .review p { font-size: 0.88rem; color: #444; line-height: 1.6; font-style: italic; margin-bottom: 12px; }
+    .reviewer { font-size: 0.8rem; font-weight: 700; color: var(--primary); }
 
-    .reviews-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-    }
-    .review-card {
-      background: var(--white);
-      border: 1px solid #e8e8e8;
-      border-radius: 8px;
-      padding: 24px;
-    }
-    .stars { color: #f5a623; font-size: 1rem; margin-bottom: 10px; }
-    .review-card p { font-size: 0.9rem; color: #444; line-height: 1.6; margin-bottom: 14px; font-style: italic; }
-    .reviewer { font-size: 0.82rem; font-weight: 700; color: var(--primary); }
+    .cta { background: var(--primary); text-align: center; padding: 72px 6%; }
+    .cta h2 { color: #fff; font-size: clamp(1.5rem, 2.8vw, 2.1rem); font-weight: 800; margin-bottom: 12px; }
+    .cta p { color: rgba(255,255,255,0.8); font-size: 1rem; margin-bottom: 28px; }
+    .btn-cta { background: var(--accent); color: #111; padding: 15px 34px; border-radius: 4px; text-decoration: none; font-weight: 700; }
 
-    .cta-section {
-      background: var(--primary);
-      text-align: center;
-      padding: 70px 6%;
-    }
-    .cta-section h2 { color: var(--white); font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; margin-bottom: 14px; }
-    .cta-section p { color: rgba(255,255,255,0.82); font-size: 1rem; margin-bottom: 32px; }
-    .btn-cta {
-      background: var(--accent);
-      color: #111;
-      padding: 16px 36px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1.05rem;
-    }
-
-    footer {
-      background: #111;
-      color: rgba(255,255,255,0.65);
-      text-align: center;
-      padding: 28px 5%;
-      font-size: 0.82rem;
-    }
-    footer strong { color: var(--white); }
+    footer { background: #111; color: rgba(255,255,255,0.55); text-align: center; padding: 24px 5%; font-size: 0.8rem; }
+    footer strong { color: #fff; }
   </style>
 </head>
 <body>
-
 <nav>
   <div class="nav-logo">Starwood Roofing</div>
-  <div class="nav-phone"><a href="tel:+18002102485">(800) 210-2485</a></div>
+  <div class="nav-cta"><a href="tel:+18002102485">(800) 210-2485</a></div>
 </nav>
 
-<section class="hero">
+<div class="hero">
   <div class="hero-bg"></div>
   <div class="hero-content">
-    <div class="hero-badge">Licensed &amp; Insured - Grand Prairie TX</div>
-    <h1>Expert Roofing
-for Grand Prairie TX Homes</h1>
-    <p>Quality materials, clean crews, and roofs that last. Serving Grand Prairie TX with honest estimates and solid work.</p>
-    <div class="hero-buttons">
-      <a href="tel:+18002102485" class="btn-primary">Call (800) 210-2485</a>
-      <a href="#services" class="btn-outline">Our Services</a>
+    <div class="hero-tag">Roofing Contractor - Grand Prairie TX</div>
+    <h1>One storm can cost you<br>everything. <span>Is your<br>roof ready?</span></h1>
+    <p>Quality materials, honest estimates, and crews that show up and clean up. Starwood Roofing protects Grand Prairie TX homes.</p>
+    <div class="hero-btns">
+      <a href="tel:+18002102485" class="btn-main">Call (800) 210-2485</a>
+      <a href="#services" class="btn-ghost">Free Inspection</a>
     </div>
   </div>
-</section>
+</div>
 
-<div class="trust-bar">
-  <div class="trust-item"><span>&#11088;</span> 4.9 Stars (67 Reviews)</div>
-  <div class="trust-item"><span>&#128336;</span> Same-Day Service</div>
-  <div class="trust-item"><span>&#128737;</span> Licensed &amp; Insured</div>
-  <div class="trust-item"><span>&#128205;</span> Serving Grand Prairie TX</div>
+<div class="stats-bar">
+  <div class="stat"><span class="stat-num">500+</span><span class="stat-label">Roofs Replaced</span></div>
+  <div class="stat"><span class="stat-num">4.9&#9733;</span><span class="stat-label">Google Rating</span></div>
+  <div class="stat"><span class="stat-num">$0</span><span class="stat-label">Free Inspection</span></div>
+  <div class="stat"><span class="stat-num">10yr</span><span class="stat-label">Workmanship Warranty</span></div>
 </div>
 
 <section id="services">
-  <div class="section-label">What We Do</div>
-  <h2 class="section-title">Roofing Services
-in Grand Prairie TX</h2>
-  <p class="section-sub">From minor repairs to full replacements, we protect Grand Prairie TX homes with quality workmanship.</p>
+  <div class="sec-label">What We Do</div>
+  <h2 class="sec-title">Roofing Services in Grand Prairie TX</h2>
+  <p class="sec-sub">From minor repairs to full replacements — we protect Grand Prairie TX homes with quality workmanship.</p>
   <div class="services-grid">
-    <div class="service-card">
-      <div class="service-icon">🏠</div>
-      <h3>Roof Replacement</h3>
-      <p>Full roof replacement with quality shingles and warranty.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🔧</div>
-      <h3>Roof Repair</h3>
-      <p>Leaks, missing shingles, and storm damage fixed fast.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🌧️</div>
-      <h3>Leak Detection</h3>
-      <p>We find the source of leaks others miss.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🌀</div>
-      <h3>Storm Damage</h3>
-      <p>Insurance claim help and storm damage repair after hail or wind.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🔍</div>
-      <h3>Free Inspection</h3>
-      <p>No-cost roof inspection. Know what you're dealing with.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🏗️</div>
-      <h3>Gutters</h3>
-      <p>Gutter install, repair, and cleaning to protect your foundation.</p>
-    </div>
+    <div class="svc"><div class="svc-icon">&#127968;</div><h3>Roof Replacement</h3><p>Full replacement with quality shingles and 10-year workmanship warranty.</p></div>
+    <div class="svc"><div class="svc-icon">&#128295;</div><h3>Roof Repair</h3><p>Leaks, missing shingles, and storm damage fixed fast and right.</p></div>
+    <div class="svc"><div class="svc-icon">&#127783;</div><h3>Leak Detection</h3><p>We find the source of leaks that other roofers miss.</p></div>
+    <div class="svc"><div class="svc-icon">&#127744;</div><h3>Storm Damage</h3><p>Insurance claim help and storm damage repair after hail or wind.</p></div>
+    <div class="svc"><div class="svc-icon">&#128269;</div><h3>Free Inspection</h3><p>No-cost roof inspection. Know exactly what you are dealing with.</p></div>
+    <div class="svc"><div class="svc-icon">&#127968;</div><h3>Gutters</h3><p>Gutter install, repair, and cleaning to protect your foundation.</p></div>
   </div>
 </section>
 
-<div class="about-section">
+<div class="about">
   <img class="about-img" src="https://images.pexels.com/photos/33404981/pexels-photo-33404981.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Starwood Roofing">
-  <div class="about-content">
-    <div class="section-label">About Us</div>
-    <div class="brand-name">Starwood Roofing</div>
-    <div class="brand-location">Serving Grand Prairie TX &amp; Surrounding Areas</div>
-    <p>Your roof is your home's first line of defense. Starwood Roofing serves Grand Prairie TX with honest assessments, quality materials, and crews that clean up after themselves. No high-pressure sales. Just a solid roof done right.</p>
-    <div class="about-pills">
+  <div>
+    <div class="sec-label">About Us</div>
+    <div class="about-name">Starwood Roofing</div>
+    <div class="about-city">Serving Grand Prairie TX &amp; Surrounding Areas</div>
+    <p>Your roof is your home's first line of defense. Starwood Roofing serves Grand Prairie TX with honest assessments, quality materials, and crews that clean up after themselves.</p>
+    <p>No high-pressure sales. Just a solid roof done right.</p>
+    <div class="pills">
       <span class="pill">&#10003; Licensed &amp; Insured</span>
       <span class="pill">&#128205; Local &amp; Family-Owned</span>
-      <span class="pill">&#11088; 4.9 Stars on Google</span>
-      <span class="pill">&#128336; Same-Day Available</span>
+      <span class="pill">&#9733; 4.9 Stars on Google</span>
+      <span class="pill">&#127968; 10-Year Warranty</span>
     </div>
   </div>
 </div>
 
-<section>
-  <div class="section-label">Why Choose Us</div>
-  <h2 class="section-title">Starwood Roofing<br>Grand Prairie TX Trusts</h2>
-  <div class="why-grid">
-    <div class="why-item">
-      <div class="why-num">60min</div>
-      <h3>Fast Response</h3>
-      <p>We aim to be at your door within 60 minutes for emergencies.</p>
-    </div>
-    <div class="why-item">
-      <div class="why-num">100%</div>
-      <h3>Satisfaction Guarantee</h3>
-      <p>Not happy? We make it right. No questions asked.</p>
-    </div>
-    <div class="why-item">
-      <div class="why-num">4.9&#11088;</div>
-      <h3>Top Rated</h3>
-      <p>Trusted by Grand Prairie TX homeowners. 67 five-star reviews.</p>
-    </div>
-    <div class="why-item">
-      <div class="why-num">$0</div>
-      <h3>Free Estimate</h3>
-      <p>No charge to come out and tell you what it will cost.</p>
-    </div>
-  </div>
-</section>
-
-<section style="background: var(--light);">
-  <div class="section-label">What Customers Say</div>
-  <h2 class="section-title">Real Reviews from<br>Grand Prairie TX Homeowners</h2>
+<section style="background:var(--light)">
+  <div class="sec-label">What Customers Say</div>
+  <h2 class="sec-title">Real Reviews from Grand Prairie TX Homeowners</h2>
   <div class="reviews-grid">
-    <div class="review-card">
-      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p>"Found a leak three other roofers missed. Fixed it right and it has held through several storms."</p>
-      <div class="reviewer">- Donna M., Grand Prairie TX</div>
-    </div>
-    <div class="review-card">
-      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p>"Fair price for a full roof replacement. The crew was professional and cleaned up everything."</p>
-      <div class="reviewer">- Ray C., Grand Prairie TX</div>
-    </div>
-    <div class="review-card">
-      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p>"Quick response after the storm. Came out same day for inspection and started work the next morning."</p>
-      <div class="reviewer">- Nancy B., Grand Prairie TX</div>
-    </div>
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Came out same day to inspect after a big storm. Thorough, professional, and fair."</p><div class="reviewer">- Mike D., Grand Prairie TX</div></div>
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Full roof replacement done in one day. Clean and efficient crew."</p><div class="reviewer">- Carol R., Grand Prairie TX</div></div>
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"They found a leak that had been causing damage for months. Fixed it properly."</p><div class="reviewer">- James K., Grand Prairie TX</div></div>
   </div>
 </section>
 
-<section class="cta-section">
+<div class="cta">
   <h2>Need Roofing in Grand Prairie TX?</h2>
-  <p>Call now for fast, reliable service. Free estimates. Same-day available.</p>
+  <p>Free inspection. No pressure. We tell you exactly what your roof needs.</p>
   <a href="tel:+18002102485" class="btn-cta">Call (800) 210-2485 Now</a>
-</section>
+</div>
 
-<footer>
-  <strong>Starwood Roofing</strong> | Grand Prairie TX | (800) 210-2485 | Licensed &amp; Insured<br>
-  <span style="opacity:0.5;font-size:0.75rem;">Professional roofing services in Grand Prairie TX and surrounding areas.</span>
-</footer>
-
+<footer><strong>Starwood Roofing</strong> | Grand Prairie TX | (800) 210-2485 | Licensed &amp; Insured</footer>
 </body>
 </html>

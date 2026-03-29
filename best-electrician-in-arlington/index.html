@@ -6,405 +6,139 @@
   <title>Best Electrician in Arlington | Electrician in Arlington TX</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --primary: #1a1a2e;
-      --accent: #f5c518;
-      --text: #1a1a1a;
-      --light: #f8f8f8;
-      --white: #ffffff;
-    }
-    body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--text); background: var(--white); }
+    :root { --primary: #1a1a2e; --accent: #f5c518; --white: #fff; --light: #f7f8fa; --text: #1a1a1a; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--text); }
 
-    nav {
-      background: var(--primary);
-      padding: 0 5%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 64px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .nav-logo { color: var(--white); font-size: 1.2rem; font-weight: 700; letter-spacing: 0.5px; }
-    .nav-phone a {
-      color: var(--white);
-      text-decoration: none;
-      font-size: 1rem;
-      font-weight: 600;
-      background: var(--accent);
-      color: #111;
-      padding: 8px 18px;
-      border-radius: 4px;
-    }
+    nav { background: var(--primary); display: flex; align-items: center; justify-content: space-between; padding: 0 6%; height: 62px; position: sticky; top: 0; z-index: 100; }
+    .nav-logo { color: #fff; font-weight: 700; font-size: 1.1rem; }
+    .nav-cta a { background: var(--accent); color: #111; padding: 8px 20px; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 0.95rem; }
 
-    .hero {
-      position: relative;
-      min-height: 520px;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-    }
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background-image: url('https://images.pexels.com/photos/32497160/pexels-photo-32497160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-      background-size: cover;
-      background-position: center;
-      filter: brightness(0.35);
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      padding: 60px 6%;
-      max-width: 680px;
-    }
-    .hero-badge {
-      display: inline-block;
-      background: var(--accent);
-      color: #111;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      padding: 5px 14px;
-      border-radius: 3px;
-      margin-bottom: 20px;
-    }
-    .hero h1 {
-      color: var(--white);
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 800;
-      line-height: 1.15;
-      margin-bottom: 16px;
-    }
-    .hero p {
-      color: rgba(255,255,255,0.88);
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin-bottom: 32px;
-      max-width: 520px;
-    }
-    .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
-    .btn-primary {
-      background: var(--accent);
-      color: #111;
-      padding: 14px 28px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1rem;
-    }
-    .btn-outline {
-      background: transparent;
-      color: var(--white);
-      padding: 14px 28px;
-      border-radius: 4px;
-      border: 2px solid rgba(255,255,255,0.7);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-    }
+    /* HERO — full screen with photo bg */
+    .hero { position: relative; min-height: 560px; display: flex; flex-direction: column; justify-content: center; }
+    .hero-bg { position: absolute; inset: 0; background-image: url('https://images.pexels.com/photos/32497160/pexels-photo-32497160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'); background-size: cover; background-position: center; filter: brightness(0.28); }
+    .hero-content { position: relative; z-index: 2; padding: 70px 6%; max-width: 700px; }
+    .hero-tag { display: inline-block; background: var(--accent); color: #111; font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 12px; border-radius: 3px; margin-bottom: 22px; }
+    .hero-content h1 { color: #fff; font-size: clamp(2rem, 3.8vw, 3rem); font-weight: 800; line-height: 1.15; margin-bottom: 18px; }
+    .hero-content h1 em { color: var(--accent); font-style: normal; }
+    .hero-content p { color: rgba(255,255,255,0.85); font-size: 1.05rem; line-height: 1.65; margin-bottom: 32px; max-width: 540px; }
+    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-main { background: var(--accent); color: #111; padding: 13px 26px; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 0.95rem; }
+    .btn-ghost { background: transparent; color: #fff; padding: 13px 26px; border-radius: 4px; border: 2px solid rgba(255,255,255,0.5); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
 
-    .trust-bar {
-      background: var(--primary);
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      flex-wrap: wrap;
-      padding: 18px 5%;
-    }
-    .trust-item {
-      color: var(--white);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
+    /* SAFETY BAR */
+    .safety-bar { background: var(--accent); display: flex; justify-content: center; flex-wrap: wrap; gap: 0; }
+    .safety-item { color: #111; font-weight: 700; font-size: 0.88rem; padding: 14px 28px; border-right: 1px solid rgba(0,0,0,0.12); display: flex; align-items: center; gap: 7px; }
+    .safety-item:last-child { border-right: none; }
 
-    section { padding: 70px 6%; }
-    .section-label {
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 10px;
-    }
-    h2.section-title {
-      font-size: clamp(1.6rem, 3vw, 2.2rem);
-      color: var(--primary);
-      font-weight: 800;
-      margin-bottom: 16px;
-      line-height: 1.2;
-    }
-    .section-sub {
-      font-size: 1rem;
-      color: #555;
-      max-width: 580px;
-      line-height: 1.65;
-      margin-bottom: 40px;
-    }
+    section { padding: 72px 6%; }
+    .sec-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    h2.sec-title { font-size: clamp(1.5rem, 2.8vw, 2.1rem); color: var(--primary); font-weight: 800; line-height: 1.2; margin-bottom: 14px; }
+    .sec-sub { font-size: 1rem; color: #555; line-height: 1.7; margin-bottom: 36px; max-width: 560px; }
 
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 24px;
-    }
-    .service-card {
-      background: var(--light);
-      border-radius: 8px;
-      padding: 28px 24px;
-      border-left: 4px solid var(--accent);
-    }
-    .service-icon { font-size: 2rem; margin-bottom: 12px; }
-    .service-card h3 { font-size: 1rem; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
-    .service-card p { font-size: 0.88rem; color: #555; line-height: 1.5; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px,1fr)); gap: 20px; }
+    .svc { background: var(--light); border-top: 4px solid var(--accent); border-radius: 6px; padding: 26px 22px; }
+    .svc-icon { font-size: 1.8rem; margin-bottom: 10px; }
+    .svc h3 { font-size: 0.95rem; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+    .svc p { font-size: 0.85rem; color: #555; line-height: 1.5; }
 
-    .about-section {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-      padding: 80px 6%;
-      background: var(--light);
-    }
-    @media (max-width: 768px) { .about-section { grid-template-columns: 1fr; gap: 32px; } }
-    .about-img {
-      width: 100%;
-      height: 380px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-    .about-content .brand-name {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--primary);
-      margin-bottom: 6px;
-    }
-    .about-content .brand-location {
-      font-size: 0.9rem;
-      color: var(--accent);
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
-    .about-content p {
-      font-size: 1rem;
-      color: #444;
-      line-height: 1.75;
-      margin-bottom: 20px;
-    }
-    .about-pills { display: flex; flex-wrap: wrap; gap: 10px; }
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--white);
-      border: 1px solid #ddd;
-      border-radius: 20px;
-      padding: 7px 14px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--primary);
-    }
+    .about { background: var(--light); display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; padding: 72px 6%; }
+    @media(max-width:768px) { .about { grid-template-columns: 1fr; } }
+    .about-img { width: 100%; height: 360px; object-fit: cover; border-radius: 8px; }
+    .about-name { font-size: 1.7rem; font-weight: 800; color: var(--primary); margin-bottom: 4px; }
+    .about-city { font-size: 0.85rem; color: var(--accent); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 18px; }
+    .about p { font-size: 0.98rem; color: #444; line-height: 1.75; margin-bottom: 18px; }
+    .pills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .pill { background: #fff; border: 1px solid #ddd; border-radius: 20px; padding: 6px 14px; font-size: 0.82rem; font-weight: 600; color: var(--primary); }
 
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 28px;
-    }
-    .why-item { text-align: center; padding: 24px 16px; }
-    .why-num { font-size: 2.4rem; font-weight: 800; color: var(--accent); margin-bottom: 6px; }
-    .why-item h3 { font-size: 0.95rem; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
-    .why-item p { font-size: 0.85rem; color: #666; line-height: 1.5; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px,1fr)); gap: 20px; }
+    .review { border: 1px solid #e5e5e5; border-radius: 8px; padding: 22px; background: #fff; }
+    .stars { color: #f5a623; margin-bottom: 10px; }
+    .review p { font-size: 0.88rem; color: #444; line-height: 1.6; font-style: italic; margin-bottom: 12px; }
+    .reviewer { font-size: 0.8rem; font-weight: 700; color: var(--primary); }
 
-    .reviews-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-    }
-    .review-card {
-      background: var(--white);
-      border: 1px solid #e8e8e8;
-      border-radius: 8px;
-      padding: 24px;
-    }
-    .stars { color: #f5a623; font-size: 1rem; margin-bottom: 10px; }
-    .review-card p { font-size: 0.9rem; color: #444; line-height: 1.6; margin-bottom: 14px; font-style: italic; }
-    .reviewer { font-size: 0.82rem; font-weight: 700; color: var(--primary); }
+    .cta { background: var(--primary); text-align: center; padding: 72px 6%; }
+    .cta h2 { color: #fff; font-size: clamp(1.5rem, 2.8vw, 2.1rem); font-weight: 800; margin-bottom: 12px; }
+    .cta p { color: rgba(255,255,255,0.8); font-size: 1rem; margin-bottom: 28px; }
+    .btn-cta { background: var(--accent); color: #111; padding: 15px 34px; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 1rem; }
 
-    .cta-section {
-      background: var(--primary);
-      text-align: center;
-      padding: 70px 6%;
-    }
-    .cta-section h2 { color: var(--white); font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; margin-bottom: 14px; }
-    .cta-section p { color: rgba(255,255,255,0.82); font-size: 1rem; margin-bottom: 32px; }
-    .btn-cta {
-      background: var(--accent);
-      color: #111;
-      padding: 16px 36px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1.05rem;
-    }
-
-    footer {
-      background: #111;
-      color: rgba(255,255,255,0.65);
-      text-align: center;
-      padding: 28px 5%;
-      font-size: 0.82rem;
-    }
-    footer strong { color: var(--white); }
+    footer { background: #111; color: rgba(255,255,255,0.55); text-align: center; padding: 24px 5%; font-size: 0.8rem; }
+    footer strong { color: #fff; }
   </style>
 </head>
 <body>
-
 <nav>
   <div class="nav-logo">Best Electrician in Arlington</div>
-  <div class="nav-phone"><a href="tel:+18174028952">(817) 402-8952</a></div>
+  <div class="nav-cta"><a href="tel:+18174028952">(817) 402-8952</a></div>
 </nav>
 
-<section class="hero">
+<div class="hero">
   <div class="hero-bg"></div>
   <div class="hero-content">
-    <div class="hero-badge">Licensed &amp; Insured - Arlington TX</div>
-    <h1>Safe, Professional Wiring
-for Arlington TX</h1>
-    <p>Licensed, insured electricians for any job big or small. Serving Arlington TX homes and businesses safely.</p>
-    <div class="hero-buttons">
-      <a href="tel:+18174028952" class="btn-primary">Call (817) 402-8952</a>
-      <a href="#services" class="btn-outline">Our Services</a>
+    <div class="hero-tag">Licensed Electrician - Arlington TX</div>
+    <h1>Flickering lights?<br>Tripped breaker?<br><em>Don't ignore it.</em></h1>
+    <p>Electrical problems don't fix themselves. Best Electrician in Arlington responds fast, diagnoses correctly, and gets your home safe — the same day.</p>
+    <div class="hero-btns">
+      <a href="tel:+18174028952" class="btn-main">Call (817) 402-8952</a>
+      <a href="#services" class="btn-ghost">Our Services</a>
     </div>
   </div>
-</section>
+</div>
 
-<div class="trust-bar">
-  <div class="trust-item"><span>&#11088;</span> 4.9 Stars (67 Reviews)</div>
-  <div class="trust-item"><span>&#128336;</span> Same-Day Service</div>
-  <div class="trust-item"><span>&#128737;</span> Licensed &amp; Insured</div>
-  <div class="trust-item"><span>&#128205;</span> Serving Arlington TX</div>
+<div class="safety-bar">
+  <div class="safety-item">&#9989; Licensed &amp; Insured</div>
+  <div class="safety-item">&#128736; Code Compliant Work</div>
+  <div class="safety-item">&#9733; 4.9 Stars (67 Reviews)</div>
+  <div class="safety-item">&#128336; Same-Day Service</div>
+  <div class="safety-item">&#128176; Free Estimates</div>
 </div>
 
 <section id="services">
-  <div class="section-label">What We Do</div>
-  <h2 class="section-title">Electrical Services
-in Arlington TX</h2>
-  <p class="section-sub">From simple repairs to full rewires, every job is done to code and backed by our guarantee.</p>
+  <div class="sec-label">What We Do</div>
+  <h2 class="sec-title">Electrical Services in Arlington TX</h2>
+  <p class="sec-sub">From simple fixes to full rewires — every job done to code and backed by our guarantee.</p>
   <div class="services-grid">
-    <div class="service-card">
-      <div class="service-icon">⚡</div>
-      <h3>Panel Upgrades</h3>
-      <p>Breaker box replacements and electrical panel upgrades done safely.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">💡</div>
-      <h3>Wiring & Rewiring</h3>
-      <p>New wiring installs and rewiring for older homes.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🔌</div>
-      <h3>Outlet & Switch</h3>
-      <p>Outlets, switches, and fixtures installed or replaced.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🏠</div>
-      <h3>Home Inspections</h3>
-      <p>Full electrical safety inspection before buying or selling.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🌞</div>
-      <h3>EV Charger Install</h3>
-      <p>Home EV charging station installation. Level 1 and Level 2.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🚨</div>
-      <h3>Emergency Electric</h3>
-      <p>Electrical emergency? We respond fast, any time of day.</p>
-    </div>
+    <div class="svc"><div class="svc-icon">&#9889;</div><h3>Panel Upgrades</h3><p>Breaker box replacements and upgrades done safely and to code.</p></div>
+    <div class="svc"><div class="svc-icon">&#128161;</div><h3>Wiring &amp; Rewiring</h3><p>New installs and rewiring for older homes — safe and permitted.</p></div>
+    <div class="svc"><div class="svc-icon">&#128268;</div><h3>Outlets &amp; Switches</h3><p>Outlets, switches, and fixtures installed or replaced.</p></div>
+    <div class="svc"><div class="svc-icon">&#127968;</div><h3>Safety Inspection</h3><p>Full electrical inspection — before buying, selling, or renovating.</p></div>
+    <div class="svc"><div class="svc-icon">&#128663;</div><h3>EV Charger Install</h3><p>Level 1 and Level 2 home EV charging station installation.</p></div>
+    <div class="svc"><div class="svc-icon">&#128681;</div><h3>Emergency Electric</h3><p>Electrical emergency? We respond fast, any time.</p></div>
   </div>
 </section>
 
-<div class="about-section">
+<div class="about">
   <img class="about-img" src="https://images.pexels.com/photos/32497160/pexels-photo-32497160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Best Electrician in Arlington">
-  <div class="about-content">
-    <div class="section-label">About Us</div>
-    <div class="brand-name">Best Electrician in Arlington</div>
-    <div class="brand-location">Serving Arlington TX &amp; Surrounding Areas</div>
-    <p>Electrical work is not something to guess on. Best Electrician in Arlington brings licensed, insured professionals to every job in Arlington TX. We do it right, we document it, and we stand behind our work. Your family's safety is our first priority.</p>
-    <div class="about-pills">
+  <div>
+    <div class="sec-label">About Us</div>
+    <div class="about-name">Best Electrician in Arlington</div>
+    <div class="about-city">Serving Arlington TX &amp; Surrounding Areas</div>
+    <p>Electrical work is not something to guess on. We bring licensed, insured professionals to every job in Arlington TX. We do it right, we document it, and we stand behind our work.</p>
+    <p>Your family's safety is our first priority.</p>
+    <div class="pills">
       <span class="pill">&#10003; Licensed &amp; Insured</span>
       <span class="pill">&#128205; Local &amp; Family-Owned</span>
-      <span class="pill">&#11088; 4.9 Stars on Google</span>
+      <span class="pill">&#9733; 4.9 Stars on Google</span>
       <span class="pill">&#128336; Same-Day Available</span>
     </div>
   </div>
 </div>
 
-<section>
-  <div class="section-label">Why Choose Us</div>
-  <h2 class="section-title">Best Electrician in Arlington<br>Arlington TX Trusts</h2>
-  <div class="why-grid">
-    <div class="why-item">
-      <div class="why-num">60min</div>
-      <h3>Fast Response</h3>
-      <p>We aim to be at your door within 60 minutes for emergencies.</p>
-    </div>
-    <div class="why-item">
-      <div class="why-num">100%</div>
-      <h3>Satisfaction Guarantee</h3>
-      <p>Not happy? We make it right. No questions asked.</p>
-    </div>
-    <div class="why-item">
-      <div class="why-num">4.9&#11088;</div>
-      <h3>Top Rated</h3>
-      <p>Trusted by Arlington TX homeowners. 67 five-star reviews.</p>
-    </div>
-    <div class="why-item">
-      <div class="why-num">$0</div>
-      <h3>Free Estimate</h3>
-      <p>No charge to come out and tell you what it will cost.</p>
-    </div>
-  </div>
-</section>
-
-<section style="background: var(--light);">
-  <div class="section-label">What Customers Say</div>
-  <h2 class="section-title">Real Reviews from<br>Arlington TX Homeowners</h2>
+<section style="background:var(--light)">
+  <div class="sec-label">What Customers Say</div>
+  <h2 class="sec-title">Real Reviews from Arlington TX Homeowners</h2>
   <div class="reviews-grid">
-    <div class="review-card">
-      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p>"Installed new outlets throughout my home. Showed up on time, cleaned up after themselves."</p>
-      <div class="reviewer">- Amy C., Arlington TX</div>
-    </div>
-    <div class="review-card">
-      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p>"Very thorough safety inspection before we bought our home. Detailed report, honest assessment."</p>
-      <div class="reviewer">- Steve L., Arlington TX</div>
-    </div>
-    <div class="review-card">
-      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p>"Great experience. The team was professional and the work passed city inspection with no issues."</p>
-      <div class="reviewer">- Phil R., Arlington TX</div>
-    </div>
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Installed my EV charger in one afternoon. Clean install and walked me through everything."</p><div class="reviewer">- Dan B., Arlington TX</div></div>
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Responded to our electrical emergency same evening. Calm, professional, solved it fast."</p><div class="reviewer">- Susan W., Arlington TX</div></div>
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Honest pricing, great workmanship. Our go-to electrician for everything now."</p><div class="reviewer">- Mark H., Arlington TX</div></div>
   </div>
 </section>
 
-<section class="cta-section">
+<div class="cta">
   <h2>Need an Electrician in Arlington TX?</h2>
-  <p>Call now for fast, reliable service. Free estimates. Same-day available.</p>
+  <p>We answer the phone. Free estimates. Same-day available.</p>
   <a href="tel:+18174028952" class="btn-cta">Call (817) 402-8952 Now</a>
-</section>
+</div>
 
-<footer>
-  <strong>Best Electrician in Arlington</strong> | Arlington TX | (817) 402-8952 | Licensed &amp; Insured<br>
-  <span style="opacity:0.5;font-size:0.75rem;">Licensed electrical services in Arlington TX and surrounding areas.</span>
-</footer>
-
+<footer><strong>Best Electrician in Arlington</strong> | Arlington TX | (817) 402-8952 | Licensed &amp; Insured</footer>
 </body>
 </html>
