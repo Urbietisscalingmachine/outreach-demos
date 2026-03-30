@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prime Group AC Repairs | HVAC in Houston TX</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --primary: #0d3b5e; --accent: #00a8e8; --white: #fff; --light: #f0f7fc; --text: #1a1a1a; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--text); }
+
+    nav { background: var(--primary); display: flex; align-items: center; justify-content: space-between; padding: 0 6%; height: 62px; position: sticky; top: 0; z-index: 100; }
+    .nav-logo { color: #fff; font-weight: 700; font-size: 1.1rem; }
+    .nav-cta a { background: var(--accent); color: #fff; padding: 8px 20px; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 0.95rem; }
+
+    /* HERO */
+    .hero { position: relative; min-height: 520px; display: flex; align-items: center; }
+    .hero-bg { position: absolute; inset: 0; background-image: url('https://images.pexels.com/photos/5463581/pexels-photo-5463581.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'); background-size: cover; background-position: center; filter: brightness(0.3); }
+    .hero-content { position: relative; z-index: 2; padding: 70px 6%; max-width: 660px; }
+    .hero-tag { display: inline-block; background: var(--accent); color: #fff; font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 12px; border-radius: 3px; margin-bottom: 22px; }
+    .hero-content h1 { color: #fff; font-size: clamp(2rem, 3.8vw, 2.9rem); font-weight: 800; line-height: 1.15; margin-bottom: 18px; }
+    .hero-content h1 span { color: var(--accent); }
+    .hero-content p { color: rgba(255,255,255,0.85); font-size: 1.05rem; line-height: 1.65; margin-bottom: 32px; }
+    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-main { background: var(--accent); color: #fff; padding: 13px 26px; border-radius: 4px; text-decoration: none; font-weight: 700; }
+    .btn-ghost { background: transparent; color: #fff; padding: 13px 26px; border-radius: 4px; border: 2px solid rgba(255,255,255,0.5); text-decoration: none; font-weight: 600; }
+
+    /* DUAL CARDS */
+    .dual-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+    @media(max-width:640px) { .dual-cards { grid-template-columns: 1fr; } }
+    .card-cool { background: var(--accent); color: #fff; padding: 44px 6%; }
+    .card-heat { background: var(--primary); color: #fff; padding: 44px 6%; }
+    .card-icon { font-size: 2.8rem; margin-bottom: 14px; }
+    .card-cool h3, .card-heat h3 { font-size: 1.3rem; font-weight: 800; margin-bottom: 10px; }
+    .card-cool p, .card-heat p { font-size: 0.95rem; opacity: 0.9; line-height: 1.6; margin-bottom: 18px; }
+    .card-stat { font-size: 0.85rem; font-weight: 600; opacity: 0.85; }
+
+    section { padding: 72px 6%; }
+    .sec-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    h2.sec-title { font-size: clamp(1.5rem, 2.8vw, 2.1rem); color: var(--primary); font-weight: 800; line-height: 1.2; margin-bottom: 14px; }
+    .sec-sub { font-size: 1rem; color: #555; line-height: 1.7; margin-bottom: 36px; max-width: 560px; }
+
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px,1fr)); gap: 20px; }
+    .svc { background: var(--light); border-left: 4px solid var(--accent); border-radius: 6px; padding: 26px 22px; }
+    .svc-icon { font-size: 1.8rem; margin-bottom: 10px; }
+    .svc h3 { font-size: 0.95rem; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+    .svc p { font-size: 0.85rem; color: #555; line-height: 1.5; }
+
+    .about { background: var(--light); display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; padding: 72px 6%; }
+    @media(max-width:768px) { .about { grid-template-columns: 1fr; } }
+    .about-img { width: 100%; height: 360px; object-fit: cover; border-radius: 8px; }
+    .about-name { font-size: 1.7rem; font-weight: 800; color: var(--primary); margin-bottom: 4px; }
+    .about-city { font-size: 0.85rem; color: var(--accent); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 18px; }
+    .about p { font-size: 0.98rem; color: #444; line-height: 1.75; margin-bottom: 18px; }
+    .pills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .pill { background: #fff; border: 1px solid #ddd; border-radius: 20px; padding: 6px 14px; font-size: 0.82rem; font-weight: 600; color: var(--primary); }
+
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px,1fr)); gap: 20px; }
+    .review { border: 1px solid #e5e5e5; border-radius: 8px; padding: 22px; background: #fff; }
+    .stars { color: #f5a623; margin-bottom: 10px; }
+    .review p { font-size: 0.88rem; color: #444; line-height: 1.6; font-style: italic; margin-bottom: 12px; }
+    .reviewer { font-size: 0.8rem; font-weight: 700; color: var(--primary); }
+
+    .cta { background: var(--primary); text-align: center; padding: 72px 6%; }
+    .cta h2 { color: #fff; font-size: clamp(1.5rem, 2.8vw, 2.1rem); font-weight: 800; margin-bottom: 12px; }
+    .cta p { color: rgba(255,255,255,0.8); font-size: 1rem; margin-bottom: 28px; }
+    .btn-cta { background: var(--accent); color: #fff; padding: 15px 34px; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 1rem; }
+
+    footer { background: #111; color: rgba(255,255,255,0.55); text-align: center; padding: 24px 5%; font-size: 0.8rem; }
+    footer strong { color: #fff; }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo">Prime Group AC Repairs</div>
+  <div class="nav-cta"><a href="tel:+17139993645">(713) 999-3645</a></div>
+</nav>
+
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-tag">HVAC Service - Houston TX</div>
+    <h1>AC died in July?<br><span>We'll be there today.</span></h1>
+    <p>Fast response on heating and cooling calls across Houston TX. Honest pricing, quality work, and technicians you can trust.</p>
+    <div class="hero-btns">
+      <a href="tel:+17139993645" class="btn-main">Call (713) 999-3645</a>
+      <a href="#services" class="btn-ghost">Our Services</a>
+    </div>
+  </div>
+</div>
+
+<div class="dual-cards">
+  <div class="card-cool">
+    <div class="card-icon">&#10052;</div>
+    <h3>Cooling</h3>
+    <p>AC repair, replacement, and maintenance. We fix all makes and models — same day when possible.</p>
+    <div class="card-stat">&#128336; Same-Day AC Repair Available</div>
+  </div>
+  <div class="card-heat">
+    <div class="card-icon">&#128293;</div>
+    <h3>Heating</h3>
+    <p>Furnace and heat pump repair before the cold hits hard. We keep Houston TX homes warm all winter.</p>
+    <div class="card-stat">&#9989; All Makes &amp; Models Serviced</div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="sec-label">What We Do</div>
+  <h2 class="sec-title">HVAC Services in Houston TX</h2>
+  <p class="sec-sub">From emergency repairs to full system replacements — we keep Houston TX homes comfortable year-round.</p>
+  <div class="services-grid">
+    <div class="svc"><div class="svc-icon">&#10052;</div><h3>AC Repair</h3><p>Fast diagnosis and repair on all makes and models of AC units.</p></div>
+    <div class="svc"><div class="svc-icon">&#128293;</div><h3>Heating Repair</h3><p>Furnace and heat pump repair before the cold season hits.</p></div>
+    <div class="svc"><div class="svc-icon">&#128260;</div><h3>System Replacement</h3><p>Full AC or heating system replacement with warranty.</p></div>
+    <div class="svc"><div class="svc-icon">&#128295;</div><h3>Maintenance</h3><p>Annual tune-up to keep your system running efficiently.</p></div>
+    <div class="svc"><div class="svc-icon">&#127744;</div><h3>Air Quality</h3><p>Filters, UV systems, and duct cleaning for cleaner indoor air.</p></div>
+    <div class="svc"><div class="svc-icon">&#128681;</div><h3>Emergency HVAC</h3><p>AC out in summer? Heat down in winter? We come fast.</p></div>
+  </div>
+</section>
+
+<div class="about">
+  <img class="about-img" src="https://images.pexels.com/photos/5463581/pexels-photo-5463581.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Prime Group AC Repairs">
+  <div>
+    <div class="sec-label">About Us</div>
+    <div class="about-name">Prime Group AC Repairs</div>
+    <div class="about-city">Serving Houston TX &amp; Surrounding Areas</div>
+    <p>When your AC dies in July or your heat goes out in January, we pick up the phone and show up fast. Prime Group AC Repairs keeps Houston TX homes comfortable all year.</p>
+    <p>Honest pricing, no pressure, and work that lasts.</p>
+    <div class="pills">
+      <span class="pill">&#10003; Licensed &amp; Insured</span>
+      <span class="pill">&#128205; Local &amp; Family-Owned</span>
+      <span class="pill">&#9733; 5 Stars on Google</span>
+      <span class="pill">&#128336; Same-Day Available</span>
+    </div>
+  </div>
+</div>
+
+<section style="background:var(--light)">
+  <div class="sec-label">What Customers Say</div>
+  <h2 class="sec-title">Real Reviews from Houston TX Homeowners</h2>
+  <div class="reviews-grid">
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Honest company. Told me I just needed a part, not a whole new system. Saved me thousands."</p><div class="reviewer">- George W., Houston TX</div></div>
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Technician was on time, had the part on his truck. In and out in 90 minutes."</p><div class="reviewer">- Diane K., Houston TX</div></div>
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Best HVAC company I have used. Responsive, fair, and the work is always solid."</p><div class="reviewer">- Kevin R., Houston TX</div></div>
+  </div>
+</section>
+
+<div class="cta">
+  <h2>Need HVAC Service in Houston TX?</h2>
+  <p>We answer the phone. Free estimates. Same-day available.</p>
+  <a href="tel:+17139993645" class="btn-cta">Call (713) 999-3645 Now</a>
+</div>
+
+<footer><strong>Prime Group AC Repairs</strong> | Houston TX | (713) 999-3645 | Licensed &amp; Insured</footer>
+</body>
+</html>
