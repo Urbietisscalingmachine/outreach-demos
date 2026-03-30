@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Castillo Roofing | Roofing in Garland TX</title>
+  <meta name="description" content="Castillo Roofing – Trusted Roofing in Garland TX.  reviews. Call (469) 991-9149"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--red:#8b1a1a;--red2:#6e1414;--cream:#faf5eb;--cream2:#f3ecda;--dark:#1a0a0a;--muted:#7a6a5a;--text:#2c1810}
+    body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:#fff;line-height:1.6;overflow-x:hidden}
+
+    /* NAV */
+    nav{position:absolute;top:0;width:100%;z-index:200;padding:24px 60px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;color:#fff}
+    .nav-logo span{color:#f5c842}
+    .nav-links{display:flex;gap:28px}
+    .nav-links a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.88rem;font-weight:600;transition:color .2s}
+    .nav-links a:hover{color:#fff}
+    .nav-call{background:#fff;color:var(--red);font-weight:700;font-size:0.88rem;padding:10px 22px;border-radius:0;text-decoration:none;transition:all .2s;letter-spacing:0.5px}
+    .nav-call:hover{background:var(--red);color:#fff}
+
+    /* PANORAMIC HERO */
+    .hero{position:relative;height:100vh;min-height:640px;overflow:hidden;display:flex;align-items:flex-end}
+    .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,10,10,0.92) 0%,rgba(26,10,10,0.55) 40%,rgba(26,10,10,0.25) 70%,rgba(26,10,10,0.1) 100%)}
+    .hero-content{position:relative;z-index:1;width:100%;max-width:1200px;margin:0 auto;padding:0 60px 88px}
+    .hero-badge{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;padding:8px 20px;font-size:0.8rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:24px}
+    .hero h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,6vw,6rem);font-weight:900;color:#fff;line-height:1.05;margin-bottom:20px;letter-spacing:-1px}
+    .hero h1 em{font-style:italic;color:#f5c842}
+    .hero-sub{font-size:1.05rem;color:rgba(255,255,255,0.7);max-width:520px;margin-bottom:40px;line-height:1.7}
+    .hero-btns{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:56px}
+    .btn-red{background:var(--red);color:#fff;font-weight:700;font-size:1rem;padding:15px 32px;text-decoration:none;transition:all .2s;border:2px solid var(--red);letter-spacing:0.5px}
+    .btn-red:hover{background:transparent;border-color:#fff}
+    .btn-white{background:transparent;color:#fff;font-weight:600;font-size:1rem;padding:15px 32px;text-decoration:none;border:2px solid rgba(255,255,255,0.4);transition:all .2s}
+    .btn-white:hover{background:#fff;color:var(--red)}
+    .hero-stats-row{display:flex;gap:52px;padding-top:32px;border-top:1px solid rgba(255,255,255,0.15);flex-wrap:wrap}
+    .hstat{display:flex;flex-direction:column}
+    .hstat-num{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;color:#f5c842;line-height:1}
+    .hstat-lbl{font-size:0.75rem;color:rgba(255,255,255,0.45);font-weight:600;text-transform:uppercase;letter-spacing:2px;margin-top:4px}
+
+    /* TRUST RIBBON */
+    .ribbon{background:var(--cream2);padding:0;border-top:3px solid var(--red)}
+    .ribbon-inner{max-width:1200px;margin:0 auto;display:flex;align-items:stretch;flex-wrap:wrap}
+    .ribbon-item{flex:1;min-width:160px;padding:22px 28px;display:flex;align-items:center;gap:14px;border-right:1px solid rgba(0,0,0,0.08);font-weight:600;font-size:0.88rem;color:var(--text)}
+    .ribbon-item:last-child{border-right:none}
+    .ribbon-icon{font-size:1.4rem}
+
+    /* WHY CHOOSE US */
+    .why-section{padding:100px 60px;background:var(--cream)}
+    .inner{max-width:1200px;margin:0 auto}
+    .section-label{font-size:0.78rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--red);margin-bottom:14px}
+    .section-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:900;color:var(--text);margin-bottom:16px;line-height:1.2}
+    .section-sub{font-size:1rem;color:var(--muted);max-width:500px;margin-bottom:60px;line-height:1.7}
+    .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
+    .why-card{padding:36px 30px;background:#fff;border-top:3px solid var(--red);box-shadow:0 2px 20px rgba(0,0,0,0.06);transition:all .2s}
+    .why-card:hover{transform:translateY(-4px);box-shadow:0 8px 36px rgba(0,0,0,0.1)}
+    .why-icon{font-size:2.5rem;margin-bottom:20px}
+    .why-card h3{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--text);margin-bottom:12px}
+    .why-card p{font-size:0.9rem;color:var(--muted);line-height:1.7}
+
+    /* SERVICES — 2-col with number */
+    .services-section{padding:100px 60px;background:#fff}
+    .services-grid-num{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:52px;border:1px solid rgba(0,0,0,0.08)}
+    .svc-num-row{display:flex;align-items:stretch;border-bottom:1px solid rgba(0,0,0,0.08);transition:all .2s}
+    .svc-num-row:last-child{border-bottom:none}
+    .svc-num-row:hover{background:var(--cream)}
+    .svc-number-box{width:72px;background:var(--red);color:#fff;font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .svc-content{padding:24px 28px;flex:1}
+    .svc-content h3{font-weight:700;font-size:1.02rem;color:var(--text);margin-bottom:4px}
+    .svc-content p{font-size:0.85rem;color:var(--muted)}
+
+    /* GALLERY */
+    .gallery-section{padding:80px 60px;background:var(--cream2)}
+    .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:44px}
+    .gallery-grid img{width:100%;height:240px;object-fit:cover;transition:transform .3s}
+    .gallery-grid img:hover{transform:scale(1.04)}
+
+    /* REVIEWS — LARGE QUOTE */
+    .reviews-section{padding:100px 60px;background:var(--dark)}
+    .reviews-section .section-label{color:#f5c842}
+    .reviews-section .section-title{color:#fff}
+    .reviews-section .section-sub{color:rgba(255,255,255,0.4)}
+    .quote-carousel{margin-top:52px}
+    .big-quote{max-width:780px;margin:0 auto;text-align:center;padding:52px 48px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);position:relative}
+    .quote-mark{font-family:'Playfair Display',serif;font-size:8rem;font-weight:900;color:rgba(245,200,66,0.15);line-height:0.5;position:absolute;top:40px;left:40px;pointer-events:none}
+    .big-quote-stars{font-size:1.1rem;color:#f5c842;letter-spacing:4px;margin-bottom:20px}
+    .big-quote-text{font-family:'Playfair Display',serif;font-size:clamp(1.2rem,2.5vw,1.6rem);font-style:italic;color:#fff;line-height:1.6;margin-bottom:28px;position:relative;z-index:1}
+    .big-quote-author{font-size:0.85rem;font-weight:700;color:#f5c842;text-transform:uppercase;letter-spacing:3px}
+    .big-quote-time{font-size:0.78rem;color:rgba(255,255,255,0.35);margin-top:4px}
+    .quote-nav{display:flex;justify-content:center;gap:10px;margin-top:28px}
+    .quote-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.2);cursor:pointer;transition:background .2s;border:none}
+    .quote-dot.active{background:var(--red)}
+    .extra-reviews{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:780px;margin:36px auto 0}
+    .mini-rev{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);padding:24px;text-align:left}
+    .mini-stars{color:#f5c842;font-size:0.8rem;margin-bottom:8px;letter-spacing:2px}
+    .mini-text{font-size:0.88rem;color:rgba(255,255,255,0.65);line-height:1.6;margin-bottom:12px;font-style:italic}
+    .mini-author{font-size:0.8rem;font-weight:700;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:1px}
+
+    /* CTA SECTION */
+    .cta-section{background:var(--red);padding:80px 60px;text-align:center}
+    .cta-section h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:900;color:#fff;margin-bottom:16px;line-height:1.2}
+    .cta-section p{font-size:1.05rem;color:rgba(255,255,255,0.75);margin-bottom:40px;max-width:500px;margin-left:auto;margin-right:auto}
+    .cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+    .btn-cta-white{background:#fff;color:var(--red);font-weight:800;font-size:1.05rem;padding:16px 36px;text-decoration:none;transition:all .2s;border:2px solid #fff}
+    .btn-cta-white:hover{background:transparent;color:#fff}
+    .btn-cta-outline{background:transparent;color:#fff;font-weight:700;font-size:1.05rem;padding:16px 36px;text-decoration:none;border:2px solid rgba(255,255,255,0.4);transition:all .2s}
+    .btn-cta-outline:hover{background:#fff;color:var(--red)}
+
+    /* CONTACT */
+    .contact-section{padding:100px 60px;background:var(--cream)}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;margin-top:44px;align-items:start}
+    .contact-info{background:var(--red);color:#fff;padding:48px;border-radius:0}
+    .contact-info h3{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:900;color:#fff;margin-bottom:32px}
+    .ci-row{display:flex;gap:16px;margin-bottom:24px;align-items:flex-start}
+    .ci-icon{width:42px;height:42px;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+    .ci-row h4{font-weight:700;color:rgba(255,255,255,0.7);margin-bottom:4px;font-size:0.8rem;text-transform:uppercase;letter-spacing:2px}
+    .ci-row p,.ci-row a{color:#fff;text-decoration:none;font-size:0.92rem;line-height:1.5}
+    .form-box{padding:48px;background:#fff;box-shadow:0 4px 30px rgba(0,0,0,0.07)}
+    .form-box h3{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;color:var(--text);margin-bottom:24px}
+    .form-group{margin-bottom:14px}
+    .form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+    input,select,textarea{width:100%;padding:13px 16px;border:1.5px solid #e0d8cc;background:#fff;font-family:'Source Sans 3',sans-serif;font-size:0.9rem;outline:none;transition:border-color .2s;color:var(--text)}
+    input:focus,select:focus,textarea:focus{border-color:var(--red)}
+    textarea{resize:vertical;min-height:100px}
+    .btn-submit-red{width:100%;background:var(--red);color:#fff;font-weight:700;font-size:1rem;padding:15px;border:none;cursor:pointer;transition:all .2s;font-family:'Source Sans 3',sans-serif;letter-spacing:0.5px}
+    .btn-submit-red:hover{background:var(--red2)}
+
+    /* FOOTER */
+    footer{background:var(--dark);padding:44px 60px}
+    .footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+    .footer-logo{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:900;color:#fff}
+    .footer-logo span{color:#f5c842}
+    .footer-text{font-size:0.82rem;color:rgba(255,255,255,0.35)}
+    .footer-call a{color:rgba(255,255,255,0.55);text-decoration:none;font-size:0.85rem}
+
+    /* FLOAT */
+    .float-btn{position:fixed;bottom:28px;right:28px;z-index:300;background:var(--red);color:#fff;font-weight:800;font-size:0.95rem;padding:15px 26px;text-decoration:none;box-shadow:0 6px 30px rgba(139,26,26,0.5);display:flex;align-items:center;gap:9px;transition:all .2s}
+    .float-btn:hover{background:var(--red2);transform:translateY(-2px)}
+
+    /* RESPONSIVE */
+    @media(max-width:1000px){
+      nav{padding:20px 32px}
+      .hero-content{padding:0 32px 72px}
+      .why-grid{grid-template-columns:1fr 1fr}
+      .services-grid-num{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      .why-section,.services-section,.gallery-section,.reviews-section,.cta-section,.contact-section{padding-left:32px;padding-right:32px}
+      footer{padding:32px}
+      .nav-links{display:none}
+    }
+    @media(max-width:640px){
+      .hero h1{font-size:2.8rem}
+      .why-grid{grid-template-columns:1fr}
+      .hero-content{padding:0 20px 56px}
+      .hero-stats-row{gap:24px}
+      .why-section,.services-section,.gallery-section,.reviews-section,.cta-section,.contact-section{padding:60px 20px}
+      .contact-info,.form-box{padding:28px 24px}
+      .ribbon-inner{flex-direction:column}
+      .ribbon-item{border-right:none;border-bottom:1px solid rgba(0,0,0,0.08)}
+      .ribbon-item:last-child{border-bottom:none}
+      footer{padding:24px 20px}
+      .extra-reviews{grid-template-columns:1fr}
+      .form-row-2{grid-template-columns:1fr}
+      .big-quote{padding:36px 28px}
+      .quote-mark{font-size:5rem}
+    }
+  </style>
+</head>
+<body>
+
+<!-- PANORAMIC HERO -->
+<section class="hero">
+  <img src="https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?w=1600&auto=compress" alt="Castillo Roofing" class="hero-img"/>
+  <div class="hero-overlay"></div>
+  <nav>
+    <div class="nav-logo">Castillo Roofing</div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="tel:(469) 991-9149" class="nav-call">Call (469) 991-9149</a>
+  </nav>
+  <div class="hero-content">
+    <div class="hero-badge">🏠 Roofing · Garland TX</div>
+    <h1>Garland TX's Most<br/><em>Trusted Roofers</em></h1>
+    <p class="hero-sub">Expert roofing services since day one. Licensed, insured, and backed by  happy customers. We stand behind every job we do.</p>
+    <div class="hero-btns">
+      <a href="tel:(469) 991-9149" class="btn-red">📞 Call (469) 991-9149</a>
+      <a href="#contact" class="btn-white">Free Inspection</a>
+    </div>
+    <div class="hero-stats-row">
+      <div class="hstat"><span class="hstat-num">4.8★</span><span class="hstat-lbl">Google Rating</span></div>
+      <div class="hstat"><span class="hstat-num"></span><span class="hstat-lbl">Reviews</span></div>
+      <div class="hstat"><span class="hstat-num">24/7</span><span class="hstat-lbl">Emergency</span></div>
+      <div class="hstat"><span class="hstat-num">Free</span><span class="hstat-lbl">Inspection</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST RIBBON -->
+<div class="ribbon">
+  <div class="ribbon-inner">
+    <div class="ribbon-item"><span class="ribbon-icon">✅</span>Licensed &amp; Insured</div>
+    <div class="ribbon-item"><span class="ribbon-icon">🚨</span>Storm Damage Response</div>
+    <div class="ribbon-item"><span class="ribbon-icon">🏆</span>Local Garland TX Roofers</div>
+    <div class="ribbon-item"><span class="ribbon-icon">💰</span>Free Inspections</div>
+    <div class="ribbon-item"><span class="ribbon-icon">⭐</span>4.8 Google Rating</div>
+  </div>
+</div>
+
+<!-- WHY CHOOSE US -->
+<section class="why-section">
+  <div class="inner">
+    <div class="section-label">Why Choose Us</div>
+    <h2 class="section-title">The Garland TX Roofer<br/>You Can Trust</h2>
+    <p class="section-sub">We've built our reputation one roof at a time. Here's why homeowners in Garland TX choose us.</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🏠</div>
+        <h3>Local Experts</h3>
+        <p>We know Garland TX's weather, building codes, and architecture. Our team lives here and takes pride in our community.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🛡️</div>
+        <h3>Fully Licensed</h3>
+        <p>Every job is fully licensed, bonded, and insured. You're protected from start to finish, no exceptions.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">💬</div>
+        <h3>Transparent Pricing</h3>
+        <p>No hidden fees, no surprise bills. We give you a detailed estimate upfront so you know exactly what to expect.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-section" id="services">
+  <div class="inner">
+    <div class="section-label">Our Services</div>
+    <h2 class="section-title">What We Offer</h2>
+    <p class="section-sub">Comprehensive roofing services for every need — from emergency repairs to full replacements.</p>
+    <div class="services-grid-num">
+      <div class="svc-num-row"><div class="svc-number-box">1</div><div class="svc-content"><h3>Roof Replacement</h3><p>Expert roof replacement by licensed roofing professionals.</p></div></div>
+<div class="svc-num-row"><div class="svc-number-box">2</div><div class="svc-content"><h3>Leak Repair</h3><p>Expert leak repair by licensed roofing professionals.</p></div></div>
+<div class="svc-num-row"><div class="svc-number-box">3</div><div class="svc-content"><h3>Storm Damage Repair</h3><p>Expert storm damage repair by licensed roofing professionals.</p></div></div>
+<div class="svc-num-row"><div class="svc-number-box">4</div><div class="svc-content"><h3>Gutters & Fascia</h3><p>Expert gutters & fascia by licensed roofing professionals.</p></div></div>
+<div class="svc-num-row"><div class="svc-number-box">5</div><div class="svc-content"><h3>Roof Inspection</h3><p>Expert roof inspection by licensed roofing professionals.</p></div></div>
+<div class="svc-num-row"><div class="svc-number-box">6</div><div class="svc-content"><h3>Emergency Tarping</h3><p>Expert emergency tarping by licensed roofing professionals.</p></div></div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+
+
+<!-- REVIEWS — LARGE QUOTE -->
+<section class="reviews-section" id="reviews">
+  <div class="inner">
+    <div class="section-label">Customer Reviews</div>
+    <h2 class="section-title">What Homeowners<br/>Are Saying</h2>
+    <p class="section-sub">Don't take our word for it — read what real Garland TX homeowners say.</p>
+    <div class="quote-carousel">
+      <div class="big-quote"><div class="quote-mark">"</div><div class="big-quote-stars">★★★★★</div><p class="big-quote-text">"I have many roofs done with Emiliano & his crew. Great jobs, great service, and great prices. Recent"</p><div class="big-quote-author">唐Michelle</div><div class="big-quote-time">Google Review</div></div>
+<div class="extra-reviews">
+<div class="mini-rev"><div class="mini-stars">★★★★★</div><p class="mini-text">"Castillo Roofing replaced my roof and gutter last month.  Quality work with great price. I've worked"</p><div class="mini-author">Michael Zeng</div></div>
+<div class="mini-rev"><div class="mini-stars">★★★★★</div><p class="mini-text">"Did my roof and gutters and my fence. He did an insurance claim with my house and he passed the insp"</p><div class="mini-author">Chapis Tovar</div></div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<div class="cta-section">
+  <h2>Ready for a Free Roof Inspection?</h2>
+  <p>Call us today and get a free, no-obligation assessment from Garland TX's most trusted roofing team.</p>
+  <div class="cta-btns">
+    <a href="tel:(469) 991-9149" class="btn-cta-white">📞 Call (469) 991-9149</a>
+    <a href="#contact" class="btn-cta-outline">Schedule Inspection</a>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="inner">
+    <div class="section-label">Get In Touch</div>
+    <h2 class="section-title">Free Roof Inspection</h2>
+    <p class="section-sub">We'll come to you — free inspection, honest assessment, no pressure.</p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Contact Details</h3>
+        <div class="ci-row"><div class="ci-icon">📞</div><div><h4>Phone</h4><a href="tel:(469) 991-9149">(469) 991-9149</a></div></div>
+        <div class="ci-row"><div class="ci-icon">📍</div><div><h4>Address</h4><p>Garland TX</p></div></div>
+        <div class="ci-row"><div class="ci-icon">🕐</div><div><h4>Hours</h4><p>Mon-Fri: 8am-6pm<br/>Emergency service available</p></div></div>
+        <div class="ci-row"><div class="ci-icon">⭐</div><div><h4>Rating</h4><p>4.8 ·  reviews</p></div></div>
+      </div>
+      <div class="form-box">
+        <h3>Request an Inspection</h3>
+        <form onsubmit="return false">
+          <div class="form-row-2">
+            <input type="text" placeholder="Your Name"/>
+            <input type="tel" placeholder="Phone"/>
+          </div>
+          <div class="form-group"><input type="email" placeholder="Email"/></div>
+          <div class="form-group"><select><option value="">Service Needed</option></select></div>
+          <div class="form-group"><textarea placeholder="Tell us about your roof..."></textarea></div>
+          <button class="btn-submit-red" type="submit">Request Free Inspection →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Castillo Roofing</div>
+    <div class="footer-text">Garland TX · © 2024 Castillo Roofing. Licensed Roofing · Garland TX</div>
+    <div class="footer-call"><a href="tel:(469) 991-9149">(469) 991-9149</a></div>
+  </div>
+</footer>
+
+<a href="tel:(469) 991-9149" class="float-btn">📞 Call Now</a>
+
+</body>
+</html>
